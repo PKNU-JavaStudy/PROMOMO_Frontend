@@ -7,11 +7,7 @@
   background-color: rgb(179, 179, 179);
 }
 
-.wrap {
-  max-width: var(--width);
-  margin: 0 auto;
-  padding: var(--wrap);
-}
+
 .container {
   margin-bottom: 90px;
 }

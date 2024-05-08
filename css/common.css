@@ -64,6 +64,12 @@ header {
   text-decoration: underline;
 }
 
+.wrap {
+  max-width: var(--width);
+  margin: 0 auto;
+  padding: var(--wrap);
+}
+
 /* footer */
 footer {
   width: 100%;

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return false;
   });
 
-  // 스크롤 이벤트
+  // 스크롤시 헤더 고정 이벤트
   topBtn.style.display = "none";
   header.style.boxShadow = "none";
 
