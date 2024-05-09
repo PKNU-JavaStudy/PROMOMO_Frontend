@@ -1,11 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // top 버튼 애니메이션
-  const topBtn = document.querySelector(".top-btn");
   const header = document.querySelector("header");
-  topBtn.addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    return false;
-  });
+
+  // top 버튼 애니메이션
+  const scrollTopBtn = () => {
+    const topBtn = document.querySelector(".top-btn");
+    topBtn.className = "top-btn";
+    topBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    return topBtn;
+  };
+
+  document.body.append(scrollTopBtn());
 
   // 스크롤시 헤더 고정 이벤트
   topBtn.style.display = "none";
