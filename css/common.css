@@ -2,9 +2,11 @@
 :root {
   /* color */
   --main-color: #00dada;
+  --main-hover-color: #009393;
   --border-color: #d9d9d9;
   --tag-bgcolor: #dbdbdb;
   --gray-font: #444444;
+  --gray-font2: #969696;
   --lightgray-font: #94a3b8;
 
   /* width */
@@ -25,7 +27,7 @@ header {
 .header-in {
   max-width: 1280px;
   margin: auto;
-  padding: 25px 0;
+  height: 96px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,6 +35,7 @@ header {
 .header-in nav {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 .header-in nav a img {
   width: 100px;
@@ -40,8 +43,14 @@ header {
 .menu {
   padding: 0 30px;
   display: flex;
+  align-items: center;
+  height: 100%;
 }
 .menu li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
   padding: 0 30px;
 }
 .menu li a {
@@ -57,6 +66,19 @@ header {
 .member li {
   padding: 0 15px;
 }
+.menu li a::after {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 0;
+  background-color: var(--main-color);
+  width: 0%;
+  height: 4px;
+  transition: width 0.2s ease;
+}
+.menu li a:hover::after {
+  width: 100%;
+}
 .member li:nth-child(1) {
   border-right: 1px solid var(--border-color);
 }
@@ -64,6 +86,7 @@ header {
   text-decoration: underline;
 }
 
+/* main */
 .wrap {
   max-width: var(--width);
   margin: 0 auto;
@@ -115,4 +138,17 @@ footer {
 .top-btn:hover i {
   color: var(--main-color);
   transition: 0.2s;
+}
+
+/* select */
+.select {
+  border: 1px solid var(--border-color);
+  padding: 4px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 0.815rem;
+  /* color: var(--lightgray-font); */
+}
+.select option:hover {
+  background-color: var(--main-color);
 }
