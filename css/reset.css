@@ -14,8 +14,13 @@
   color: #000;
   box-sizing: border-box;
 }
-a {
+a,
+button {
   cursor: pointer;
+}
+input,
+select {
+  outline: none;
 }
 
 html,

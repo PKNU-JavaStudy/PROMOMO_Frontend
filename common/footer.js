@@ -3,7 +3,7 @@ const renderFooter = () => {
   footer.innerHTML = `
   <button class="top-btn"><i class="fa-solid fa-arrow-up"></i></button>
   <div class="footer-in">
-    <a href="/">
+    <a href="/index.html">
       <img src="./img/logo.png" alt="logo" />
     </a>
     <div>
