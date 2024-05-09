@@ -7,7 +7,6 @@
   background-color: rgb(179, 179, 179);
 }
 
-
 .container {
   margin-bottom: 90px;
 }
@@ -63,8 +62,8 @@ p.pj-content {
   width: 370px;
   font-size: 0.875rem;
   padding-top: 15px;
-  overflow: hidden;
   display: -webkit-box;
+  overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   line-height: 1.2rem;
