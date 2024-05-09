@@ -3,11 +3,11 @@ const renderHeader = () => {
   header.innerHTML = `
   <div class="header-in">
     <nav>
-      <a href="#">
+      <a href="/index.html">
         <img src="./img/logo.png" alt="logo" />
       </a>
       <ul class="menu">
-        <li><a href="#">멤버 모집</a></li>
+        <li><a href="/recruit_list.html">멤버 모집</a></li>
         <li><a href="#">프로젝트 자랑</a></li>
       </ul>
     </nav>
