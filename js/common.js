@@ -1,4 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // 모달창
+  document.querySelector(".open-modal").addEventListener("click", function () {
+    document.querySelector(".modal-bg").classList.add("visible");
+    document.querySelector(".modal").classList.add("visible");
+  });
+
+  document.querySelector(".close-modal").addEventListener("click", function () {
+    document.querySelector(".modal-bg").classList.remove("visible");
+    document.querySelector(".modal").classList.remove("visible");
+  });
+
+  document.addEventListener("click", function (event) {
+    if (!event.target.closest(".modal, .open-modal")) {
+      document.querySelector(".modal").classList.remove("visible");
+      document.querySelector(".modal-bg").classList.remove("visible");
+      document.body.classList.remove("modal-open");
+    }
+  });
+
   const header = document.querySelector("header");
 
   // top 버튼 애니메이션
@@ -30,4 +49,5 @@ document.addEventListener("DOMContentLoaded", function () {
       header.style.boxShadow = "0px 0px 5px 3px rgba(0, 0, 0, 0.16)";
     }
   });
+
 });
