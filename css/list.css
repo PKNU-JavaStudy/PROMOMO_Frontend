@@ -37,7 +37,7 @@
   color: var(--main-color);
 }
 
-.category button {
+.btn-write {
   color: #fff;
   padding: 12px 26px;
   border-radius: 5px;
@@ -48,7 +48,7 @@
   transition: 0.3s;
 }
 
-.category button:hover {
+.btn-write:hover {
   background-color: var(--main-hover-color);
   transition: 0.3s;
 }
