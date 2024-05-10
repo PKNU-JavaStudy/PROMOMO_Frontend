@@ -1,23 +1,70 @@
-main{
-    padding-top: 50px;
-}
 /* 전체 wrap */
-#rc_wrap {
-    max-width: 882px;
-    margin: 0 auto;
-    height: 1010px;
-    padding: var(--wrap);
-    position: relative;
-}
-span{
-    display: block;
-    font-size: 18px;
-    font-weight: bold;
+.flex {
+    display: flex;
+    justify-content: space-between;
 }
 
+.rc-input {
+    width: 60%;
+}
+
+.pj-type {
+    display: inline-block;
+    background-color: var(--tag-bgcolor);
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.rc-title {
+    /* block을 써주면 굳이 flex를 안써도 아래줄에 영역으로 잡힘 */
+    display: block;
+    margin-top: 10px;
+    /* input border없애기 */
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.s-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    /* padding : 위 좌우 아래 */
+    padding: 60px 0 30px;
+}
+
+textarea {
+    border: 1px solid var(--border-color);
+    width: 100%;
+    border-radius: 10px;
+    resize: none;
+}
+
+.rc_checkbox label {
+    padding-right: 20px;
+    font-weight: 500;
+}
+
+.rc-info {
+    width: 270px;
+}
+
+.rc-title-info {
+    border: 1px solid var(--border-color);
+    background-color: #F9FAFC;
+    padding: 15px 28px;
+    border-radius: 5px;
+    font-size: 0.815rem;
+    line-height: 1rem;
+}
+
+.summarize {
+    margin-top: 120px;
+}
 
 /* 사용자 입력 받는 wrap */
-#rc_input {
+/* #rc_input {
     max-width: 413px;
     width: 469px;
     margin: 0 auto;
@@ -41,6 +88,7 @@ span{
     top: 0;
     left: 0;
 }
+
 .rc_title input {
     width: 350px;
     height: 33px;
@@ -57,6 +105,7 @@ span{
     top: 129px;
     left: 0;
 }
+
 .rc_summarize input {
     width: 190px;
     height: 33px;
@@ -73,12 +122,13 @@ span{
     top: 253px;
     left: 0;
 }
-.rc_checkbox  {
+
+.rc_checkbox {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color:var(--gray-font2);
+    color: var(--gray-font2);
 }
 
 
@@ -87,12 +137,11 @@ span{
     justify-content: space-between;
     align-items: start;
     flex-direction: column;
-    /*background-color: green;*/
-    width: 412px;
-    height: 70px;
-    position: absolute;
-    top: 371px;
-    left: 0;
+width: 412px;
+height: 70px;
+position: absolute;
+top: 371px;
+left: 0;
 }
 
 .rc_time {
@@ -131,15 +180,16 @@ span{
     left: 0;
 }
 
-.rc_stack .stack_item{
+.rc_stack .stack_item {
     color: #fff;
     padding: 12px 26px;
     border-radius: 5px;
     background-color: var(--main-color);
     border: none;
 }
-.exit{
-    display:inline;
+
+.exit {
+    display: inline;
     color: #fff;
 }
 
@@ -158,18 +208,18 @@ span{
     height: 45px;
 }
 
-.button-wrap .btn_sutmit{
+.button-wrap .btn_sutmit {
     background-color: var(--main-color);
     justify-content: center;
     display: flex;
-    align-items:center;
+    align-items: center;
 }
 
-.button-wrap .btn_back{
+.button-wrap .btn_back {
     margin-bottom: 40px;
     justify-content: center;
     display: flex;
-    align-items:center;
+    align-items: center;
 }
 
 #rc_info {
@@ -183,57 +233,59 @@ span{
     right: 0;
 }
 
-.rc_title_info{
+.rc_title_info {
     border-radius: 5px;
     background-color: var(--border-color);
-    padding:15px;
+    padding: 15px;
     width: 254px;
     height: 59px;
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
 }
 
-.rc_summarize_info{
+.rc_summarize_info {
     border-radius: 5px;
     background-color: var(--border-color);
-    padding:15px;
+    padding: 15px;
     width: 254px;
     height: 59px;
     position: absolute;
-    top:150px;
+    top: 150px;
     left: 0;
 }
 
-.rc_pj_info{
+.rc_pj_info {
     border-radius: 5px;
     background-color: var(--tag-bgcolor);
-    padding:15px;
-    width:100%;
+    padding: 15px;
+    width: 100%;
     height: 234px;
     position: absolute;
-    bottom:0;
+    bottom: 0;
     left: 0;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.rc_pj_info1{
+
+.rc_pj_info1 {
     font-size: 0.9em;
 }
-.rc_pj_info2 ul{
+
+.rc_pj_info2 ul {
     padding-left: 20px;
     list-style: circle;
 }
 
-.rc_pj_info2 ul li{
+.rc_pj_info2 ul li {
     list-style: circle;
     font-size: 0.9em;
 }
 
-.rc_pj_info3{
+.rc_pj_info3 {
     font-size: 0.9em;
 }
 
-
+*/
