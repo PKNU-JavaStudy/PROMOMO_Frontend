@@ -317,7 +317,7 @@ main {      /* 기본 틀 */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 13px; 
 }
 
 /* .front_icon:hover,       // 작성자에만 필요
