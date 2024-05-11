@@ -18,10 +18,8 @@
 }
 
 .rc-title {
-    /* block을 써주면 굳이 flex를 안써도 아래줄에 영역으로 잡힘 */
     display: block;
     margin-top: 10px;
-    /* input border없애기 */
     border: none;
     font-size: 1.5rem;
     font-weight: 700;
@@ -41,9 +39,70 @@ textarea {
     resize: none;
 }
 
-.rc_checkbox label {
+.rc-checkbox {
+    font-weight: 500;
+}
+
+.rc-checkbox label {
     padding-right: 20px;
     font-weight: 500;
+}
+
+.rc-stack .stack-item{
+    color: #fff;
+    padding: 12px 26px;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    border: none;
+    font-weight: 600;
+    margin-bottom: 15px;
+    width:110px;
+}
+.exit{
+    display:inline;
+    color: #fff;
+}
+.btn-write {
+    color: #fff;
+    padding: 12px 26px;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    border: none;
+    font-weight: 600;
+    transition: 0.3s;
+    position: absolute;
+    width: 125px;
+    height: 45px;
+    margin-top: 30px;
+}
+
+.btn-write:hover{
+    background-color: var(--main-hover-color);
+    transition: 0.3s;
+}
+
+h3{
+    margin-top: 25px;
+}
+.button-wrap{
+    padding:50px;
+}
+.button-wrap .submit-modal{
+    background-color: var(--main-color);
+    justify-content: center;
+    display: flex;
+    align-items:center;
+    color: #fff;
+}
+.button-wrap .submit-modal:hover{
+    background-color: var(--main-hover-color);
+    color:black;
+}
+.button-wrap .close-modal{
+    margin-bottom: 40px;
+    justify-content: center;
+    display: flex;
+    align-items:center;
 }
 
 .rc-info {
@@ -63,229 +122,28 @@ textarea {
     margin-top: 120px;
 }
 
-/* 사용자 입력 받는 wrap */
-/* #rc_input {
-    max-width: 413px;
-    width: 469px;
-    margin: 0 auto;
-    height: 1010px;
-    padding: var(--wrap);
-
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-
-.rc_title {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    flex-direction: column;
-    width: 190px;
-    height: 68px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.rc_title input {
-    width: 350px;
-    height: 33px;
-}
-
-.rc_summarize {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    flex-direction: column;
-    width: 289px;
-    height: 74px;
-    position: absolute;
-    top: 129px;
-    left: 0;
-}
-
-.rc_summarize input {
-    width: 190px;
-    height: 33px;
-}
-
-.rc_role {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    flex-direction: column;
-    width: 373px;
-    height: 74px;
-    position: absolute;
-    top: 253px;
-    left: 0;
-}
-
-.rc_checkbox {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    color: var(--gray-font2);
-}
-
-
-.rc_purpose {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    flex-direction: column;
-width: 412px;
-height: 70px;
-position: absolute;
-top: 371px;
-left: 0;
-}
-
-.rc_time {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    flex-direction: column;
-    width: 372px;
-    height: 71px;
-    position: absolute;
-    top: 487px;
-    left: 0;
-}
-
-.rc_project_info {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    flex-direction: column;
-    width: 157px;
-    height: 72px;
-    position: absolute;
-    top: 604px;
-    left: 0;
-}
-
-.rc_stack {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    flex-direction: column;
-    width: 413px;
-    height: 117px;
-    position: absolute;
-    top: 720px;
-    left: 0;
-}
-
-.rc_stack .stack_item {
-    color: #fff;
-    padding: 12px 26px;
+.advice{
+    margin-top: 450px;
+    border: 1px solid var(--border-color);
+    background-color: #F9FAFC;
+    padding: 15px 15px;
     border-radius: 5px;
-    background-color: var(--main-color);
-    border: none;
+    font-size: 0.815rem;
+    line-height: 1rem;
 }
 
-.exit {
-    display: inline;
-    color: #fff;
+.advice-step1{
+    font-size:0.815rem;
+}
+.advice-step2{
+    padding: 15px 25px;
+}
+.advice-step2 li{
+    list-style: disc;
+    font-size:0.815rem;
+}
+.advice-step3{
+    font-size:0.815rem;
 }
 
-.btn-write {
-    color: #fff;
-    padding: 12px 26px;
-    border-radius: 5px;
-    background-color: var(--main-color);
-    border: none;
-    font-weight: 600;
-    transition: 0.3s;
-    position: absolute;
-    top: 900px;
-    left: 0;
-    width: 125px;
-    height: 45px;
-}
 
-.button-wrap .btn_sutmit {
-    background-color: var(--main-color);
-    justify-content: center;
-    display: flex;
-    align-items: center;
-}
-
-.button-wrap .btn_back {
-    margin-bottom: 40px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-}
-
-#rc_info {
-    max-width: 282px;
-    width: 282px;
-    margin: 0 auto;
-    height: 856px;
-    padding: var(--wrap);
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.rc_title_info {
-    border-radius: 5px;
-    background-color: var(--border-color);
-    padding: 15px;
-    width: 254px;
-    height: 59px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.rc_summarize_info {
-    border-radius: 5px;
-    background-color: var(--border-color);
-    padding: 15px;
-    width: 254px;
-    height: 59px;
-    position: absolute;
-    top: 150px;
-    left: 0;
-}
-
-.rc_pj_info {
-    border-radius: 5px;
-    background-color: var(--tag-bgcolor);
-    padding: 15px;
-    width: 100%;
-    height: 234px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.rc_pj_info1 {
-    font-size: 0.9em;
-}
-
-.rc_pj_info2 ul {
-    padding-left: 20px;
-    list-style: circle;
-}
-
-.rc_pj_info2 ul li {
-    list-style: circle;
-    font-size: 0.9em;
-}
-
-.rc_pj_info3 {
-    font-size: 0.9em;
-}
-
-*/
