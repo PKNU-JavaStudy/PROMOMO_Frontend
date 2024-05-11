@@ -37,7 +37,9 @@ textarea {
     width: 100%;
     border-radius: 10px;
     resize: none;
+    border:none;
 }
+
 
 .rc-checkbox {
     font-weight: 500;
