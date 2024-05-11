@@ -1,0 +1,330 @@
+* {
+    margin: 5%;
+}
+main {      /* 기본 틀 */
+    display: inline-block;
+    /* background-color: pink; */
+    border: none;
+    width: 55%;
+    padding: 1%;
+}
+.tagbtn .tag {      /* 사이드 프로젝트 상자 */
+    display: inline-block;
+    background-color: var(--tag-bgcolor);
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    color: #626262;
+    border-radius: 3px;
+}
+.tagbtn .title {    /* 제목 타이틀 글자 스타일 설정 */
+    padding: 12px 0 17px;
+    font-size: 20px;
+    font-weight: 600;
+} 
+.tagbtn strong {    /* 제목 타이틀 글자 스타일 설정*/
+    position: relative;
+    font-size: 20px;
+    font-weight: 900;
+    padding-right: 20px;
+}
+.tagbtn strong.state-ing:before {   /* 모집중 | 기준으로 스타일 설정 */
+    content: "|";
+    position: absolute;
+    top: 2px;
+    left: 66px;
+    color: var(--gray-font);
+    font-weight: 500;
+}
+.tagbtn strong.state-done:before {  /* 모집 완료 | 기준으로 스타일 설정 */
+    content: "|";
+    position: absolute;
+    top: 2px;
+    left: 82px;
+    color: var(--gray-font);
+    font-weight: 500;
+}
+.tagbtn strong.state-ing {  /* 모집 중 글자 색 맞추기*/
+    color: var(--main-color);
+}
+.count {      /* 조회수 및 날짜 카운터 정렬 */
+    display: flex;
+    padding-top: 20px;
+    align-items: center;
+}
+.count li {   /* 카운터 폰트 크기 및 색상 맞추기*/
+    font-size: 0.75rem;
+    color: var(--lightgray-font);
+    padding: 0 5px;
+}
+/* .tagbtn ul.count li i {
+    font-size: 0.815rem;
+    color: var(--lightgray-font);
+    padding-right: 3px;
+} */
+.tagbtn ul.count .share_Btn {   /* url복사 버튼 스타일 설정 */
+    margin-left: auto; 
+    margin-right: 10px;
+    background-color: var(--border-color);
+    border: none;
+    color: white;
+    padding: 3.5px 6px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.815rem;
+    width: auto;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.tagbtn ul.count .share_Btn:hover { /* 복사버튼 호버 시 색 변경*/
+    background-color: gray;
+}
+.division_line {                /* 본문 구분 선 긋기 */
+    border-top: 1px solid var(--tag-bgcolor);
+  margin: 30px 0px;
+}
+.main_contents {        /* 본문 간격 맞추기 */
+    padding-top: 20px;
+}
+.content, .recruit_icon {      /* 요약 부분 간격 맞추기 */
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.fa-desktop, .fa-server{    /* 요약 프론트, 백 아이콘 설정 */
+    color: rgb(115, 195, 158);
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 1.5em;
+    width: 1.7rem;
+    height: 1.7rem;
+    padding-top: 2px;
+    background-color: rgb(238, 237, 237);
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.fa-wand-magic-sparkles {   /* 요약 디자인 아이콘 설정 */
+    color: rgb(255, 204, 101);
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 1.5em;
+    width: 1.7rem;
+    height: 1.7rem;
+    padding-top: 2px;
+    background-color: rgb(238, 237, 237);
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.fa-paste {         /* 요약 기획 아이콘 설정 */
+    color: plum;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 1.5em;
+    width: 1.7rem;
+    height: 1.7rem;
+    padding-top: 2px;
+    background-color: rgb(238, 237, 237);
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.fa-envelopes-bulk {    /* 요약 기타 아이콘 설정 */
+    color: #626262;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 1.5em;
+    width: 1.7rem;
+    height: 1.7rem;
+    padding-top: 2px;
+    background-color: rgb(238, 237, 237);
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.stack_icon li {        /* 기술 스택 글자 정렬 */
+    display: inline-block;
+    padding-bottom: 10px;
+    font-size: 1rem;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.stack_icon img {       /* 기술 스택 이미지 크기 설정 */
+    width: 1.7rem;
+    height: 1.7rem;
+    margin-top: 10px;
+}
+.purpose_icon {         /* 목적 부분 간격 설정 */
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.fa-cubes-stacked {     /* 목적 역량키우기 아이콘 설정 */
+    color: #b265de;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 1.5em;
+    width: 1.7rem;
+    height: 1.7rem;
+    padding-top: 2px;
+    background-color: rgb(238, 237, 237);
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+.fa-briefcase {     /* 목적 포트폴리오 아이콘 설정 */
+    color: #626262;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 1.5em;
+    width: 1.7rem;
+    height: 1.7rem;
+    padding-top: 2px;
+    background-color: rgb(238, 237, 237);
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+.fa-house-laptop {     /* 목적 취미 아이콘 설정 */
+    color: #e8ad54;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 1.5em;
+    width: 1.7rem;
+    height: 1.7rem;
+    padding-top: 2px;
+    background-color: rgb(238, 237, 237);
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+.fa-comment-dots {     /* 목적 소통 아이콘 설정 */
+    color: #e66a6a;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 1.5em;
+    width: 1.7rem;
+    height: 1.7rem;
+    padding-top: 2px;
+    background-color: rgb(238, 237, 237);
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+.screenTime {       /* 참여시간 간격 설정*/
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.fa-hourglass-half {    /* 참여시간 아이콘 설정 */
+    color: #545454;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 1.5em;
+    width: 1.7rem;
+    height: 1.7rem;
+    padding-top: 2px;
+    background-color: rgb(238, 237, 237);
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+.fa-circle-info:hover::after {      /* 저요저요 info버튼 호버 설정 */
+    content: "지원자의 프로필을 눌러서 정보를 확인해보세요.";
+    position: absolute;
+    color: #000000;
+    padding: 10px 8px;
+    border-radius: 5px;
+    font-size: 10px;
+    border: 1px solid var(--tag-bgcolor);
+    margin-left: 5px;
+}
+.application_box {      /* 저요저요 멤버추가 댓글상자 */
+    width: 270px;
+    margin: 5px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgb(236, 236, 236);
+    border-radius: 5px;
+    background-color: rgb(236, 236, 236);
+    flex-direction: column;
+}
+.button_box {       /* 멤버 버튼 버튼 나란히 두기 */
+    display: flex;
+    justify-content: space-between;
+}
+.mem_button{   /* 저요저요 멤버 프로필 버튼 설정 */
+    width: 140px;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--tag-bgcolor);
+}
+.addmem_button {    /* 저요저요 멤버 추가 버튼 설정 */
+    display: inline-block;
+    width: 65px;
+    padding: 5px;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+.addmem_button:hover {  /* 멤버추가 호버 설정 */
+    background-color: #626262;
+}
+.box_line {     /* 저요저요 박스 안의 구분 선 */
+    border-top: 2px solid var(--tag-bgcolor);
+    margin: 5%;
+    margin-bottom: 10px;
+}
+.comment {      /* 박스안의 댓글 여백 설정 */
+    margin: 10px 15px;
+}
+.box_count {    /* 댓글 아래 날짜 설정 */
+    text-align: right;
+    font-size: 12px;
+    color: var(--lightgray-font);
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+.aplly_box {        /* 댓글 입력 상자 정렬 */
+    display: flex;
+    align-items: center;
+}
+.profile_pic {      /* 프로필 사진 크기 설정 */
+    width: 40px;
+    height: 40px;
+    background-color: var(--tag-bgcolor);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.comment_write {    /* 댓글 입력 창 설정 */
+    width: 500px;
+    height: 40px;
+    background-color: var(--tag-bgcolor);
+    border-radius: 5px;
+    border: none;
+}
+.aplly_try {
+    display: inline-block;
+    width: 80px;
+    padding: 12px;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* .front_icon:hover,       // 작성자에만 필요
+.back_icon:hover, 
+.design_icon:hover,
+.planner_icon:hover,
+.other_icon:hover
+{
+    background-color: var(--tag-bgcolor);
+} */
