@@ -1,0 +1,100 @@
+.flex{
+    display: flex;
+    justify-content: space-between;
+    /*background-color: beige;*/
+}
+
+form{
+    width: 100%;
+}
+.sc-header{
+    background-color: #6acfcb;
+    margin-top:45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.sc-header-img{
+    width: 35%;
+}
+
+.sc-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    /* padding : 위 좌우 아래 */
+    padding: 60px 0 20px;
+}
+
+.sc-thumbnail-box{
+    background-color: var(--border-color);
+    height: 198px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+
+}
+.sc-thumbnail-box button{
+    background-color: var(--main-color);
+    font-weight: 600;
+    padding: 12px 26px;
+    border-radius: 25px;
+    border:none;
+    color:white;
+}
+
+
+
+
+
+
+
+
+.sc-header-text{
+    width: 65%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sc-contnet{
+    background-color: orange;
+}
+.sc-github-link{
+    background-color: yellow;
+}
+
+.sc-stack{
+    background-color: green;
+}
+
+.sc-member-list{
+    background-color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
