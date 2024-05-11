@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./css/index.css"/>
     <link rel="stylesheet" href="./css/show_create.css"/>
     <link rel="stylesheet" href="./css/recruit_create.css"/>
+    <link rel="stylesheet" href="./css/recruit_detail.css"/>
     <!-- js -->
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"
@@ -28,7 +29,7 @@
 <main>
     <div class="wrap flex">
         <form action="#" method="post">
-            <span class="pj-type">사이드 프로젝트</span>
+            <span class="sc-type">프로젝트 자랑 작성</span>
             <div class="sc-header">
                 <div class="sc-header-img">
                     <p class="sc-title">썸네일</p>
@@ -37,16 +38,69 @@
                     </div>
                 </div>
                 <div class="sc-header-text">
-                    <p class="s-title">프로젝트 제목</p>
-                    <input type="text" id="pj-title" name="title" placeholder="프로젝트 제목을 입력해주세요.(50자 이내")>
-                    <p class="s-summarize">요약</p>
-                    <input type="text" id="pj-summarize" name="summarize" placeholder="프로젝트를 짧게 설명해주세요.(150자 이내)">
+                    <div class="sc-title-box">
+                        <p class="sc-title">프로젝트 제목</p>
+                        <p class="sc-length">0/50</p>
+                    </div>
+                    <input class="sc-input" type="text" name="title" maxlength="50" placeholder="프로젝트 제목을 입력해주세요.(50자 이내)">
+                    <div class="sc-title-box">
+                        <p class="sc-title">요약</p>
+                        <p class="sc-length">0/150</p>
+                    </div>
+                    <input class="sc-input" type="text" name="summarize" maxlength="150" placeholder="프로젝트를 짧게 설명해주세요.(150자 이내)">
                 </div>
             </div>
-            <div class="sc-content"></div>
-            <div class="sc-github-link"></div>
-            <div class="sc-stack"></div>
-            <div class="sc-member-list"></div>
+            <div class="sc-content">
+                <p class="sc-title">내용</p>
+                <textarea rows="20"></textarea>
+            </div>
+            <div class="sc-github-link">
+                <div class="sc-title-box">
+                    <p class="sc-title">깃허브 레포지토리 링크</p>
+                    <p class="sc-url-length">0/100</p>
+                </div>
+                <input class="sc-url" type="text" name="title" maxlength="100" placeholder="URL을 입력해주세요">
+            </div>
+            <div class="sc-stack">
+                <p class="s-title">기술 스택</p>
+                <span class="stack-item">React <i class="fa-solid fa-xmark"></i></span>
+                <div class="stack-list">
+                    <select class="select">
+                        <option value="all">기술스택 선택</option>
+                        <option value="Java">Java</option>
+                        <option value="C++">C++</option>
+                        <option value="C#">C#</option>
+                        <option value="Python">Python</option>
+                        <option value="Spring">Spring</option>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JS">JS</option>
+                        <option value="React">React</option>
+                    </select>
+                </div>
+            </div>
+            <div class="sc-member-list">
+                <div class="sc-title-box">
+                    <p class="sc-title">참여 멤버</p>
+                    <p class="members-length">4/10</p>
+                </div>
+                <div class="members">
+                    <ul>
+                        <li>
+                            <img src="./img/java_icon.png"><span class="member-name">최재영</span>
+                        </li>
+                        <li>
+                            <img src="./img/java_icon.png"><span class="member-name">이윤지</span>
+                        </li>
+                        <li>
+                            <img src="./img/java_icon.png"><span class="member-name">김동건</span>
+                        </li>
+                        <li>
+                            <img src="./img/java_icon.png"><span class="member-name">한지수</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <button class="btn-write">작성완료</button>
         </form>
     </div>
