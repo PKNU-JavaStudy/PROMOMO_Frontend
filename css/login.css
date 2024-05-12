@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
 /* 로그인 제목 스타일 */
 .login h1 {
     color: #333;
@@ -14,6 +15,8 @@
     margin-top: 50px;
     margin-bottom: 0;
 }
+
+
 .submit-box{
     width: 400px;
     margin: auto;
@@ -23,12 +26,15 @@
     padding: 30px;
     background-color: #fff;
 }
+
+
 .email h2, .password h2 {
     margin-top: 0;
     font-size: 16px;
     color: #666;
     text-align: center;
 }
+
 /* input 창 크기 및 테두리 성정 */
 input[type="email"],
 input[type="password"] {
@@ -38,6 +44,8 @@ input[type="password"] {
     border: none;
     padding: 0;
 }
+
+
 .input-group {
     margin-top: 0;
     margin-bottom: 5px;
@@ -45,6 +53,8 @@ input[type="password"] {
     background: transparent;
     border: none;
 }
+
+
 input[type="submit"] {
     width: 100%; /* 버튼 너비 조정 */
     padding: 10px;
@@ -55,16 +65,20 @@ input[type="submit"] {
     cursor: pointer; /* 커서 스타일 */
     margin: auto;
 }
+
 input[type="submit"]:hover {
     background-color: #009393; /* 호버 시 색상 변경 */
 }
+
 .kakaoLogin input[type="submit"] {
     background-color: #FEE500; /* 카카오 로그인 버튼 색상 */
     color: black;
 }
+
 .kakaoLogin input[type="submit"]:hover {
     background-color: #ECD100; /* 호버 시 색상 변경 */
 }
+
 /* 구분선 스타일 */
 .separator {
     text-align: center;
@@ -73,6 +87,7 @@ input[type="submit"]:hover {
     position: relative; /* 위치 기준점 설정 */
     padding: 10px 0; /* 선과 텍스트 사이의 간격 */
 }
+
 .separator::before,
 .separator::after {
     content: ""; /* 가상 요소 내용 */
@@ -83,12 +98,16 @@ input[type="submit"]:hover {
     background-color: #000000; /* 선의 색상 */
     transform: translateY(-50%); /* 세로 중앙 정렬 */
 }
+
 .separator::before {
     left: 0;
 }
+
 .separator::after {
     right: 0;
 }
+
+
 /* 아직 회원이 아니신가요 영역 */
 .submit {
     color: #969696;
@@ -98,6 +117,7 @@ input[type="submit"]:hover {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
 .submit a {
     color: #00dada;
     text-decoration: none;
