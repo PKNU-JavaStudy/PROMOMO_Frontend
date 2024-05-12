@@ -1,0 +1,246 @@
+/*!* 전체 wrap *!*/
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* 전체 body 스타일링 */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+/* 프로필 정보 */
+.profile-container {
+    width: 100%;
+    margin: 20px auto;
+    text-align: left;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 프로필 이미지 */
+.profile-section img.profile-image {
+    width: 181px;
+    height: 181px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+
+h1 {
+    font-size: 2.188rem;
+
+}
+
+.year {
+    margin-top: 1px;
+    font-size: 0.938rem;
+    color: #969696;
+}
+
+
+.profile-section h1, .profile-section p, .profile-section textarea, .profile-section a {
+    margin-left: 20px; /* 왼쪽 정렬을 위한 외부 여백 조정 */
+}
+
+.github-link {
+    display: block; /* 인라인 블록에서 블록으로 변경 */
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 52px;
+}
+
+/* 링크에 커서가 있을 때 밑줄 및 색상 변경 */
+a.github-link:hover {
+    text-decoration: underline;
+    color: #00dada;
+}
+
+/* 깃허브 이미지 크기 설정 */
+.github-logo {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* 자기소개 글 입력 칸 */
+#text-input {
+    width: 564px;
+    height: 100px; /* 대략 3줄의 높이 */
+    font-size: 1rem;
+    margin-top: 28px;
+    border: none; /* 테두리 제거 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* 최대 3줄만 표시 */
+    overflow: hidden;
+    text-overflow: ellipsis; /* 텍스트가 넘칠 경우 생략 기호로 표시 */
+    white-space: normal; /* 줄바꿈 허용 */
+    line-height: 1.4;
+    box-shadow: none; /* 그림자 제거 */
+}
+
+
+.underline {
+    margin-top: 62px;
+    margin-bottom: 62px;
+    color: #969696;
+}
+
+/* 기술 색션 */
+.skills-section, .programs-section {
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.tags.skills .tag {
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    margin: 4px; /* 조금의 간격 추가 */
+    color: #969696;
+}
+
+/* 개별 기술 스택 태그 색상 */
+.front {
+    background-color: lightskyblue;
+}
+
+/* 프론트엔드 */
+.back {
+    background-color: lavender;
+}
+
+/* 백엔드 */
+.design {
+    background-color: lightpink;
+}
+
+/* 디자인 */
+.plan {
+    background-color: lightgreen;
+}
+
+/* 기획 */
+
+.tags.programs .tag {
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: #969696; /* 연한 회색 텍스트 */
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    background: #ddd; /* 회색 배경 */
+    margin: 4px; /* 조금의 간격 추가 */
+    border: 1px solid transparent; /* 태두리 제거 */
+}
+
+/* 프로그램 스킬 태그 투명 배경과 연한 텍스트 색상 */
+.react, .typescript, .html, .css {
+    background-color: #ddd; /* 회색 배경 */
+    color: #fff; /* 텍스트 색상 변경 */
+}
+
+/* 헤더 색션 */
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* 프로젝트, 북마크 스타일 설정 */
+.make-pj, .bookmark {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 프로젝트, 북마크 제목 스타일 설정 */
+.make-pj h2, .bookmark h2 {
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+
+/* 드롭다운 메뉴 */
+.dropdown {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* 프로젝트 정보 레이아웃 */
+.project-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+/* 생성한 프로젝트, 북마크한 프로젝트 수 색상 설정 */
+.highlight {
+    color: #00dada;
+}
+/* 프로젝트 내용 섹션의 배경 및 여백 설정 */
+.pj-content {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* 프로젝트 태그의 스타일 설정, 배경색 및 글꼴 크기 조정 */
+.project-tag {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 2px 6px;
+    font-size: 12px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.time-commitment {
+    color: #969696;
+    padding: 2px 6px;
+    font-size: 0.75rem;
+}
+
+.get-member {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    margin-right: 5px;
+    display: block;
+}
+
+.get-member span {
+    color: #00dada;
+}
+
+.date {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-top: 20px;
+}
