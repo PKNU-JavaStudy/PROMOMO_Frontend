@@ -1,76 +1,75 @@
 .main_contents {
-    width: 670px;
+  width: 670px;
 }
 
 .title-wrap .tag {
-    /* 사이드 프로젝트 상자 */
-    display: inline-block;
-    background-color: var(--tag-bgcolor);
-    padding: 0 6px;
-    font-size: 0.75rem;
-    color: #fff;
-    border-radius: 3px;
+  /* 사이드 프로젝트 상자 */
+  display: inline-block;
+  background-color: var(--tag-bgcolor);
+  padding: 0 6px;
+  font-size: 0.75rem;
+  color: #fff;
+  border-radius: 3px;
 }
 
 .title-wrap .title {
-    /* 제목 타이틀 글자 스타일 설정 */
-    padding: 20px 0 25px;
-    font-size: 1.5rem;
-    font-weight: 600;
+  /* 제목 타이틀 글자 스타일 설정 */
+  padding: 20px 0 25px;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .title-wrap strong {
-    /* 제목 타이틀 글자 스타일 설정*/
-    position: relative;
-    font-size: 1.5rem;
-    font-weight: 900;
-    padding-right: 20px;
+  /* 제목 타이틀 글자 스타일 설정*/
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 900;
+  padding-right: 20px;
 }
 
 .title-wrap strong.state-ing:before {
-    /* 모집중 | 기준으로 스타일 설정 */
-    content: "|";
-    position: absolute;
-    top: 3px;
-    left: 75px;
-    color: var(--gray-font);
-    font-weight: 500;
+  /* 모집중 | 기준으로 스타일 설정 */
+  content: "|";
+  position: absolute;
+  top: 3px;
+  left: 75px;
+  color: var(--gray-font);
+  font-weight: 500;
 }
 
 .title-wrap strong.state-done:before {
-    /* 모집 완료 | 기준으로 스타일 설정 */
-    content: "|";
-    position: absolute;
-    top: 2px;
-    left: 82px;
-    color: var(--gray-font);
-    font-weight: 500;
+  /* 모집 완료 | 기준으로 스타일 설정 */
+  content: "|";
+  position: absolute;
+  top: 2px;
+  left: 82px;
+  color: var(--gray-font);
+  font-weight: 500;
 }
 
 .title-wrap strong.state-ing {
-    /* 모집 중 글자 색 맞추기*/
-    color: var(--main-color);
+  /* 모집 중 글자 색 맞추기*/
+  color: var(--main-color);
 }
 
 .count {
-    /* 조회수 및 날짜 카운터 정렬 */
-    display: flex;
-    align-items: center;
-
+  /* 조회수 및 날짜 카운터 정렬 */
+  display: flex;
+  align-items: center;
 }
 
 .count li {
-    /* 카운터 폰트 크기 및 색상 맞추기*/
-    font-size: 0.815rem;
-    color: var(--lightgray-font);
-    padding: 0 5px;
+  /* 카운터 폰트 크기 및 색상 맞추기*/
+  font-size: 0.815rem;
+  color: var(--lightgray-font);
+  padding: 0 5px;
 }
 
 .info-wrap {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 /* .title-wrap ul.count li i {
@@ -80,271 +79,270 @@
 } */
 
 .share_Btn {
-    font-size: 0.815rem;
+  font-size: 0.815rem;
 }
 
 .share_Btn i {
-    font-size: 0.815rem;
-    padding-right: 3px;
+  font-size: 0.815rem;
+  padding-right: 3px;
 }
 
 .title_contents {
-    font-size: 1.25rem;
-    padding: 40px 0;
-    font-weight: 800;
+  font-size: 1.25rem;
+  padding: 40px 0;
+  font-weight: 800;
 }
 
 .title_contents.first {
-    padding-top: 30px;
+  padding-top: 30px;
 }
 
 .recruit_icon {
-    display: flex;
+  display: flex;
 }
 
 .content {
-    line-height: 1.5rem;
-
+  line-height: 1.5rem;
 }
 
 .content.bottom {
-    padding-bottom: 95px;
-    border-bottom: 1px solid var(--border-color);
+  padding-bottom: 95px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .recruit_icon li {
-    padding-right: 20px;
-    font-weight: 600;
+  padding-right: 20px;
+  font-weight: 600;
 }
 
 .recruit_icon li i {
-    margin-right: 7px;
-    border-radius: 50%;
-    background-color: rgb(231, 231, 231);
-    padding: 5px 5px;
-    font-size: 0.875rem;
+  margin-right: 7px;
+  border-radius: 50%;
+  background-color: rgb(231, 231, 231);
+  padding: 5px 5px;
+  font-size: 0.875rem;
 }
 
 .fa-desktop,
 .fa-server {
-    /* 요약 프론트, 백 아이콘 설정 */
-    color: rgb(115, 195, 158);
+  /* 요약 프론트, 백 아이콘 설정 */
+  color: rgb(115, 195, 158);
 }
 
 .fa-wand-magic-sparkles {
-    /* 요약 디자인 아이콘 설정 */
-    color: rgb(255, 204, 101);
+  /* 요약 디자인 아이콘 설정 */
+  color: rgb(255, 204, 101);
 }
 
 .fa-paste {
-    /* 요약 기획 아이콘 설정 */
-    color: plum;
+  /* 요약 기획 아이콘 설정 */
+  color: plum;
 }
 
 .fa-envelopes-bulk {
-    /* 요약 기타 아이콘 설정 */
-    color: #626262;
+  /* 요약 기타 아이콘 설정 */
+  color: #626262;
 }
 
 .stack_icon {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .stack_icon img {
-    /* 기술 스택 이미지 크기 설정 */
-    width: 1.7rem;
-    height: 1.7rem;
-    margin-right: 7px;
+  /* 기술 스택 이미지 크기 설정 */
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-right: 7px;
 }
 
 .stack_icon li:nth-child(2n) {
-    padding-right: 20px;
-    font-weight: 600;
+  padding-right: 20px;
+  font-weight: 600;
 }
 
 .fa-cubes-stacked {
-    /* 목적 역량키우기 아이콘 설정 */
-    color: #b265de;
+  /* 목적 역량키우기 아이콘 설정 */
+  color: #b265de;
 }
 
 .fa-briefcase {
-    /* 목적 포트폴리오 아이콘 설정 */
-    color: #626262;
+  /* 목적 포트폴리오 아이콘 설정 */
+  color: #626262;
 }
 
 .fa-house-laptop {
-    /* 목적 취미 아이콘 설정 */
-    color: #e8ad54;
+  /* 목적 취미 아이콘 설정 */
+  color: #e8ad54;
 }
 
 .fa-comment-dots {
-    /* 목적 소통 아이콘 설정 */
-    color: #e66a6a;
+  /* 목적 소통 아이콘 설정 */
+  color: #e66a6a;
 }
 
 .fa-hourglass-half {
-    /* 참여시간 아이콘 설정 */
-    color: #545454;
+  /* 참여시간 아이콘 설정 */
+  color: #545454;
 }
 
 .fa-circle-info {
-    position: relative;
+  position: relative;
 }
 
 .fa-circle-info:hover::after {
-    /* 저요저요 info버튼 호버 설정 */
-    content: "지원자의 프로필을 눌러서 정보를 확인해보세요.";
-    position: absolute;
-    color: var(--gray-font);
-    padding: 10px 8px;
-    border-radius: 5px;
-    font-size: 0.688rem;
-    border: 1px solid var(--tag-bgcolor);
-    margin-left: 5px;
-    top: -8px;
-    width: 240px;
+  /* 저요저요 info버튼 호버 설정 */
+  content: "지원자의 프로필을 눌러서 정보를 확인해보세요.";
+  position: absolute;
+  color: var(--gray-font);
+  padding: 10px 8px;
+  border-radius: 5px;
+  font-size: 0.688rem;
+  border: 1px solid var(--tag-bgcolor);
+  margin-left: 5px;
+  top: -8px;
+  width: 240px;
 }
 
 .app-wrap {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 30px;
-    row-gap: 25px;
-    padding-bottom: 55px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  row-gap: 25px;
+  padding-bottom: 55px;
 }
 
 .application_box {
-    /* 저요저요 멤버추가 댓글상자 */
-    display: flex;
-    justify-content: space-between;
-    border-radius: 10px;
-    background-color: rgb(236, 236, 236);
-    flex-direction: column;
-    padding: 15px 20px;
+  /* 저요저요 멤버추가 댓글상자 */
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: rgb(236, 236, 236);
+  flex-direction: column;
+  padding: 15px 20px;
 }
 
 .profile-top {
-    position: relative;
-    display: flex;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 15px;
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 15px;
 }
 
 .profile-top img {
-    width: 60px;
-    height: 60px;
-    margin-right: 13px;
+  width: 60px;
+  height: 60px;
+  margin-right: 13px;
 }
 
 .profile-top h3 {
-    font-weight: 600;
-    padding-top: 9px;
+  font-weight: 600;
+  padding-top: 9px;
 }
 
 .profile-top p {
-    font-size: 0.815rem;
-    color: var(--gray-font);
+  font-size: 0.815rem;
+  color: var(--gray-font);
 }
 
 .profile-top button {
-    position: absolute;
-    top: 0;
-    right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .button_box {
-    /* 멤버 버튼 버튼 나란히 두기 */
-    display: flex;
-    justify-content: space-between;
+  /* 멤버 버튼 버튼 나란히 두기 */
+  display: flex;
+  justify-content: space-between;
 }
 
 .mem_button {
-    /* 저요저요 멤버 프로필 버튼 설정 */
-    width: 140px;
-    padding: 10px;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: var(--tag-bgcolor);
+  /* 저요저요 멤버 프로필 버튼 설정 */
+  width: 140px;
+  padding: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--tag-bgcolor);
 }
 
 .addmem_button {
-    /* 저요저요 멤버 추가 버튼 설정 */
-    display: inline-block;
-    width: 65px;
-    padding: 5px;
-    background-color: var(--main-color);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 13px;
+  /* 저요저요 멤버 추가 버튼 설정 */
+  display: inline-block;
+  width: 65px;
+  padding: 5px;
+  background-color: var(--main-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
 }
 
 .addmem_button.done {
-    background-color: var(--gray-font);
+  background-color: var(--gray-font);
 }
 
 .addmem_button.add:hover {
-    background-color: var(--main-hover-color);
+  background-color: var(--main-hover-color);
 }
 
 .box_line {
-    /* 저요저요 박스 안의 구분 선 */
-    border-top: 2px solid var(--tag-bgcolor);
-    margin: 5%;
-    margin-bottom: 10px;
+  /* 저요저요 박스 안의 구분 선 */
+  border-top: 2px solid var(--tag-bgcolor);
+  margin: 5%;
+  margin-bottom: 10px;
 }
 
 .comment {
-    /* 박스안의 댓글 여백 설정 */
-    margin: 20px 0px;
+  /* 박스안의 댓글 여백 설정 */
+  margin: 20px 0px;
 }
 
 .box_count {
-    /* 댓글 아래 날짜 설정 */
-    text-align: right;
-    font-size: 12px;
-    color: var(--lightgray-font);
-    padding-bottom: 5px;
-    padding-right: 5px;
+  /* 댓글 아래 날짜 설정 */
+  text-align: right;
+  font-size: 12px;
+  color: var(--lightgray-font);
+  padding-bottom: 5px;
+  padding-right: 5px;
 }
 
 .aplly_box {
-    /* 댓글 입력 상자 정렬 */
-    display: flex;
-    border-top: 1px solid var(--border-color);
-    padding-top: 30px;
-    justify-content: space-between;
+  /* 댓글 입력 상자 정렬 */
+  display: flex;
+  border-top: 1px solid var(--border-color);
+  padding-top: 30px;
+  justify-content: space-between;
 }
 
 .profile_pic img {
-    /* 프로필 사진 크기 설정 */
-    width: 40px;
-    border-radius: 50%;
+  /* 프로필 사진 크기 설정 */
+  width: 40px;
+  border-radius: 50%;
 }
 
 .comment_write {
-    /* 댓글 입력 창 설정 */
-    width: 520px;
-    padding: 12px 20px;
-    background-color: #efefef;
-    border-radius: 8px;
-    border: none;
+  /* 댓글 입력 창 설정 */
+  width: 520px;
+  padding: 12px 20px;
+  background-color: #efefef;
+  border-radius: 8px;
+  border: none;
 }
 
 .aplly_try {
-    display: inline-block;
-    padding: 0 15px;
-    background-color: var(--main-color);
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 0.875rem;
+  display: inline-block;
+  padding: 0 15px;
+  background-color: var(--main-color);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.875rem;
 }
 
 /* .front_icon:hover,       // 작성자에만 필요
@@ -358,105 +356,103 @@
 
 /* right */
 .right-box {
-    position: sticky;
-    top: 167px;
-    height: 400px;
+  position: sticky;
+  top: 167px;
+  height: 495px;
 }
 
 .profile-box {
-    width: 273px;
-    border-radius: 10px;
-    background-color: #F3F3F3;
-    padding: 30px 40px;
-    text-align: center;
-
+  width: 273px;
+  border-radius: 10px;
+  background-color: #f3f3f3;
+  padding: 30px 40px;
+  text-align: center;
 }
 
 .profile-box h3 {
-    padding-top: 14px;
-    font-size: 1.25rem;
-    font-weight: 500;
-
+  padding-top: 14px;
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
 .profile-box p {
-    padding-top: 10px;
-    color: #868686;
-    text-align: left;
-    font-size: 0.815rem;
-    line-height: 1.2rem;
+  padding-top: 10px;
+  color: #868686;
+  text-align: left;
+  font-size: 0.815rem;
+  line-height: 1.2rem;
 }
 
 .right-btn {
-    margin: 17px 0 0px;
-    padding: 15px 0;
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid var(--main-color);
-    font-weight: 600;
-    color: var(--main-color);
+  margin: 17px 0 0px;
+  padding: 15px 0;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--main-color);
+  font-weight: 600;
+  color: var(--main-color);
 }
 
 .right-btn.bookmark {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .right-btn.confirm {
-    background-color: var(--main-color);
-    color: #fff;
+  background-color: var(--main-color);
+  color: #fff;
 }
 
 .edit-btn {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
 }
 
 .edit-btn button {
-    padding: 10px 0;
-    background-color: #fff;
-    border-radius: 8px;
+  padding: 10px 0;
+  background-color: #fff;
+  border-radius: 8px;
 }
 
 .right-btn i {
-    color: var(--main-color);
-    padding-right: 5px;
+  color: var(--main-color);
+  padding-right: 5px;
 }
 
 .right-box span {
-    display: block;
-    margin-top: 30px;
-    font-weight: 600;
-    font-size: 0.875rem;
+  display: block;
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 0.875rem;
 }
 
 .confirm:hover {
-    /* 모집완료 버튼 호버 시 색 변경 */
-    background-color: var(--main-hover-color);
-    transition: 0.3s;
+  /* 모집완료 버튼 호버 시 색 변경 */
+  background-color: var(--main-hover-color);
+  transition: 0.3s;
 }
 
 .button-wrap .submit-modal {
-    background-color: var(--main-color);
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    color: #fff;
+  background-color: var(--main-color);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: #fff;
 }
 
 .button-wrap .submit-modal:hover {
-    background-color: var(--main-hover-color);
-    color: black;
+  background-color: var(--main-hover-color);
+  color: black;
 }
 
 .button-wrap .close-modal {
-    margin-bottom: 40px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
+  margin-bottom: 40px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 .close-modal:hover {
-    /* 돌아가기 호버 시 색 전환 */
-    background-color: var(--tag-bgcolor);
+  /* 돌아가기 호버 시 색 전환 */
+  background-color: var(--tag-bgcolor);
 }
