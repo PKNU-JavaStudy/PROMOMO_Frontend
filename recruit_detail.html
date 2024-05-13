@@ -14,8 +14,8 @@
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/detail.css">
+  <link rel="stylesheet" href="./css/common.css">
   <!-- js -->
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
@@ -132,7 +132,6 @@
                 지원하고 싶어요~!
               <p class="box_count">2024년 4월 30일</p>
               </p>
-              <!-- 댓글 더 추가하기 -->
             </div>
             <div class="application_box">
               <div class="profile-top">
@@ -147,7 +146,6 @@
                 지원하고 싶어요~!
               <p class="box_count">2024년 4월 30일</p>
               </p>
-              <!-- 댓글 더 추가하기 -->
             </div>
             <div class="application_box">
               <div class="profile-top">
@@ -162,7 +160,6 @@
                 지원하고 싶어요~!
               <p class="box_count">2024년 4월 30일</p>
               </p>
-              <!-- 댓글 더 추가하기 -->
             </div>
           </div>
           <div class="aplly_box">
@@ -182,15 +179,55 @@
           <p>안녕하세요 프론트엔드 개발자 이윤지 입니다.</p>
         </div>
         <button class="right-btn bookmark"><i class="fa-regular fa-bookmark"></i>북마크</button>
-        <button class="right-btn confirm">모집완료 하기</button>
+        <button class="right-btn confirm open-modal">모집완료 하기</button>
+          <!-- 모달창 -->
+          <div class="modal-bg">
+          </div>
+          <div class="modal">
+              <div class="modal-header">
+                  <a href="#" class="close-modal"><i class="fa-solid fa-xmark"></i></a>
+              </div>
+              <h3>모집을 완료하시겠습니까?</h3>
+              <div class="button-wrap">
+                  <button class="close-modal">돌아가기</button>
+                  <button class="submit-modal" type="submit">모집 완료하기</button>
+              </div>
+          </div>
         <div class="edit-btn">
-          <button class="right-btn">수정</button>
-          <button class="right-btn">삭제</button>
+          <button class="right-btn mod_btn open-modal02">수정</button>
+          <button class="right-btn del_btn open-modal03">삭제</button>
+          <div class="modal-bg bg02">
+          </div>
+          <div class="modal02">
+              <div class="modal-header">
+                  <a href="#" class="close-modal close-modal02"><i class="fa-solid fa-xmark"></i></a>
+              </div>
+              <h3>게시글을 삭제하시겠습니까?</h3>
+              <p>삭제 후에는 게시글을 되돌릴 수 없습니다.</p>
+              <div class="button-wrap">
+                  <button class="close-modal">돌아가기</button>
+                  <button class="submit-modal" type="submit">삭제하기</button>
+              </div>
+          </div>
+          <div class="modal-bg bg03">
+          </div>
+          <div class="modal03">
+            <div class="modal-header">
+                <a href="#" class="close-modal close-modal03"><i class="fa-solid fa-xmark"></i></a>
+            </div>
+            <h3>프로젝트 멤버를 삭제하시겠습니까?</h3>
+            <div class="button-wrap">
+                <button class="close-modal">돌아가기</button>
+                <button class="submit-modal" type="submit">삭제하기</button>
+          </div>
         </div>
+        </div>
+
         <span>👩‍👦‍👦 현재 참여 인원 5명</span>
+        <!-- <button class="mem_del_btn"><i class="fa-solid fa-xmark"></i></button> -->
+
       </div>
     </div>
   </main>
 </body>
-
 </html>

@@ -181,7 +181,9 @@ footer {
 }
 
 /* modal */
-.modal-bg {
+.modal-bg,
+.bg02,
+.bg03 {
   position: fixed;
   top: 0;
   left: 0;
@@ -192,11 +194,15 @@ footer {
   z-index: 9999;
 }
 
-.modal-bg.visible {
+.modal-bg.visible,
+.bg02.visible,
+.bg03.visible {
   display: block;
 }
 
-.modal {
+.modal,
+.modal02,
+.modal03 {
   display: none;
   position: fixed;
   top: 50%;
@@ -209,10 +215,12 @@ footer {
   text-align: center;
   box-sizing: border-box;
   padding: 60px 50px;
-  z-index: 99999;
+  z-index: 9999;
 }
 
-.modal.visible {
+.modal.visible,
+.modal02.visible,
+.modal03.visible {
   display: block;
 }
 
