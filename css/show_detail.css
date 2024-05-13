@@ -67,6 +67,7 @@
 }
 
 .info-wrap {
+    /* 카운터 구분선 기준으로 공유하기 정렬 */
     display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
@@ -80,49 +81,37 @@
 } */
 
 .share_Btn {
+    /* 공유하기 버튼 폰트 크기 설정 */
     font-size: 0.815rem;
 }
 
 .share_Btn i {
+    /* 공유하기 아이콘 설정 */
     font-size: 0.815rem;
     padding-right: 3px;
 }
 
 .title_contents {
+    /* 프로젝트 요약 폰트 설정 */
     font-size: 1.25rem;
     padding: 40px 0;
     font-weight: 800;
 }
 
 .title_contents.first {
+    /* 프로젝트 요약 위치 설정 */
     padding-top: 30px;
 }
 
-.recruit_icon {
-    display: flex;
-}
-
 .content {
+    /* 요약 내용 글자 간격 설정 */
     line-height: 1.5rem;
-
 }
 
 .content.bottom {
+    /* 프로젝트 소개 아래쪽 구분선 간격 설정 */
     padding-bottom: 95px;
     border-bottom: 1px solid var(--border-color);
-}
-
-.recruit_icon li {
-    padding-right: 20px;
-    font-weight: 600;
-}
-
-.recruit_icon li i {
-    margin-right: 7px;
-    border-radius: 50%;
-    background-color: rgb(231, 231, 231);
-    padding: 5px 5px;
-    font-size: 0.875rem;
 }
 
 .fa-desktop,
@@ -147,6 +136,7 @@
 }
 
 .stack_icon {
+    /* 기술 스택 정렬 */
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -160,59 +150,14 @@
 }
 
 .stack_icon li:nth-child(2n) {
+    /* 기술 스택 두번째 줄 설정 */
     padding-right: 20px;
     font-weight: 600;
 }
 
-.fa-cubes-stacked {
-    /* 목적 역량키우기 아이콘 설정 */
-    color: #b265de;
-}
-
-.fa-briefcase {
-    /* 목적 포트폴리오 아이콘 설정 */
-    color: #626262;
-}
-
-.fa-house-laptop {
-    /* 목적 취미 아이콘 설정 */
-    color: #e8ad54;
-}
-
-.fa-comment-dots {
-    /* 목적 소통 아이콘 설정 */
-    color: #e66a6a;
-}
-
-.fa-hourglass-half {
-    /* 참여시간 아이콘 설정 */
-    color: #545454;
-}
-
-.fa-circle-info {
-    position: relative;
-}
-
-.fa-circle-info:hover::after {
-    /* 저요저요 info버튼 호버 설정 */
-    content: "지원자의 프로필을 눌러서 정보를 확인해보세요.";
-    position: absolute;
-    color: var(--gray-font);
-    padding: 10px 8px;
-    border-radius: 5px;
-    font-size: 0.688rem;
-    border: 1px solid var(--tag-bgcolor);
-    margin-left: 5px;
-    top: -8px;
-    width: 240px;
-}
-
-.app-wrap {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 30px;
-    row-gap: 25px;
-    padding-bottom: 55px;
+.app-wrap {         
+    /* 댓글창 간격 설정 */
+    padding-bottom: 10px;
 }
 
 .application_box {
@@ -223,9 +168,11 @@
     background-color: rgb(236, 236, 236);
     flex-direction: column;
     padding: 15px 20px;
+    margin-bottom: 20px;
 }
 
 .profile-top {
+    /* 프로필 스타일 설정 */
     position: relative;
     display: flex;
     border-bottom: 1px solid var(--border-color);
@@ -233,67 +180,51 @@
 }
 
 .profile-top img {
+    /* 프로필 이미지 설정 */
     width: 60px;
     height: 60px;
     margin-right: 13px;
 }
 
 .profile-top h3 {
+    /* 프로필 이름 설정 */
     font-weight: 600;
     padding-top: 9px;
 }
 
 .profile-top p {
+    /* 프로필 날짜 설정 */
     font-size: 0.815rem;
     color: var(--gray-font);
 }
 
 .profile-top button {
+    /* 프로필 답글 버튼 설정 */
     position: absolute;
     top: 0;
     right: 0;
 }
 
-.button_box {
-    /* 멤버 버튼 버튼 나란히 두기 */
-    display: flex;
-    justify-content: space-between;
-}
-
-.mem_button {
-    /* 저요저요 멤버 프로필 버튼 설정 */
-    width: 140px;
-    padding: 10px;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: var(--tag-bgcolor);
-}
-
 .addmem_button {
-    /* 저요저요 멤버 추가 버튼 설정 */
+    /* 답글 버튼 설정 */
     display: inline-block;
     width: 65px;
     padding: 5px;
-    background-color: var(--main-color);
-    color: #fff;
+    color: var(--lightgray-font);
+    background-color: rgb(236, 236, 236);
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 13px;
 }
 
-.addmem_button.done {
-    background-color: var(--gray-font);
-}
-
 .addmem_button.add:hover {
-    background-color: var(--main-hover-color);
+    /* 답글 버튼 호버 시 색 설정 */
+    color: #626262;
 }
 
 .box_line {
-    /* 저요저요 박스 안의 구분 선 */
+    /* 댓글달기 박스 안의 구분 선 */
     border-top: 2px solid var(--tag-bgcolor);
     margin: 5%;
     margin-bottom: 10px;
@@ -337,6 +268,7 @@
 }
 
 .aplly_try {
+    /* 댓글 달기 버튼 설정 */
     display: inline-block;
     padding: 0 15px;
     background-color: var(--main-color);
@@ -361,6 +293,7 @@
     position: sticky;
     top: 167px;
     height: 400px;
+    margin-left: 50px;
 }
 
 .profile-box {
@@ -400,9 +333,12 @@
 .right-btn.bookmark {
     background-color: #fff;
 }
-
 .right-btn.confirm {
-    background-color: var(--main-color);
+    border: 1px solid black;
+    background-color:black;
+    color: #fff;
+}
+.right-btn .fa-github {
     color: #fff;
 }
 
@@ -423,40 +359,52 @@
     padding-right: 5px;
 }
 
-.right-box span {
-    display: block;
-    margin-top: 30px;
+.sc-title {
+    font-size: 1.25rem;
     font-weight: 600;
-    font-size: 0.875rem;
+    padding: 30px 0 20px;
 }
 
-.confirm:hover {
-    /* 모집완료 버튼 호버 시 색 변경 */
-    background-color: var(--main-hover-color);
-    transition: 0.3s;
+.sc-title-box {
+    display: flex;
+    justify-content: space-between;
 }
 
-.button-wrap .submit-modal {
-    background-color: var(--main-color);
-    justify-content: center;
+.members-length{
+    padding-top: 40px;
+    color:var(--tag-bgcolor);
+    font-size: 0.825rem;
+}
+
+.sc-member-list{
+    margin-top: 20px;
+}
+
+.members{
+    border:1px solid var(--border-color);
+    border-radius: 15px;
+    overflow-y: scroll;
+    width: 450px;
+}
+
+.members ul {
+    height: 223px;
+}
+
+.members ul li{
+    height: 75px;
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     align-items: center;
-    color: #fff;
+    line-height: 75px;
 }
 
-.button-wrap .submit-modal:hover {
-    background-color: var(--main-hover-color);
-    color: black;
+.members ul li img{
+    margin-left: 14px;
+    margin-right: 20px;
 }
 
-.button-wrap .close-modal {
-    margin-bottom: 40px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-}
-
-.close-modal:hover {
-    /* 돌아가기 호버 시 색 전환 */
-    background-color: var(--tag-bgcolor);
+.sc-member-list img{
+    width: 41px;
+    height: 41px;
 }
