@@ -22,10 +22,44 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".modal").classList.remove("visible");
   });
 
+  document
+    .querySelector(".open-modal02")
+    .addEventListener("click", function () {
+      document.querySelector(".bg02").classList.add("visible");
+      document.querySelector(".modal02").classList.add("visible");
+    });
+
+  document
+    .querySelector(".close-modal02")
+    .addEventListener("click", function () {
+      document.querySelector(".bg02").classList.remove("visible");
+      document.querySelector(".modal02").classList.remove("visible");
+    });
+
+  document
+    .querySelector(".open-modal03")
+    .addEventListener("click", function () {
+      document.querySelector(".bg03").classList.add("visible");
+      document.querySelector(".modal03").classList.add("visible");
+    });
+
+  document
+    .querySelector(".close-modal03")
+    .addEventListener("click", function () {
+      document.querySelector(".bg03").classList.remove("visible");
+      document.querySelector(".modal03").classList.remove("visible");
+    });
+
   document.addEventListener("click", function (event) {
-    if (!event.target.closest(".modal, .open-modal")) {
+    if (
+      !event.target.closest(".modal, .open-modal, .open-modal02, .open-modal03")
+    ) {
       document.querySelector(".modal").classList.remove("visible");
+      document.querySelector(".modal02").classList.remove("visible");
+      document.querySelector(".modal03").classList.remove("visible");
       document.querySelector(".modal-bg").classList.remove("visible");
+      document.querySelector(".bg02").classList.remove("visible");
+      document.querySelector(".bg03").classList.remove("visible");
       document.body.classList.remove("modal-open");
     }
   });
