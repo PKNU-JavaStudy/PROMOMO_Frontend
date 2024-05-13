@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>모집 | 마이페이지</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/common.css"/>
+    <link rel="stylesheet" href="./css/mypage_edit.css"/>
+
+    <script src="./js/common.js"></script>
+    <script defer src="./common/header.js"></script>
+    <script defer src="./common/footer.js"></script>
+</head>
+<body>
+<main>
+    <div class="wrap flex">
+        <div class="profile-section">
+            <img src="img/cinnamoroll.jpeg" alt="Profile Image" class="profile-image">
+            <div class="form-container">
+                    <div class="form-group">
+                        <h2>이름 <span class="highlight">*</span></h2>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <h2>경력 <span class="highlight">*</span></h2>
+                            <div class="radio">
+                                <label><input type="radio" name="experience" value="신입 개발자">신입 개발자</label>
+                                <label><input type="radio" name="experience" value="1~3년차 개발자">1-3년차 개발자</label>
+                                <label><input type="radio" name="experience" value="3년~5년차 개발자">3년이상 개발자</label>
+                                <label><input type="radio" name="experience" value="5년이상 개발자">5년이상 개발자</label>
+                            </div>
+                        </div>
+                        <div class="introduce">
+                            <h2>자기소개</h2>
+                            <textarea class="introduce-input" style="resize: none" type="text" name="title" maxlength="100"
+                                      placeholder="자기소개를 입력해주세요."></textarea>
+                        </div>
+                        <div class="link">
+                            <h2>깃허브 레포지토리 링크<span class="maxlength">0/100</span></h2>
+                            <input class="sc-input" style="resize: none" type="text" name="title" maxlength="100" placeholder="URL을 입력하세요."></input>
+                        </div>
+                        <h2 class="section">원하는 직군 <span class="highlight">*</span></h2>
+                        <div class="skills-section">
+                            <div class="tags skills">
+                                <span class="tag front">프론트엔드</span>
+                            </div>
+                        </div>
+                        <select id="role">
+                            <option value="frontend">프론트엔드</option>
+                            <option value="backend">백엔드</option>
+                            <option value="designer">디자이너</option>
+                            <option value="planner">기획자</option>
+                        </select>
+
+                        <h2 class="section">기술 스택 <span class="highlight">*</span></h2>
+                        <div class="programs-section">
+
+                            <div class="tags programs">
+                                <span class="tag react">React</span>
+                            </div>
+                        </div>
+                        <select id="stack">
+                            <option value="frontend">React</option>
+                            <option value="backend">TypeScript</option>
+                            <option value="designer">HTML</option>
+                            <option value="planner">CSS</option>
+                        </select>
+                        <button type="submit">완료</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
