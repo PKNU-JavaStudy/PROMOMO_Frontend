@@ -1,4 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // top 버튼 애니메이션
+  const scrollTopBtn = () => {
+    const topBtn = document.querySelector(".top-btn");
+    topBtn.className = "top-btn";
+    topBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    return topBtn;
+  };
+
+  document.body.append(scrollTopBtn());
   // 모달창
   document.querySelector(".open-modal").addEventListener("click", function () {
     document.querySelector(".modal-bg").classList.add("visible");
@@ -20,19 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const header = document.querySelector("header");
 
-  // top 버튼 애니메이션
-  const scrollTopBtn = () => {
-    const topBtn = document.querySelector(".top-btn");
-    topBtn.className = "top-btn";
-    topBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-    return topBtn;
-  };
-
-  document.body.append(scrollTopBtn());
-
   // 스크롤시 헤더 고정 이벤트
   topBtn.style.display = "none";
   header.style.boxShadow = "none";
@@ -49,5 +48,4 @@ document.addEventListener("DOMContentLoaded", function () {
       header.style.boxShadow = "0px 0px 5px 3px rgba(0, 0, 0, 0.16)";
     }
   });
-
 });
