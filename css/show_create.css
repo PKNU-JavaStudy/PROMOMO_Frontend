@@ -46,13 +46,27 @@ form {
   align-items: center;
   border-radius: 15px;
 }
-.sc-thumbnail-box button {
+
+/* 파일 업로드 버튼*/
+.btn-upload {
   background-color: var(--main-color);
   font-weight: 600;
   padding: 12px 26px;
   border-radius: 25px;
   border: none;
   color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background: rgb(77,77,77);
+    color: #fff;
+  }
+}
+
+#file {
+  display: none;
 }
 
 .sc-header-text {
