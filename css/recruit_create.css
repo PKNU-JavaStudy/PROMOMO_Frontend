@@ -1,161 +1,160 @@
 /* 전체 wrap */
 .flex {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .rc-input {
-    width: 60%;
+  width: 60%;
 }
 
 .pj-type {
-    display: inline-block;
-    background-color: var(--tag-bgcolor);
-    padding: 6px 10px;
-    font-size: 0.75rem;
-    color: #fff;
-    border-radius: 3px;
+  display: inline-block;
+  background-color: var(--tag-bgcolor);
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  color: #fff;
+  border-radius: 3px;
 }
 
 .rc-title {
-    display: block;
-    margin-top: 10px;
-    border: none;
-    font-size: 1.5rem;
-    font-weight: 700;
+  display: block;
+  margin-top: 10px;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .s-title {
-    font-size: 1.25rem;
-    font-weight: 800;
-    /* padding : 위 좌우 아래 */
-    padding: 60px 0 30px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  /* padding : 위 좌우 아래 */
+  padding: 60px 0 30px;
 }
 
 textarea {
-    border: 1px solid var(--border-color);
-    width: 100%;
-    border-radius: 10px;
-    resize: none;
-    padding: 20px;
-    overflow-y: scroll;
+  border: 1px solid var(--border-color);
+  width: 100%;
+  border-radius: 10px;
+  resize: none;
+  padding: 20px;
+  overflow-y: scroll;
 }
 
-
 .rc-checkbox {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .rc-checkbox label {
-    padding-right: 20px;
-    font-weight: 500;
+  padding-right: 20px;
+  font-weight: 500;
 }
 
 .rc-stack .stack-item {
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 20px;
-    background-color: var(--main-color);
-    border: none;
-    font-weight: 600;
-    margin-bottom: 15px;
-    font-size: 0.815rem;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background-color: var(--main-color);
+  border: none;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 0.815rem;
 }
 
 .stack-item i {
-    font-size: 0.815rem;
-    color: #fff;
-    padding-left: 5px;
+  font-size: 0.815rem;
+  color: #fff;
+  padding-left: 5px;
 }
 
 .stack-list {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .btn-write {
-    color: #fff;
-    padding: 12px 26px;
-    border-radius: 5px;
-    background-color: var(--main-color);
-    border: none;
-    font-weight: 600;
-    transition: 0.3s;
-    margin-top: 92px;
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 5px;
+  background-color: var(--main-color);
+  border: none;
+  font-weight: 600;
+  transition: 0.3s;
+  margin-top: 92px;
 }
 
 .btn-write:hover {
-    background-color: var(--main-hover-color);
-    transition: 0.3s;
+  background-color: var(--main-hover-color);
+  transition: 0.3s;
 }
 
 h3 {
-    margin-top: 25px;
-}
-
-.button-wrap {
-    padding: 50px;
+  margin-top: 25px;
 }
 
 .button-wrap .submit-modal {
-    background-color: var(--main-color);
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    color: #fff;
+  background-color: var(--main-color);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--main-color);
+}
+.submit-modal a {
+  color: #fff;
 }
 
-.button-wrap .submit-modal:hover {
-    background-color: var(--main-hover-color);
-    color: black;
-}
+/* .button-wrap .submit-modal:hover {
+  background-color: var(--main-hover-color);
+  color: black;
+} */
 
 .button-wrap .close-modal {
-    margin-bottom: 40px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
+  margin-bottom: 15px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
 }
 
 .rc-info {
-    width: 270px;
+  width: 270px;
 }
 
 .rc-title-info {
-    border: 1px solid var(--border-color);
-    background-color: #F9FAFC;
-    padding: 15px 28px;
-    border-radius: 5px;
-    font-size: 0.815rem;
-    line-height: 1rem;
+  border: 1px solid var(--border-color);
+  background-color: #f9fafc;
+  padding: 15px 28px;
+  border-radius: 5px;
+  font-size: 0.815rem;
+  line-height: 1rem;
 }
 
 .summarize {
-    margin-top: 120px;
+  margin-top: 120px;
 }
 
 .advice {
-    margin-top: 540px;
-    border: 1px solid var(--border-color);
-    background-color: #F9FAFC;
-    padding: 15px 15px;
-    border-radius: 5px;
-    font-size: 0.815rem;
-    line-height: 1rem;
+  margin-top: 540px;
+  border: 1px solid var(--border-color);
+  background-color: #f9fafc;
+  padding: 15px 15px;
+  border-radius: 5px;
+  font-size: 0.815rem;
+  line-height: 1rem;
 }
 
 .advice-step1 {
-    font-size: 0.815rem;
+  font-size: 0.815rem;
 }
 
 .advice-step2 {
-    padding: 15px 25px;
+  padding: 15px 25px;
 }
 
 .advice-step2 li {
-    list-style: disc;
-    font-size: 0.815rem;
+  list-style: disc;
+  font-size: 0.815rem;
 }
 
 .advice-step3 {
-    font-size: 0.815rem;
+  font-size: 0.815rem;
 }
