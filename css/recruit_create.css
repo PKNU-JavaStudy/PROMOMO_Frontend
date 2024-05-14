@@ -72,14 +72,18 @@ textarea {
 }
 
 .btn-write {
-  color: #fff;
   padding: 12px 26px;
   border-radius: 5px;
   background-color: var(--main-color);
   border: none;
+  color: #fff;
   font-weight: 600;
   transition: 0.3s;
   margin-top: 92px;
+}
+.btn-write a {
+  color: #fff;
+  font-weight: 600;
 }
 
 .btn-write:hover {
