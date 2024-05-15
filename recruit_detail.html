@@ -201,7 +201,7 @@
             </div>
             <div class="modal02">
                 <div class="modal-header">
-                    <a href="#" class="close-modal close-modal02"><i class="fa-solid fa-xmark"></i></a>
+                    <a href="#" class="close-modal02"><i class="fa-solid fa-xmark"></i></a>
                 </div>
                 <h3>게시글을 삭제하시겠습니까?</h3>
                 <p>삭제 후에는 게시글을 되돌릴 수 없습니다.</p>
@@ -214,7 +214,7 @@
             </div>
             <div class="modal03">
                 <div class="modal-header">
-                    <a href="#" class="close-modal close-modal03"><i class="fa-solid fa-xmark"></i></a>
+                    <a href="#" class="close-modal03"><i class="fa-solid fa-xmark"></i></a>
                 </div>
                 <h3>프로젝트 멤버를 삭제하시겠습니까?</h3>
                 <div class="button-wrap">
@@ -257,6 +257,11 @@
                 document.querySelector(".modal02").classList.remove("visible");
             });
 
+            document.querySelector(".close-modal02").addEventListener("click", function () {
+                document.querySelector(".bg02").classList.remove("visible");
+                document.querySelector(".modal02").classList.remove("visible");
+            });
+
             // 삭제모달
             document.querySelector(".open-modal03").addEventListener("click", function () {
                 document.querySelector(".bg03").classList.add("visible");
@@ -268,10 +273,15 @@
                 document.querySelector(".modal03").classList.remove("visible");
             });
 
+            document.querySelector(".close-modal03").addEventListener("click", function () {
+                document.querySelector(".bg03").classList.remove("visible");
+                document.querySelector(".modal03").classList.remove("visible");
+            });
+
             // 바깥영역 클릭 시 종료
             document.addEventListener("click", function (event) {
                 if (
-                    !event.target.closest(".modal, .open-modal, .open-modal02, .open-modal03, .modal02, .modal03")
+                    !event.target.closest(".modal, .open-modal, .open-modal02, .open-modal03, .modal02 , .modal03")
                 ) {
                     document.querySelector(".modal").classList.remove("visible");
                     document.querySelector(".modal-bg").classList.remove("visible");
