@@ -445,14 +445,41 @@
   color: black;
 }
 
-.button-wrap .close-modal {
+/* 모집완료 버튼 -> 돌아가기 버튼*/
+.button-wrap .close-modal-back{
   margin-bottom: 40px;
   justify-content: center;
   display: flex;
   align-items: center;
 }
 
-.close-modal:hover {
+/* 수정버튼 -> 돌아가기 버튼*/
+.button-wrap .close-modal02-back{
+  margin-bottom: 40px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+/* 삭제버튼 -> 돌아가기 버튼*/
+.button-wrap .close-modal03-back{
+  margin-bottom: 40px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+
+.close-modal-back:hover {
+  /* 돌아가기 호버 시 색 전환 */
+  background-color: var(--tag-bgcolor);
+}
+
+.close-modal02-back:hover {
+  /* 돌아가기 호버 시 색 전환 */
+  background-color: var(--tag-bgcolor);
+}
+
+.close-modal03-back:hover {
   /* 돌아가기 호버 시 색 전환 */
   background-color: var(--tag-bgcolor);
 }
