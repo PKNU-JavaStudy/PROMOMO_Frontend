@@ -189,7 +189,7 @@
                 </div>
                 <h3>모집을 완료하시겠습니까?</h3>
                 <div class="button-wrap">
-                    <button class="close-modal">돌아가기</button>
+                    <button class="close-modal-back">돌아가기</button>
                     <button class="submit-modal" type="submit">모집 완료하기</button>
                 </div>
             </div>
@@ -206,7 +206,7 @@
                 <h3>게시글을 삭제하시겠습니까?</h3>
                 <p>삭제 후에는 게시글을 되돌릴 수 없습니다.</p>
                 <div class="button-wrap">
-                    <button class="close-modal">돌아가기</button>
+                    <button class="close-modal02-back">돌아가기</button>
                     <button class="submit-modal" type="submit">삭제하기</button>
                 </div>
             </div>
@@ -218,7 +218,7 @@
                 </div>
                 <h3>프로젝트 멤버를 삭제하시겠습니까?</h3>
                 <div class="button-wrap">
-                    <button class="close-modal">돌아가기</button>
+                    <button class="close-modal03-back">돌아가기</button>
                     <button class="submit-modal" type="submit">삭제하기</button>
                 </div>
             </div>
@@ -228,55 +228,64 @@
 
 
         </div>
-    </div>
-    <script>
-        document.querySelector(".open-modal").addEventListener("click", function () {
-            document.querySelector(".modal-bg").classList.add("visible");
-            document.querySelector(".modal").classList.add("visible");
-        });
+        <script>
 
-        document.querySelector(".close-modal").addEventListener("click", function () {
-            document.querySelector(".modal-bg").classList.remove("visible");
-            document.querySelector(".modal").classList.remove("visible");
-        });
+            // 모집완료 모달
+            document.querySelector(".open-modal").addEventListener("click", function () {
+                document.querySelector(".modal-bg").classList.add("visible");
+                document.querySelector(".modal").classList.add("visible");
+            });
 
-        document.querySelector(".open-modal02").addEventListener("click", function () {
-            document.querySelector(".bg02").classList.add("visible");
-            document.querySelector(".modal02").classList.add("visible");
-        });
-
-        document.querySelector(".close-modal02").addEventListener("click", function () {
-            document.querySelector(".bg02").classList.remove("visible");
-            document.querySelector(".modal02").classList.remove("visible");
-        });
-
-        document.querySelector(".open-modal03").addEventListener("click", function () {
-            document.querySelector(".bg03").classList.add("visible");
-            document.querySelector(".modal03").classList.add("visible");
-        });
-
-        document.querySelector(".close-modal03").addEventListener("click", function () {
-            document.querySelector(".bg03").classList.remove("visible");
-            document.querySelector(".modal03").classList.remove("visible");
-        });
-
-
-        document.addEventListener("click", function (event) {
-            if (
-                !event.target.closest(".modal, .open-modal, .open-modal02, .open-modal03")
-            ) {
-                document.querySelector(".modal").classList.remove("visible");
+            document.querySelector(".close-modal").addEventListener("click", function () {
                 document.querySelector(".modal-bg").classList.remove("visible");
+                document.querySelector(".modal").classList.remove("visible");
+            });
 
-                document.querySelector(".modal02").classList.remove("visible");
+            document.querySelector(".close-modal-back").addEventListener("click", function () {
+                document.querySelector(".modal-bg").classList.remove("visible");
+                document.querySelector(".modal").classList.remove("visible");
+            });
+
+            // 수정 모달
+            document.querySelector(".open-modal02").addEventListener("click", function () {
+                document.querySelector(".bg02").classList.add("visible");
+                document.querySelector(".modal02").classList.add("visible");
+            });
+
+            document.querySelector(".close-modal02-back").addEventListener("click", function () {
                 document.querySelector(".bg02").classList.remove("visible");
+                document.querySelector(".modal02").classList.remove("visible");
+            });
 
-                document.querySelector(".modal03").classList.remove("visible");
+            // 삭제모달
+            document.querySelector(".open-modal03").addEventListener("click", function () {
+                document.querySelector(".bg03").classList.add("visible");
+                document.querySelector(".modal03").classList.add("visible");
+            });
+
+            document.querySelector(".close-modal03-back").addEventListener("click", function () {
                 document.querySelector(".bg03").classList.remove("visible");
-                document.body.classList.remove("modal-open");
-            }
-        });
-    </script>
+                document.querySelector(".modal03").classList.remove("visible");
+            });
+
+            // 바깥영역 클릭 시 종료
+            document.addEventListener("click", function (event) {
+                if (
+                    !event.target.closest(".modal, .open-modal, .open-modal02, .open-modal03, .modal02, .modal03")
+                ) {
+                    document.querySelector(".modal").classList.remove("visible");
+                    document.querySelector(".modal-bg").classList.remove("visible");
+
+                    document.querySelector(".modal02").classList.remove("visible");
+                    document.querySelector(".bg02").classList.remove("visible");
+
+                    document.querySelector(".modal03").classList.remove("visible");
+                    document.querySelector(".bg03").classList.remove("visible");
+                    document.body.classList.remove("modal-open");
+                }
+            });
+        </script>
+    </div>
 </main>
 </body>
 </html>
