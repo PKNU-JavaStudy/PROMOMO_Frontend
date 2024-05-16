@@ -73,12 +73,6 @@
   border-bottom: 1px solid var(--border-color);
 }
 
-/* .title-wrap ul.count li i {
-    font-size: 0.815rem;
-    color: var(--lightgray-font);
-    padding-right: 3px;
-} */
-
 .share_Btn {
   /* 공유하기 버튼 폰트 크기 설정 */
   font-size: 0.815rem;
@@ -108,13 +102,13 @@
 }
 
 .content.bottom {
-  /* 프로젝트 소개 아래쪽 구분선 간격 설정 */
+  /* 본문-댓글창 구분선 간격 설정 */
   padding-bottom: 95px;
   border-bottom: 1px solid var(--border-color);
 }
 
 .stack_icon {
-  /* 기술 스택 정렬 */
+  /* 기술 스택 아이콘 정렬 */
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -139,7 +133,7 @@
 }
 
 .application_box {
-  /* 저요저요 멤버추가 댓글상자 틀 생성 */
+  /* 댓글상자 틀 생성 */
   display: flex;
   justify-content: space-between;
   border-radius: 10px;
@@ -150,7 +144,7 @@
 }
 
 .profile-top {
-  /* 프로필 스타일 설정 */
+  /* 댓글 프로필 구분선 및 스타일 설정 */
   position: relative;
   display: flex;
   border-bottom: 1px solid var(--border-color);
@@ -158,7 +152,7 @@
 }
 
 .profile-top img {
-  /* 프로필 이미지 설정 */
+  /* 댓글 프로필 이미지 설정 */
   width: 60px;
   height: 60px;
   margin-right: 13px;
@@ -195,20 +189,13 @@
   color: #626262;
 }
 
-.box_line {
-  /* 댓글달기 박스 안의 구분 선 */
-  border-top: 2px solid var(--tag-bgcolor);
-  margin: 5%;
-  margin-bottom: 10px;
-}
-
 .comment {
   /* 박스안의 댓글 여백 설정 */
   margin: 20px 0px;
 }
 
 .box_count {
-  /* 댓글 아래 날짜 설정 */
+  /* 댓글 날짜 font 설정 */
   text-align: right;
   font-size: 12px;
   color: var(--lightgray-font);
@@ -225,7 +212,7 @@
 }
 
 .profile_pic img {
-  /* 프로필 사진 크기 설정 */
+  /* 댓글 입력 프로필 사진 크기 설정 */
   width: 40px;
   border-radius: 50%;
 }
@@ -251,16 +238,8 @@
   font-size: 0.875rem;
 }
 
-/* .front_icon:hover,       // 작성자에만 필요
-.back_icon:hover, 
-.design_icon:hover,
-.planner_icon:hover,
-.other_icon:hover
-{
-    background-color: var(--tag-bgcolor);
-} */
-
 /* right */
+/* 설명은 detail 참고 */
 .right-box {
   position: sticky;
   top: 167px;
@@ -377,4 +356,20 @@
 .sc-member-list img {
   width: 41px;
   height: 41px;
+}
+
+.members::-webkit-scrollbar {
+  width: 10px;
+}
+
+.members::-webkit-scrollbar-thumb {
+  background-color: #868686;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: none;
+}
+
+.members::-webkit-scrollbar-track {
+  background-color: var(--tag-bgcolor);
+  border-radius: 10px;
 }

@@ -1,4 +1,4 @@
-.main_contents {
+.main-contents {
   width: 670px;
 }
 
@@ -52,13 +52,13 @@
   color: var(--main-color);
 }
 
-.count {
-  /* 조회수 및 날짜 카운터 정렬 */
+.info-wrap .count {
+  /* 조회수 및 날짜 카운터 flex 정렬 */
   display: flex;
   align-items: center;
 }
 
-.count li {
+.info-wrap .count li {
   /* 카운터 폰트 크기 및 색상 맞추기*/
   font-size: 0.815rem;
   color: var(--lightgray-font);
@@ -66,56 +66,60 @@
 }
 
 .info-wrap {
+  /* 카운터와 공유하기 버튼 flex정렬 */
   display: flex;
   justify-content: space-between;
   padding-bottom: 20px;
   border-bottom: 1px solid var(--border-color);
 }
 
-/* .title-wrap ul.count li i {
-    font-size: 0.815rem;
-    color: var(--lightgray-font);
-    padding-right: 3px;
-} */
-
-.share_Btn {
+.info-wrap .share-Btn {
+  /* 공유하기 버튼 font-size 설정 */
   font-size: 0.815rem;
 }
 
-.share_Btn i {
+.info-wrap .share-Btn i {
+  /* 공유하기 아이콘 설정 */
   font-size: 0.815rem;
   padding-right: 3px;
 }
 
-.title_contents {
+p.title-contents {
+  /* 본문 내용의 소제목 font 설정 */
   font-size: 1.25rem;
   padding: 40px 0;
   font-weight: 800;
 }
 
-.title_contents.first {
-  padding-top: 30px;
+.title-contents.first {
+  /* 본문 내용(요약) 간격 설정 */
+  padding-top: 30px;  /* 없어도 될듯...? */
 }
 
-.recruit_icon {
+ul.recruit-icon {
+  /* 아이콘 가로로 정렬 */
   display: flex;
 }
 
-.content {
+p.content {
+  /* 본문 내용(요약) 줄 간격 설정 */
   line-height: 1.5rem;
 }
 
-.content.bottom {
+p.content.bottom {
+  /* 본문 내용과 댓글창 구분 선 */
   padding-bottom: 95px;
   border-bottom: 1px solid var(--border-color);
 }
 
-.recruit_icon li {
+ul.recruit-icon li {
+  /* 아이콘 font 간격 및 볼드 설정 */
   padding-right: 20px;
   font-weight: 600;
 }
 
-.recruit_icon li i {
+ul.recruit-icon li i {
+  /* 본뭉(참여시간) 아이콘 설정 */
   margin-right: 7px;
   border-radius: 50%;
   background-color: rgb(231, 231, 231);
@@ -125,39 +129,41 @@
 
 .fa-desktop,
 .fa-server {
-  /* 요약 프론트, 백 아이콘 설정 */
+  /* 모집역할 프론트, 백 아이콘 설정 */
   color: rgb(115, 195, 158);
 }
 
 .fa-wand-magic-sparkles {
-  /* 요약 디자인 아이콘 설정 */
+  /* 모집역할 디자인 아이콘 설정 */
   color: rgb(255, 204, 101);
 }
 
 .fa-paste {
-  /* 요약 기획 아이콘 설정 */
+  /* 모집역할 기획 아이콘 설정 */
   color: plum;
 }
 
 .fa-envelopes-bulk {
-  /* 요약 기타 아이콘 설정 */
+  /* 모집역할 기타 아이콘 설정 */
   color: #626262;
 }
 
-.stack_icon {
+ul.stack-icon {
+  /* 기술스택 아이콘 정렬 */
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.stack_icon img {
+ul.stack-icon img {
   /* 기술 스택 이미지 크기 설정 */
   width: 1.7rem;
   height: 1.7rem;
   margin-right: 7px;
 }
 
-.stack_icon li:nth-child(2n) {
+ul.stack-icon li:nth-child(2n) {
+  /* 기술스택 두번째 줄 정렬 */
   padding-right: 20px;
   font-weight: 600;
 }
@@ -188,7 +194,8 @@
 }
 
 .fa-circle-info {
-  position: relative;
+  /* 저요저요 info 아이콘 */
+  position: relative;   /* 없어도 될듯..?*/
 }
 
 .fa-circle-info:hover::after {
@@ -206,6 +213,7 @@
 }
 
 .app-wrap {
+  /* 저요저요 참여댓글 창 정렬 */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 30px;
@@ -213,7 +221,7 @@
   padding-bottom: 55px;
 }
 
-.application_box {
+.application-box {
   /* 저요저요 멤버추가 댓글상자 */
   display: flex;
   justify-content: space-between;
@@ -224,6 +232,7 @@
 }
 
 .profile-top {
+  /* 댓글 상자 내 프로필 영역 설정 */
   position: relative;
   display: flex;
   border-bottom: 1px solid var(--border-color);
@@ -231,45 +240,38 @@
 }
 
 .profile-top img {
+  /* 댓글 상자 프로필사진 설정 */
   width: 60px;
   height: 60px;
   margin-right: 13px;
 }
 
 .profile-top h3 {
+  /* 댓글 상자 이름 설정 */
   font-weight: 600;
   padding-top: 9px;
 }
 
 .profile-top p {
+  /* 댓글 상자 소개문 설정 */
   font-size: 0.815rem;
   color: var(--gray-font);
 }
 
 .profile-top button {
+  /* 댓글 상자 멤버 추가 버튼 위치 및 크기 설정 */
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.button_box {
+.button-box {               /* 삭제 보류 */
   /* 멤버 버튼 버튼 나란히 두기 */
   display: flex;
   justify-content: space-between;
 }
 
-.mem_button {
-  /* 저요저요 멤버 프로필 버튼 설정 */
-  width: 140px;
-  padding: 10px;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: var(--tag-bgcolor);
-}
-
-.addmem_button {
+.addmem-button {
   /* 저요저요 멤버 추가 버튼 설정 */
   display: inline-block;
   width: 65px;
@@ -282,19 +284,14 @@
   font-size: 13px;
 }
 
-.addmem_button.done {
+.addmem-button.done {
+  /* 댓글 상자 멤버 버튼 색상 설정 */
   background-color: var(--gray-font);
 }
 
-.addmem_button.add:hover {
+.addmem-button.add:hover {
+  /* 댓글 상자 멤버추가 hover시 색상 설정 */
   background-color: var(--main-hover-color);
-}
-
-.box_line {
-  /* 저요저요 박스 안의 구분 선 */
-  border-top: 2px solid var(--tag-bgcolor);
-  margin: 5%;
-  margin-bottom: 10px;
 }
 
 .comment {
@@ -302,7 +299,7 @@
   margin: 20px 0px;
 }
 
-.box_count {
+.box-count {
   /* 댓글 아래 날짜 설정 */
   text-align: right;
   font-size: 12px;
@@ -311,7 +308,7 @@
   padding-right: 5px;
 }
 
-.aplly_box {
+.aplly-box {
   /* 댓글 입력 상자 정렬 */
   display: flex;
   border-top: 1px solid var(--border-color);
@@ -319,14 +316,14 @@
   justify-content: space-between;
 }
 
-.profile_pic img {
+.profile-pic img {
   /* 프로필 사진 크기 설정 */
   width: 40px;
   border-radius: 50%;
 }
 
-.comment_write {
-  /* 댓글 입력 창 설정 */
+.comment-write {
+  /* 댓글 입력 창 크기 및 모양 설정 */
   width: 520px;
   padding: 12px 20px;
   background-color: #efefef;
@@ -334,7 +331,8 @@
   border: none;
 }
 
-.aplly_try {
+.aplly-try {
+  /* 댓글창 지원하기 버튼 설정 */
   display: inline-block;
   padding: 0 15px;
   background-color: var(--main-color);
@@ -356,12 +354,14 @@
 
 /* right */
 .right-box {
+  /*right-box 위치 고정 설정 */
   position: sticky;
   top: 167px;
   height: 495px;
 }
 
 .profile-box {
+  /* right-box 프로필 틀 설정 */
   width: 273px;
   border-radius: 10px;
   background-color: #f3f3f3;
@@ -370,12 +370,14 @@
 }
 
 .profile-box h3 {
+  /* right-box 이름 설정 */
   padding-top: 14px;
   font-size: 1.25rem;
   font-weight: 500;
 }
 
 .profile-box p {
+  /* right-box 소개문 설정 */
   padding-top: 10px;
   color: #868686;
   text-align: left;
@@ -384,6 +386,7 @@
 }
 
 .right-btn {
+  /* right-box 버튼 색상 밑 크기 설정 */
   margin: 17px 0 0px;
   padding: 15px 0;
   width: 100%;
@@ -394,32 +397,38 @@
 }
 
 .right-btn.bookmark {
+  /* right-box 북마크 색상 설정 */
   background-color: #fff;
 }
 
 .right-btn.confirm {
+  /* right-box 모집완료 색상 설정 */
   background-color: var(--main-color);
   color: #fff;
 }
 
 .edit-btn {
+  /* right-box 수정, 삭제 버튼 정렬 */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 10px;
 }
 
 .edit-btn button {
+  /* right-box 수정 버튼 설정 */
   padding: 10px 0;
   background-color: #fff;
   border-radius: 8px;
 }
 
 .right-btn i {
+  /* right-box 아이콘 색상 설정 */
   color: var(--main-color);
   padding-right: 5px;
 }
 
 .right-box span {
+  /* right-box 프로젝트 참여 멤버 이름 설정 */
   display: block;
   margin-top: 30px;
   font-weight: 600;
@@ -433,39 +442,27 @@
 }
 
 .button-wrap .submit-modal {
+  /* right-box 모달창 모집완료 버튼 설정 */
   background-color: var(--main-color);
   justify-content: center;
   display: flex;
   align-items: center;
   color: #fff;
+  border: none;
 }
 
 .button-wrap .submit-modal:hover {
+  /* right-box 모달창 모집완료 버튼 hover 설정 */
   background-color: var(--main-hover-color);
-  color: black;
 }
 
-/* 모집완료 버튼 -> 돌아가기 버튼*/
-.button-wrap .close-modal-back{
+.button-wrap .close-modal {
   margin-bottom: 40px;
   justify-content: center;
   display: flex;
   align-items: center;
-}
-
-/* 수정버튼 -> 돌아가기 버튼*/
-.button-wrap .close-modal02-back{
-  margin-bottom: 40px;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-}
-/* 삭제버튼 -> 돌아가기 버튼*/
-.button-wrap .close-modal03-back{
-  margin-bottom: 40px;
-  justify-content: center;
-  display: flex;
-  align-items: center;
+  border: 1px solid #999999;
+  color: #999999;
 }
 
 
@@ -482,4 +479,107 @@
 .close-modal03-back:hover {
   /* 돌아가기 호버 시 색 전환 */
   background-color: var(--tag-bgcolor);
+}
+
+
+.sc-title {
+  /* 프로젝트 참여 멤버 font 설정 */
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 30px 0 20px;
+}
+
+.sc-title-box {
+  /* 프로젝트 참여 멤버 flex 정렬 */
+  display: flex;
+  justify-content: space-between;
+}
+
+.members-length {
+  /* 참여 인원 font 설정 */
+  padding-top: 40px;
+  color: var(--tag-bgcolor);
+  font-size: 0.825rem;
+}
+
+.sc-member-list {
+  /* 프로젝트 참여 멤버 간격 설정 */
+  margin-top: 20px;
+}
+
+.members {
+  /* 멤버 틀 설정 */
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.members ul {
+  /* 멤버 틀 최대 높이 설정 */
+  height: 223px;
+}
+
+.members ul li {
+  /* 이름 아래 구분 선 설정 */
+  height: 75px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  line-height: 75px;
+}
+
+.members ul li img {
+  /* 멤버 프로필사진 간격 설정 */
+  margin-left: 14px;
+  margin-right: 20px;
+}
+
+.sc-member-list img {
+  /* 멤버 프로필 사진 크기 설정 */
+  width: 41px;
+  height: 41px;
+}
+
+.member-name {
+  /* 멤버 이름 위치 설정 */
+  margin-bottom: 10%; 
+}
+
+.delete-btn {
+  /* 멤버 삭제 버튼 설정 */
+  color: var(--border-color);
+  border: none;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  margin-left: 40%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.delete-btn:hover {
+  /* 멤버 삭제 버튼 hover시 색상 설정 */
+  background-color: var(--tag-bgcolor);
+}
+
+.members::-webkit-scrollbar {
+  /* 참여 멤버 박스 스크롤 스타일 설정(두께) */
+  width: 10px;
+}
+
+.members::-webkit-scrollbar-thumb {
+  /* 참여 멤버 박스 move스크롤 스타일 설정 */
+  background-color: #868686;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: none;
+}
+
+.members::-webkit-scrollbar-track {
+  /* 참여 멤버 박스 back스크롤 스타일 설정 */
+  background-color: var(--tag-bgcolor);
+  border-radius: 10px;
 }
