@@ -465,6 +465,21 @@ ul.stack-icon li:nth-child(2n) {
   color: #999999;
 }
 
+/* 모집완료버튼 -> 돌아가기 버튼*/
+.button-wrap .close-modal-back{
+  margin-bottom: 40px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+/* 삭제버튼 -> 돌아가기 버튼*/
+.button-wrap .close-modal02-back{
+  margin-bottom: 40px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
 
 .close-modal-back:hover {
   /* 돌아가기 호버 시 색 전환 */

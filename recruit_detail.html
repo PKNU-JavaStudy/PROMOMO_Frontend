@@ -182,13 +182,11 @@
             <button class="right-btn confirm open-modal">모집완료 하기</button>
            
             <div class="edit-btn">
-                <button class="right-btn mod_btn open-modal02">수정</button>
-                <button class="right-btn del_btn open-modal03">삭제</button>
+                <a href="recruit_create.html"><button class="right-btn mod_btn">수정</button></a>
+                <button class="right-btn del_btn open-modal02">삭제</button>
             </div>
             
             <span>👩‍👦‍👦 현재 참여 인원 5명</span>
-            <!-- <button class="mem_del_btn"><i class="fa-solid fa-xmark"></i></button> -->
-
 
         </div>
          <!-- 모달창 -->
@@ -217,18 +215,6 @@
                 <button class="submit-modal" type="submit">삭제하기</button>
             </div>
         </div>
-        <!-- <div class="modal-bg bg03">                삭제할 부분
-        </div>
-        <div class="modal03">
-            <div class="modal-header">
-                <a href="#" class="close-modal03"><i class="fa-solid fa-xmark"></i></a>
-            </div>
-            <h3>프로젝트 멤버를 삭제하시겠습니까?</h3>
-            <div class="button-wrap">
-                <button class="close-modal03-back">돌아가기</button>
-                <button class="submit-modal" type="submit">삭제하기</button>
-            </div>
-        </div> -->
 
         <script>
 
@@ -248,7 +234,7 @@
                 document.querySelector(".modal").classList.remove("visible");
             });
 
-            // 수정 모달
+            // 삭제 모달
             document.querySelector(".open-modal02").addEventListener("click", function () {
                 document.querySelector(".bg02").classList.add("visible");
                 document.querySelector(".modal02").classList.add("visible");
@@ -264,26 +250,10 @@
                 document.querySelector(".modal02").classList.remove("visible");
             });
 
-            // 삭제모달
-            document.querySelector(".open-modal03").addEventListener("click", function () {
-                document.querySelector(".bg03").classList.add("visible");
-                document.querySelector(".modal03").classList.add("visible");
-            });
-
-            document.querySelector(".close-modal03-back").addEventListener("click", function () {
-                document.querySelector(".bg03").classList.remove("visible");
-                document.querySelector(".modal03").classList.remove("visible");
-            });
-
-            document.querySelector(".close-modal03").addEventListener("click", function () {
-                document.querySelector(".bg03").classList.remove("visible");
-                document.querySelector(".modal03").classList.remove("visible");
-            });
-
             // 바깥영역 클릭 시 종료
             document.addEventListener("click", function (event) {
                 if (
-                    !event.target.closest(".modal, .open-modal, .open-modal02, .open-modal03, .modal02 , .modal03")
+                    !event.target.closest(".modal, .open-modal, .open-modal02, .modal02")
                 ) {
                     document.querySelector(".modal").classList.remove("visible");
                     document.querySelector(".modal-bg").classList.remove("visible");
@@ -291,8 +261,6 @@
                     document.querySelector(".modal02").classList.remove("visible");
                     document.querySelector(".bg02").classList.remove("visible");
 
-                    document.querySelector(".modal03").classList.remove("visible");
-                    document.querySelector(".bg03").classList.remove("visible");
                     document.body.classList.remove("modal-open");
                 }
             });
