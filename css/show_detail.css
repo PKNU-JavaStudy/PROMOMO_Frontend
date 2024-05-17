@@ -73,25 +73,25 @@
   border-bottom: 1px solid var(--border-color);
 }
 
-.share_Btn {
+.share-Btn {
   /* 공유하기 버튼 폰트 크기 설정 */
   font-size: 0.815rem;
 }
 
-.share_Btn i {
+.share-Btn i {
   /* 공유하기 아이콘 설정 */
   font-size: 0.815rem;
   padding-right: 3px;
 }
 
-.title_contents {
+.title-contents {
   /* 프로젝트 요약 폰트 설정 */
   font-size: 1.25rem;
   padding: 40px 0;
   font-weight: 800;
 }
 
-.title_contents.first {
+.title-contents.first {
   /* 프로젝트 요약 위치 설정 */
   padding-top: 30px;
 }
@@ -107,21 +107,21 @@
   border-bottom: 1px solid var(--border-color);
 }
 
-.stack_icon {
+.stack-icon {
   /* 기술 스택 아이콘 정렬 */
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.stack_icon img {
+.stack-icon img {
   /* 기술 스택 이미지 크기 설정 */
   width: 1.7rem;
   height: 1.7rem;
   margin-right: 7px;
 }
 
-.stack_icon li:nth-child(2n) {
+.stack-icon li:nth-child(2n) {
   /* 기술 스택 두번째 줄 설정 */
   padding-right: 20px;
   font-weight: 600;
@@ -132,7 +132,7 @@
   padding-bottom: 10px;
 }
 
-.application_box {
+.application-box {
   /* 댓글상자 틀 생성 */
   display: flex;
   justify-content: space-between;
@@ -171,7 +171,7 @@
   right: 0;
 }
 
-.addmem_button {
+.addmem-button {
   /* 답글 버튼 스타일 설정 */
   display: inline-block;
   width: 65px;
@@ -184,7 +184,7 @@
   font-size: 13px;
 }
 
-.addmem_button.add:hover {
+.addmem-button.add:hover {
   /* 답글 버튼 호버 시 색 설정 */
   color: #626262;
 }
@@ -194,7 +194,7 @@
   margin: 20px 0px;
 }
 
-.box_count {
+.box-count {
   /* 댓글 날짜 font 설정 */
   text-align: right;
   font-size: 12px;
@@ -203,7 +203,7 @@
   padding-right: 5px;
 }
 
-.aplly_box {
+.aplly-box {
   /* 댓글 입력 상자 정렬 */
   display: flex;
   border-top: 1px solid var(--border-color);
@@ -211,13 +211,13 @@
   justify-content: space-between;
 }
 
-.profile_pic img {
+.profile-pic img {
   /* 댓글 입력 프로필 사진 크기 설정 */
   width: 40px;
   border-radius: 50%;
 }
 
-.comment_write {
+.comment-write {
   /* 댓글 입력 창 설정 */
   width: 520px;
   padding: 12px 20px;
@@ -226,7 +226,7 @@
   border: none;
 }
 
-.aplly_try {
+.aplly-try {
   /* 댓글 달기 버튼 설정 */
   display: inline-block;
   padding: 0 15px;
