@@ -192,7 +192,6 @@
   padding-right: 3px;
 }
 
-
 /* show_list */
 .ipt-wrap {
   width: 100%;
@@ -222,7 +221,6 @@
 }
 
 .show-box {
-
   border-radius: 10px;
   border: 1px solid var(--border-color);
   overflow: hidden;
@@ -237,9 +235,18 @@
   padding: 17px;
 }
 
-.show-box:hover .box-text {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 241 241 / var(--tw-bg-opacity));
+.img-wrap {
+  overflow: hidden;
+  height: 185px;
+}
+.show-box:hover img {
+  scale: 1.1;
+  transition: 0.3s;
+}
+
+.show-box img {
+  transition: 0.3s;
+  height: 100%;
 }
 
 .box-text h2 {
@@ -304,7 +311,7 @@ ul.count li {
 }
 
 .write-btn:hover:after {
-  content: '내 프로젝트 자랑하기';
+  content: "내 프로젝트 자랑하기";
   width: 120px;
   top: -12px;
   position: absolute;

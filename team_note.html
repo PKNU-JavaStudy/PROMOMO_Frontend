@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <!-- 직접 구현한 CSS -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/team_note.css" />
+    <!-- js -->
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/common.js"></script>
+    <script defer src="./common/header.js"></script>
+    <script defer src="./common/footer.js"></script>
+    <script defer src="./js/kanban.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <title>모집(mo.zip) - 팀노트</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="dropzone-wrap">
+        <button id="add" class="open-modal">
+          <i class="fa-solid fa-plus"></i>Add Card
+        </button>
+        <div class="dropzone-container">
+          <div class="dropzone" id="create">
+            <div class="drop-top">
+              <div class="flex">
+                <h3>Todo 📝</h3>
+                <span>3</span>
+              </div>
+              <i><i class="fa-solid fa-ellipsis-vertical"></i></i>
+            </div>
+            <div class="drop-cont">
+              <h2>프론트 레포지토리 구상</h2>
+              <p class="daterange">📆 2024.05.16 ~ 2024.05.30</p>
+              <ul>
+                <li>최재영</li>
+                <li>김동건</li>
+                <li>이윤지</li>
+                <li>한지수</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dropzone">
+            <div class="drop-top">
+              <div class="flex">
+                <h3>In Progress 🚀</h3>
+                <span>3</span>
+              </div>
+              <i><i class="fa-solid fa-ellipsis-vertical"></i></i>
+            </div>
+          </div>
+          <div class="dropzone">
+            <div class="drop-top">
+              <div class="flex">
+                <h3>Done ✔</h3>
+                <span>3</span>
+              </div>
+              <i><i class="fa-solid fa-ellipsis-vertical"></i></i>
+            </div>
+          </div>
+        </div>
+        <div class="modal-bg"></div>
+        <div class="modal">
+          <div class="modal-header">
+            <a href="#" class="close-modal"
+              ><i class="fa-solid fa-xmark"></i
+            ></a>
+          </div>
+          <div class="modal-cont">
+            <div>
+              <label for="category">상태</label>
+              <select name="" id="category">
+                <option value="">Todo 📃</option>
+                <option value="">In Progress 🚀</option>
+                <option value="">Done ✅</option>
+              </select>
+            </div>
+            <div>
+              <label for="">할 일</label>
+              <input type="text" placeholder="ex) DB테이블 작성하기" />
+            </div>
+            <div>
+              <label for="">기간</label>
+              <input
+                type="text"
+                name="daterange"
+                value="05/01/2024 - 05/15/2024"
+              />
+            </div>
+            <div>
+              <label for="">책임자</label>
+              <select name="" id="">
+                <option value="">최재영</option>
+                <option value="">김동건</option>
+                <option value="">이윤지</option>
+                <option value="">한지수</option>
+              </select>
+            </div>
+          </div>
+          <div class="btn-wrap">
+            <button>등록/수정하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    $(function () {
+      $('input[name="daterange"]').daterangepicker(
+        {
+          opens: "left",
+        },
+        function (start, end, label) {
+          console.log(
+            "A new date selection was made: " +
+              start.format("YYYY-MM-DD") +
+              " to " +
+              end.format("YYYY-MM-DD")
+          );
+        }
+      );
+    });
+  </script>
+</html>
