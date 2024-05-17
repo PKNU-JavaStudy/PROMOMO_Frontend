@@ -155,10 +155,10 @@
           <p>안녕하세요 프론트엔드 개발자 이윤지 입니다.</p>
         </div>
         <button class="right-btn bookmark"><i class="fa-regular fa-bookmark"></i>북마크</button>
-        <button class="right-btn confirm"><i class="fa-brands fa-github"></i>깃허브 링크</button>
+        <a href="https://github.com/LegdayDev" target="_blank"><button class="right-btn confirm"><i class="fa-brands fa-github"></i>깃허브 링크</button></a>
         <div class="edit-btn">
-          <button class="right-btn">수정</button>
-          <button class="right-btn">삭제</button>
+          <a href="show_create.html"><button class="right-btn">수정</button></a>
+          <button class="right-btn open-modal">삭제</button>
         </div>
         <div class="sc-member-list">
             <div class="sc-title-box">
@@ -168,20 +168,47 @@
         </div>
       </div>
       <!-- 모달창 -->
-      <div class="modal-bg bg02">
+      <div class="modal-bg">
       </div>
-      <div class="modal02">
+      <div class="modal">
           <div class="modal-header">
-              <a href="#" class="close-modal02"><i class="fa-solid fa-xmark"></i></a>
+              <a href="#" class="close-modal"><i class="fa-solid fa-xmark"></i></a>
           </div>
           <h3>게시글을 삭제하시겠습니까?</h3>
           <p>삭제 후에는 게시글을 되돌릴 수 없습니다.</p>
           <div class="button-wrap">
-              <button class="close-modal02-back">돌아가기</button>
+              <button class="close-modal-back">돌아가기</button>
               <button class="submit-modal" type="submit">삭제하기</button>
           </div>
       </div>
     </div>
   </main>
 </body>
+<script>
+  document.querySelector(".open-modal").addEventListener("click", function () {
+    document.querySelector(".modal-bg").classList.add("visible");
+    document.querySelector(".modal").classList.add("visible");
+  });
+
+  document.querySelector(".close-modal").addEventListener("click", function () {
+    document.querySelector(".modal-bg").classList.remove("visible");
+    document.querySelector(".modal").classList.remove("visible");
+  });
+
+  document.querySelector(".close-modal-back").addEventListener("click", function () {
+    document.querySelector(".modal-bg").classList.remove("visible");
+    document.querySelector(".modal").classList.remove("visible");
+  });
+
+  document.addEventListener("click", function (event) {
+    if (
+            !event.target.closest(".modal, .open-modal, .open-modal02, .modal02")
+    ) {
+      document.querySelector(".modal").classList.remove("visible");
+      document.querySelector(".modal-bg").classList.remove("visible");
+
+      document.body.classList.remove("modal-open");
+    }
+  });
+</script>
 </html>
