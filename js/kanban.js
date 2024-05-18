@@ -1,76 +1,166 @@
-const create = document.getElementsByClassName(".add");
-const firstlist = document.getElementById("create");
+// 선택된 담당자 정보를 저장하는 배열
+let selectedResponsibles = [];
+// 담당자 선택 시 선택된 담당자를 옆에 표시
+document.getElementById("responsible").addEventListener("change", function () {
+  const selected = document.getElementById("responsible").value;
+  const displayArea = document.getElementById("selectedResponsible");
+  // 이미 선택된 담당자는 추가하지 않음
+  if (!selectedResponsibles.some((res) => res.name === selected)) {
+    selectedResponsibles.push({
+      name: selected,
+      index: selectedResponsibles.length,
+    });
+    const span = document.createElement("span");
+    span.textContent = selected;
+    span.style.marginRight = "10px";
+    span.classList.add(`responsible-${selectedResponsibles.length - 1}`); // 고유 클래스 추가
+    displayArea.appendChild(span);
+  }
+});
 
-create.addEventListener("click", () => {
-  const inputDiv = document.createElement("div");
-  const input = document.createElement("input");
-  const deleteBtn = document.createElement("button");
+document.getElementById("createBtn").addEventListener("click", function () {
+  const category = document.getElementById("category").value;
+  const title = document.querySelector('input[name="title"]').value;
+  const daterange = document.querySelector('input[name="daterange"]').value;
+  const card = document.createElement("div");
+  card.className = "card";
 
-  deleteBtn.classList.add("delete");
-  deleteBtn.innerText = "x";
-
-  firstlist.appendChild(inputDiv);
-  inputDiv.setAttribute("id", "draggable");
-  inputDiv.setAttribute("draggable", "true");
-  inputDiv.appendChild(input);
-  inputDiv.appendChild(deleteBtn);
-  firstlist.appendChild(create);
-
-  deleteBtn.addEventListener("click", () => {
-    inputDiv.remove();
+  let responsibleHTML = "";
+  selectedResponsibles.forEach((res) => {
+    responsibleHTML += `<span class="responsible-${res.index}">${res.name}</span>`;
   });
-});
 
-let dragged;
+  card.innerHTML = `
+  <h4>${title}</h4>
+  <p>📆 ${daterange}</p>
+  <p>${responsibleHTML}</p>`;
 
-/* 드래그 가능한 대상에서 발생하는 이벤트 */
-document.addEventListener("drag", (event) => {
-  console.log("dragging");
-});
-
-document.addEventListener("dragstart", (event) => {
-  // 드래그한 요소에 대한 참조 저장
-  dragged = event.target;
-  // 반투명하게 만들기
-  event.target.classList.add("dragging");
-});
-
-document.addEventListener("dragend", (event) => {
-  // 투명도 초기화
-  event.target.classList.remove("dragging");
-});
-
-/* 드롭 대상에서 발생하는 이벤트 */
-document.addEventListener(
-  "dragover",
-  (event) => {
-    // 드롭을 허용하기 위해 기본 동작 취소
-    event.preventDefault();
-  },
-  false
-);
-
-document.addEventListener("dragenter", (event) => {
-  // 드래그 가능한 요소가 대상 위로 오면 강조
-  if (event.target.classList.contains("dropzone")) {
-    event.target.classList.add("dragover");
+  if (category === "Todo 📃") {
+    document.getElementById("todo").appendChild(card);
+  } else if (category === "In Progress 🚀") {
+    document.getElementById("inProgress").appendChild(card);
+  } else if (category === "Done ✅") {
+    document.getElementById("done").appendChild(card);
   }
+
+  document.querySelector(".modal-bg").classList.remove("visible");
+  document.querySelector(".modal").classList.remove("visible");
 });
 
-document.addEventListener("dragleave", (event) => {
-  // 드래그 가능한 요소가 대상 밖으로 나가면 강조 제거
-  if (event.target.classList.contains("dropzone")) {
-    event.target.classList.remove("dragover");
-  }
+// 간트차트
+document.getElementById("planBtn").addEventListener("click", function () {
+  document.querySelector(".bg02").classList.add("visible");
+  document.querySelector(".modal02").classList.add("visible");
 });
 
-document.addEventListener("drop", (event) => {
-  // 일부 요소의 링크 열기와 같은 기본 동작 취소
-  event.preventDefault();
-  // 드래그한 요소를 선택한 드롭 대상으로 이동
-  if (event.target.classList.contains("dropzone")) {
-    event.target.classList.remove("dragover");
-    dragged.parentNode.removeChild(dragged);
-    event.target.appendChild(dragged);
+google.charts.load("current", { packages: ["gantt"] });
+google.charts.setOnLoadCallback(drawChart);
+
+var chart;
+var data;
+var options;
+
+function drawChart() {
+  data = new google.visualization.DataTable();
+  data.addColumn("string", "Task ID");
+  data.addColumn("string", "Task Name");
+  data.addColumn("string", "Resource");
+  data.addColumn("date", "Start Date");
+  data.addColumn("date", "End Date");
+  data.addColumn("number", "Duration");
+  data.addColumn("number", "Percent Complete");
+  data.addColumn("string", "Dependencies");
+
+  // 초기데이터
+  data.addRows([[" ", " ", " ", new Date(), new Date(), null, 100, null]]);
+
+  options = {
+    height: 400,
+    gantt: {
+      trackHeight: 30,
+    },
+    hAxis: {
+      format: "d MMM yyyy",
+      minValue: new Date(data.getValue(0, 3)),
+      maxValue: new Date(data.getValue(0, 4)),
+    },
+  };
+
+  chart = new google.visualization.Gantt(document.getElementById("chart_div"));
+  chart.draw(data, options);
+  updateTaskList();
+}
+
+function taskValidation(taskName) {
+  for (var i = 0; i < data.getNumberOfRows(); i++) {
+    if (data.getValue(i, 1) === " ") data.removeRow(i);
+    if (data.getValue(i, 1) === taskName) return false;
   }
-});
+  return true;
+}
+
+function addTask() {
+  let taskId = document.getElementById("taskId").value;
+  let taskName = document.getElementById("taskName").value;
+  if (!taskValidation(taskName)) {
+    alert("작업이 중복됩니다!");
+    return;
+  }
+  let resource = document.getElementById("resource").value;
+  let startDate = new Date(document.getElementById("startDate").value);
+  let endDate = new Date(document.getElementById("endDate").value);
+  let dependencies = null;
+
+  if (data.bf.length > 8) {
+    options.height = options.height + 100;
+  }
+  if (confirm("작업을 추가하시겠습니까?") == true) {
+    data.addRows([
+      [
+        taskId,
+        taskName,
+        resource,
+        startDate,
+        endDate,
+        null,
+        null,
+        dependencies,
+      ],
+    ]);
+  }
+
+  var minDate = options.hAxis.minValue;
+  var maxDate = options.hAxis.maxValue;
+  if (startDate < minDate) options.hAxis.minValue = startDate;
+  if (endDate > maxDate) options.hAxis.maxValue = endDate;
+  chart.draw(data, options);
+  updateTaskList();
+}
+
+function updateTaskList() {
+  let select = document.getElementById("deleteTaskName");
+  select.innerHTML = "";
+  for (var i = 0; i < data.getNumberOfRows(); i++) {
+    let taskName = data.getValue(i, 1);
+    if (taskName !== " ") {
+      let option = document.createElement("option");
+      option.value = taskName;
+      option.textContent = taskName;
+      select.appendChild(option);
+    }
+  }
+}
+
+function deleteTask() {
+  let deleteTaskName = document.getElementById("deleteTaskName").value;
+  for (var i = 0; i < data.getNumberOfRows(); i++) {
+    if (data.getValue(i, 1) === deleteTaskName) {
+      if (confirm(`${data.getValue(i, 1)} 작업을 삭제하시겠습니까?`) == true) {
+        data.removeRow(i);
+        chart.draw(data, options);
+        updateTaskList();
+        break;
+      }
+    }
+  }
+}
