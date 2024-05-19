@@ -1,4 +1,5 @@
-.main_contents {
+.main-contents {
+  /* 본문 간격 설정 */
   width: 670px;
 }
 
@@ -48,80 +49,75 @@
 }
 
 .title-wrap strong.state-ing {
-  /* 모집 중 글자 색 맞추기*/
+  /* 모집 중 글자 색 맞추기 */
   color: var(--main-color);
 }
 
-.count {
+.info-wrap .count {
   /* 조회수 및 날짜 카운터 정렬 */
   display: flex;
   align-items: center;
 }
 
-.count li {
-  /* 카운터 폰트 크기 및 색상 맞추기*/
+.info-wrap .count li {
+  /* 카운터 폰트 크기 및 색상 맞추기 */
   font-size: 0.815rem;
   color: var(--lightgray-font);
   padding: 0 5px;
 }
 
 .info-wrap {
-  /* 카운터 구분선 기준으로 공유하기 정렬 */
+  /* 카운터와 공유하기 버튼 flex정렬 */
   display: flex;
   justify-content: space-between;
   padding-bottom: 20px;
   border-bottom: 1px solid var(--border-color);
 }
 
-.share-Btn {
-  /* 공유하기 버튼 폰트 크기 설정 */
+.info-wrap .share-Btn {
+  /* 공유하기 버튼 font-size 설정 */
   font-size: 0.815rem;
 }
 
-.share-Btn i {
+.info-wrap .share-Btn i {
   /* 공유하기 아이콘 설정 */
   font-size: 0.815rem;
   padding-right: 3px;
 }
 
-.title-contents {
+p.title-contents {
   /* 프로젝트 요약 폰트 설정 */
   font-size: 1.25rem;
   padding: 40px 0;
   font-weight: 800;
 }
 
-.title-contents.first {
-  /* 프로젝트 요약 위치 설정 */
-  padding-top: 30px;
-}
-
-.content {
+p.content {
   /* 요약 내용 글자 간격 설정 */
   line-height: 1.5rem;
 }
 
-.content.bottom {
+p.content.bottom {
   /* 본문-댓글창 구분선 간격 설정 */
   padding-bottom: 95px;
   border-bottom: 1px solid var(--border-color);
 }
 
-.stack-icon {
+ul.stack-icon {
   /* 기술 스택 아이콘 정렬 */
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.stack-icon img {
+ul.stack-icon img {
   /* 기술 스택 이미지 크기 설정 */
   width: 1.7rem;
   height: 1.7rem;
   margin-right: 7px;
 }
 
-.stack-icon li:nth-child(2n) {
+ul.stack-icon li:nth-child(2n) {
   /* 기술 스택 두번째 줄 설정 */
   padding-right: 20px;
   font-weight: 600;
@@ -132,7 +128,7 @@
   padding-bottom: 10px;
 }
 
-.application-box {
+.app-wrap .application-box {
   /* 댓글상자 틀 생성 */
   display: flex;
   justify-content: space-between;
@@ -143,7 +139,7 @@
   margin-bottom: 20px;
 }
 
-.profile-top {
+.application-box .profile-top {
   /* 댓글 프로필 구분선 및 스타일 설정 */
   position: relative;
   display: flex;
@@ -151,27 +147,27 @@
   padding-bottom: 15px;
 }
 
-.profile-top img {
+.application-box .profile-top img {
   /* 댓글 프로필 이미지 설정 */
   width: 60px;
   height: 60px;
   margin-right: 13px;
 }
 
-.profile-top h3 {
+.application-box .profile-top h3 {
   /* 프로필 이름 설정 */
   font-weight: 600;
   padding-top: 9px;
 }
 
-.profile-top button {
+.application-box .profile-top button {
   /* 프로필 답글 버튼 위치 설정 */
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.addmem-button {
+.profile-top .addmem-button {
   /* 답글 버튼 스타일 설정 */
   display: inline-block;
   width: 65px;
@@ -184,12 +180,12 @@
   font-size: 13px;
 }
 
-.addmem-button.add:hover {
+.profile-top .addmem-button.add:hover {
   /* 답글 버튼 호버 시 색 설정 */
   color: #626262;
 }
 
-.comment {
+.application-box .comment {
   /* 박스안의 댓글 여백 설정 */
   margin: 20px 0px;
 }
@@ -199,7 +195,7 @@
   text-align: right;
   font-size: 12px;
   color: var(--lightgray-font);
-  padding-bottom: 5px;
+  padding-top: 10px;
   padding-right: 5px;
 }
 
@@ -211,13 +207,13 @@
   justify-content: space-between;
 }
 
-.profile-pic img {
+.aplly-box .profile-pic img {
   /* 댓글 입력 프로필 사진 크기 설정 */
   width: 40px;
   border-radius: 50%;
 }
 
-.comment-write {
+.aplly-box .comment-write {
   /* 댓글 입력 창 설정 */
   width: 520px;
   padding: 12px 20px;
@@ -226,7 +222,7 @@
   border: none;
 }
 
-.aplly-try {
+.aplly-box .aplly-try {
   /* 댓글 달기 버튼 설정 */
   display: inline-block;
   padding: 0 15px;
@@ -247,7 +243,7 @@
   width: 273px;
 }
 
-.profile-box {
+.right-box .profile-box {
   width: 273px;
   border-radius: 10px;
   background-color: #f3f3f3;
@@ -255,13 +251,13 @@
   text-align: center;
 }
 
-.profile-box h3 {
+.right-box .profile-box h3 {
   padding-top: 14px;
   font-size: 1.25rem;
   font-weight: 500;
 }
 
-.profile-box p {
+.right-box .profile-box p {
   padding-top: 10px;
   color: #868686;
   text-align: left;
@@ -269,7 +265,7 @@
   line-height: 1.2rem;
 }
 
-.right-btn {
+.right-box .right-btn {
   margin: 17px 0 0px;
   padding: 15px 0;
   width: 100%;
@@ -308,19 +304,19 @@
   padding-right: 5px;
 }
 
-.sc-title {
-  font-size: 1.25rem;
+.sc-title-box .sc-title {
+  font-size: 0.875rem;
   font-weight: 600;
-  padding: 30px 0 20px;
+  padding: 15px 0 20px;
 }
 
-.sc-title-box {
+.sc-member-list .sc-title-box {
   display: flex;
   justify-content: space-between;
 }
 
-.members-length {
-  padding-top: 40px;
+.sc-title-box .members-length {
+  padding-top: 15px;
   color: var(--tag-bgcolor);
   font-size: 0.825rem;
 }
@@ -329,48 +325,37 @@
   margin-top: 20px;
 }
 
-.members {
-  border: 1px solid var(--border-color);
-  border-radius: 15px;
-  overflow-y: scroll;
-  width: 100%;
+.modal h3 {
+  /* 모달창 안내문구 폰트 설정 */
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+.modal p {
+  /* 모달창 안내문구 폰트 설정 */
+  padding-bottom: 30px;
+}
+.button-wrap  button {
+  /* 모달창 버튼 글자 중앙정렬 */
+  text-align: center;
+}
+.button-wrap .close-modal-back {
+  /* 모달창 버튼 간격두기 */
+  margin-bottom: 40px;
+  border: 1px solid var(--tag-bgcolor);
 }
 
-.members ul {
-  height: 223px;
-}
-
-.members ul li {
-  height: 75px;
-  border-bottom: 1px solid var(--border-color);
-  display: flex;
-  align-items: center;
-  line-height: 75px;
-}
-
-.members ul li img {
-  margin-left: 14px;
-  margin-right: 20px;
-}
-
-.sc-member-list img {
-  width: 41px;
-  height: 41px;
-}
-
-.members::-webkit-scrollbar {
-  width: 10px;
-}
-
-.members::-webkit-scrollbar-thumb {
-  background-color: #868686;
-  border-radius: 10px;
-  background-clip: padding-box;
-  border: none;
-}
-
-.members::-webkit-scrollbar-track {
+.close-modal-back:hover {
+  /* 모집완료버튼 -> 돌아가기 호버 시 색 전환 */
   background-color: var(--tag-bgcolor);
-  border-radius: 10px;
 }
 
+.button-wrap .submit-modal {
+  /* 모달창 삭제버튼 색 설정 */
+  background-color: var(--main-color);
+  border: none;
+  color: white;
+}
+.submit-modal:hover {
+  /* 모달창 삭제 버튼 hover 설정 */
+  background-color: var(--main-hover-color);
+}
