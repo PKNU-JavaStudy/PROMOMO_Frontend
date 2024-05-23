@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/list.css" />
+    <link rel="stylesheet" href="./css/recruit_list.css" />
     <!-- js -->
     <!-- jquery -->
     <script
@@ -62,7 +62,7 @@
           </select>
         </div>
         <div class="lists">
-          <a href="#" class="project-box">
+          <a href="recruit_detail.html" class="project-box">
             <span class="tag">사이드 프로젝트</span>
             <p class="title">
               <strong class="state-ing">모집 중</strong> 엘리스 SW 4기
@@ -95,7 +95,7 @@
               <li>👁‍🗨 28회</li>
             </ul>
           </a>
-          <a href="#" class="project-box">
+          <a href="recruit_detail.html" class="project-box">
             <span class="tag">사이드 프로젝트</span>
             <p class="title">
               <strong class="state-ing">모집 중</strong> 엘리스 SW 4기
@@ -121,7 +121,7 @@
               <li>👁‍🗨 28회</li>
             </ul>
           </a>
-          <a href="#" class="project-box">
+          <a href="recruit_detail.html" class="project-box">
             <span class="tag">사이드 프로젝트</span>
             <p class="title">
               <strong class="state-done">모집 완료</strong> 엘리스 SW 4기
@@ -147,7 +147,7 @@
               <li>👁‍🗨 28회</li>
             </ul>
           </a>
-          <a href="#" class="project-box">
+          <a href="recruit_detail.html" class="project-box">
             <span class="tag">사이드 프로젝트</span>
             <p class="title">
               <strong class="state-done">모집 완료</strong> 엘리스 SW 4기
@@ -173,7 +173,7 @@
               <li>👁‍🗨 28회</li>
             </ul>
           </a>
-          <a href="#" class="project-box">
+          <a href="recruit_detail.html" class="project-box">
             <span class="tag">사이드 프로젝트</span>
             <p class="title">
               <strong class="state-done">모집 완료</strong> 엘리스 SW 4기
@@ -199,7 +199,7 @@
               <li>👁‍🗨 28회</li>
             </ul>
           </a>
-          <a href="#" class="project-box">
+          <a href="recruit_detail.html" class="project-box">
             <span class="tag">사이드 프로젝트</span>
             <p class="title">
               <strong class="state-done">모집 완료</strong> 엘리스 SW 4기
@@ -225,7 +225,7 @@
               <li>👁‍🗨 28회</li>
             </ul>
           </a>
-          <a href="#" class="project-box">
+          <a href="recruit_detail.html" class="project-box">
             <span class="tag">사이드 프로젝트</span>
             <p class="title">
               <strong class="state-done">모집 완료</strong> 엘리스 SW 4기
@@ -251,24 +251,55 @@
               <li>👁‍🗨 28회</li>
             </ul>
           </a>
-        </div>
-      </div>
-      <!-- 모집글 작성 모달창 -->
-      <div class="modal-bg"></div>
-      <div class="modal">
-        <div class="modal-header">
-          <a href="#" class="close-modal"><i class="fa-solid fa-xmark"></i></a>
-        </div>
-        <h3>작성할 프로젝트 타입을 골라주세요.</h3>
-        <div class="button-wrap">
-          <button class="type01">
-            사이드 프로젝트<i class="fa-solid fa-chevron-right"></i>
-          </button>
-          <button class="type02">
-            스터디/모임<i class="fa-solid fa-chevron-right"></i>
-          </button>
         </div>
       </div>
     </div>
+    <!-- 모집글 작성 모달창 -->
+    <div class="modal-bg"></div>
+    <div class="modal">
+      <div class="modal-header">
+        <a href="#" class="close-modal"><i class="fa-solid fa-xmark"></i></a>
+      </div>
+      <h3>작성할 프로젝트 타입을 골라주세요.</h3>
+      <div class="button-wrap">
+        <button class="type01">
+          <a href="recruit_create.html"
+            >사이드 프로젝트<i class="fa-solid fa-chevron-right"></i
+          ></a>
+        </button>
+        <button class="type02">
+          <a href="recruit_create.html"
+            >스터디/모임<i class="fa-solid fa-chevron-right"></i
+          ></a>
+        </button>
+      </div>
+    </div>
+    <script>
+      document
+        .querySelector(".open-modal")
+        .addEventListener("click", function () {
+          document.querySelector(".modal-bg").classList.add("visible");
+          document.querySelector(".modal").classList.add("visible");
+        });
+
+      document
+        .querySelector(".close-modal")
+        .addEventListener("click", function () {
+          document.querySelector(".modal-bg").classList.remove("visible");
+          document.querySelector(".modal").classList.remove("visible");
+        });
+
+      document.addEventListener("click", function (event) {
+        if (
+          !event.target.closest(
+            ".modal, .open-modal, .open-modal02, .open-modal03"
+          )
+        ) {
+          document.querySelector(".modal").classList.remove("visible");
+          document.querySelector(".modal-bg").classList.remove("visible");
+          document.body.classList.remove("modal-open");
+        }
+      });
+    </script>
   </body>
 </html>

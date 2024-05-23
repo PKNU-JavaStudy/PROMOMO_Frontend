@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/recruit_create.css" /> <!-- 코드 재사용 -->
+    <link rel="stylesheet" href="./css/recruit_detail.css" /> <!-- 코드 재사용 -->
     <link rel="stylesheet" href="./css/show_create.css" />
-    <link rel="stylesheet" href="./css/recruit_create.css" />
-    <link rel="stylesheet" href="./css/recruit_detail.css" />
     <!-- js -->
     <!-- jquery -->
     <script
@@ -43,11 +43,13 @@
           <div class="sc-header">
             <div class="sc-header-img">
               <p class="sc-title title-dist">썸네일</p>
-              <div class="sc-thumbnail-box">
-                <!-- <button class="btn-thumbnail" type="button">
-                  썸네일 올리기
-                </button> -->
-                <input type="file" />
+              <div id="image_container">
+                <div class="sc-thumbnail-box" onchange="setThumbnail(event);">
+                  <label for="file">
+                    <div class="btn-upload">파일 업로드하기</div>
+                  </label>
+                  <input type="file" name="file" id="file" />
+                </div>
               </div>
             </div>
             <div class="sc-header-text">
@@ -146,9 +148,26 @@
               </ul>
             </div>
           </div>
-          <button class="sh-btn btn-write">작성완료</button>
+          <button class="sh-btn btn-write">
+            <a href="show_list.html">작성완료</a>
+          </button>
         </form>
       </div>
     </main>
+    <script>
+      function setThumbnail(event) {
+        let reader = new FileReader();
+
+        reader.onload = function (event) {
+          let img = document.createElement("img");
+          img.setAttribute("src", event.target.result);
+          img.setAttribute("width", "210px");
+          img.setAttribute("height", "210px");
+          document.querySelector(".sc-thumbnail-box").appendChild(img);
+        };
+
+        reader.readAsDataURL(event.target.files[0]);
+      }
+    </script>
   </body>
 </html>
