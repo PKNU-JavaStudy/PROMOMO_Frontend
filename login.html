@@ -27,11 +27,11 @@
         <form class="submit-box" action="/submit-login" method="POST"> <!-- 로그인 데이터를 처리할 서버의 URL -->
             <div class="input-group">
                 <h2 for="email">이메일</h2>
-                <input type="email" id="email" placeholder="   이메일 입력" required>
+                <input type="email" id="email" placeholder="이메일 입력" required>
             </div>
             <div class="input-group">
                 <h2 for="password">비밀번호</h2>
-                <input type="password" id="password" placeholder="   비밀번호 입력" minlength="5" required>
+                <input type="password" id="password" placeholder="비밀번호 입력" minlength="5" required>
             </div>
 
             <div class="inputLogin">
@@ -43,7 +43,11 @@
                 <input type="submit" value="카카오 로그인" class="kakao">
             </div>
             <div class="submit">아직 회원이 아니신가요??
-                <span><a href="join.html">&ensp;가입하기</a></span> <!-- 회원가입 페이지 링크 수정 -->
+                <span><a href="join.html">가입하기</a></span> <!-- 회원가입 페이지 링크 수정 -->
+                <br>
+            </div>
+            <div class="forgot">
+            <span class="forgot-id"><a href="find_id.html">아이디</a> 혹은 </span ><span class="forgot-pw"><a href="find_password.html">비밀번호</a></span ><span class="forgot-id">를 잊으셨나요?</span>
             </div>
         </form>
 

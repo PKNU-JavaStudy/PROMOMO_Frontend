@@ -33,19 +33,31 @@
 input[type="email"],
 input[type="password"] {
     margin-top: 10px;
-    width: 300px;
+    width: 338px;
     height: 40px;
-    border: none;
-    padding: 0;
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    border-radius: 5px;
 }
 .input-group {
-    margin-top: 0;
-    margin-bottom: 5px;
-    padding: 30px;
+    padding: 10px 0 20px 0;
     background: transparent;
     border: none;
 }
-input[type="submit"] {
+
+input.inputLogin {
+    width: 100%; /* 버튼 너비 조정 */
+    padding: 10px;
+    background-color: #00dada; /* 특정 색상 코드 적용 */
+    color: white; /* 글자색 */
+    border: none; /* 테두리 제거 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    cursor: pointer; /* 커서 스타일 */
+    margin-top: 20px;
+
+}
+
+.kakaoLogin input {
     width: 100%; /* 버튼 너비 조정 */
     padding: 10px;
     background-color: #00dada; /* 특정 색상 코드 적용 */
@@ -55,24 +67,28 @@ input[type="submit"] {
     cursor: pointer; /* 커서 스타일 */
     margin: auto;
 }
+
 input[type="submit"]:hover {
     background-color: #009393; /* 호버 시 색상 변경 */
 }
+
 .kakaoLogin input[type="submit"] {
     background-color: #FEE500; /* 카카오 로그인 버튼 색상 */
     color: black;
 }
+
 .kakaoLogin input[type="submit"]:hover {
     background-color: #ECD100; /* 호버 시 색상 변경 */
 }
+
 /* 구분선 스타일 */
 .separator {
     text-align: center;
     color: #000000;
-    margin: 20px 0;
     position: relative; /* 위치 기준점 설정 */
     padding: 10px 0; /* 선과 텍스트 사이의 간격 */
 }
+
 .separator::before,
 .separator::after {
     content: ""; /* 가상 요소 내용 */
@@ -83,12 +99,15 @@ input[type="submit"]:hover {
     background-color: #000000; /* 선의 색상 */
     transform: translateY(-50%); /* 세로 중앙 정렬 */
 }
+
 .separator::before {
     left: 0;
 }
+
 .separator::after {
     right: 0;
 }
+
 /* 아직 회원이 아니신가요 영역 */
 .submit {
     color: #969696;
@@ -96,13 +115,51 @@ input[type="submit"]:hover {
     padding-top: 20px;
     font-size: 1rem;
     margin-top: 30px;
-    margin-bottom: 30px;
 }
+
 .submit a {
+    margin-left: 10px;
     color: #00dada;
     text-decoration: none;
 }
 
+
 .submit a:hover {
+    text-decoration: underline;
+}
+
+.forgot{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.forgot-id {
+    color: #969696;
+}
+
+.forgot-id a {
+    margin-left: 10px;
+    color: #00dada;
+}
+
+.forgot-id a:hover {
+    text-decoration: underline;
+}
+
+.forgot-pw {
+    color: #969696;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1rem;
+    margin: auto;
+}
+
+.forgot-pw a {
+    color: #00dada;
+}
+
+.forgot-pw a:hover {
     text-decoration: underline;
 }

@@ -78,7 +78,7 @@ input[type="password"] {
 }
 
 /* 회원가입 버튼 스타일 */
-input[type="submit"] {
+.submit-btn {
     width: 314px;
     height: 45px;
     margin-top: 30px;
@@ -89,23 +89,23 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-input[type="submit"]:hover {
+.submit-btn:hover {
     background-color: #009393;
 }
 
 /* 이미 회원이신가요? 영역 */
-.submit {
+.already-member {
     color: #969696;
     text-align: center;
-    padding-top: 20px;
+    margin-top: 30px;
     font-size: 1rem;
 }
 
-.submit a {
+.already-member a {
     color: #00dada;
     text-decoration: none;
 }
 
-.submit a:hover {
+.already-member a:hover {
     text-decoration: underline;
 }

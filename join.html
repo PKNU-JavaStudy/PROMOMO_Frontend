@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>모집 | 회원가입</title>
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <!-- 직접 구현한 CSS -->
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/join.css" />
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/common.css"/>
+    <link rel="stylesheet" href="./css/join.css"/>
 
     <script src="./js/common.js"></script>
     <script defer src="./common/header.js"></script>
@@ -22,47 +22,128 @@
 </head>
 
 <body>
-    <div class="wrap">
-        <h1 class="join-h1">회원가입</h1>
-        <div class="join-wrap">
+<div class="wrap">
+    <h1 class="join-h1">회원가입</h1>
+    <div class="join-wrap">
+        <form id="checkForm">
             <div class="input-group">
                 <h2 for="name">이름</h2>
                 <div class="name">
-                    <input type="text" id="name" placeholder="  이름을 입력하세요">
+                    <input type="text" id="name" placeholder="이름을 입력하세요." required>
                 </div>
             </div>
             <div class="input-group">
                 <h2 for="email">이메일</h2>
                 <div class="email">
-                    <input type="email" id="email" placeholder="  example@moppe.com">
+                    <input type="email" id="email" placeholder="example@moppe.com" required>
+                </div>
+            </div>
+            <div class="input-group">
+                <h2 for="phone-number">휴대폰 번호</h2>
+                <div class="email">
+                    <input type="text" id="phone-number" placeholder="전화번호를 입력해주세요.(-제외)" minlength="11" maxlength="11" required>
                 </div>
             </div>
             <div class="input-group">
                 <h2 for="password">비밀번호</h2>
                 <div class="password">
-                    <input type="password" id="password" placeholder="  비밀 번호를 입력하세요" minlength="5">
+                    <input type="password" id="password" placeholder="비밀 번호를 입력해주세요.(5~11자리)" minlength="5" maxlength="11" required>
                 </div>
             </div>
             <div class="input-group">
                 <h2>비밀번호 확인</h2>
                 <div class="checkPassword">
-                    <input type="password" placeholder="  비밀번호를 다시 입력하세요" minlength="5">
+                    <input type="password" id="checkPassword" placeholder="비밀번호를 한번 더 입력해주세요." minlength="5" required>
                 </div>
             </div>
             <div class="join_checkBox">
-                <p><label><input type="checkbox" value="모두 동의">&emsp;모두 동의</label></p>
-                <p><label><input type="checkbox" value="(필수) 만 14세 이상입니다.">&emsp;(필수) 만 14세 이상입니다.</label></p>
-                <p><label><input type="checkbox" value="(필수) 커리어리 이용약관 동의">&emsp;(필수) 커리어리 이용약관 동의</label></p>
-                <p><label><input type="checkbox" value="(필수) 개인정보 수집 및 이용 동의">&emsp;(필수) 개인정보 수집 및 이용 동의</label></p>
-                <p><label><input type="checkbox" value="(선택) 마케팅 정보 수신 동의">&emsp;(선택) 마케팅 정보 수신 동의</label></p>
-                <p><input type="submit" value="회원가입">
-                </p>
+                <p><label><input type="checkbox" id="agreeAll" onclick="toggleAll(this)" value="모두 동의">&emsp;모두 동의</label></p>
+                <p><label><input type="checkbox" class="required" id="agreeAge" value="(필수) 만 14세 이상입니다.">&emsp;(필수) 만 14세 이상입니다.</label></p>
+                <p><label><input type="checkbox" class="required" id="agreeTerms" value="(필수) 커리어리 이용약관 동의">&emsp;(필수) 커리어리 이용약관 동의</label></p>
+                <p><label><input type="checkbox" class="required" id="agreePrivacy" value="(필수) 개인정보 수집 및 이용 동의">&emsp;(필수) 개인정보 수집 및 이용 동의</label></p>
+                <p><label><input type="checkbox" id="agreeMarketing" value="(선택) 마케팅 정보 수신 동의">&emsp;(선택) 마케팅 정보 수신 동의</label></p>
+                <button type="button" class="submit-btn" id="submit">회원가입</button>
             </div>
-            <div class="submit">이미 회원이신가요?
-                <span><a href="login.html">로그인하기</a> </span>
-            </div>
+        </form>
+        <div class="already-member">이미 회원이신가요?
+            <span><a href="login.html">로그인하기</a> </span>
         </div>
     </div>
-</body>
+</div>
 
+<script>
+    // 변수 선언
+    const form = document.getElementById("checkForm");  // 전체 폼
+    const submit = document.getElementById("submit");   // 회원가입 버튼
+    const requiredCheckBoxes = Array.from(document.querySelectorAll('.required'));  // 모든 필수 체크박스
+    const agreeAllCheckBox = document.getElementById("agreeAll");   // 모두 동의 체크박스
+    const phoneNumberPattern = /^010\d{8}$/;    // 휴대폰 번호 정규식
+
+    // 모두 동의 체크박스
+    function toggleAll(source) {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = source.checked;
+        });
+        checkSubmitState();
+    }
+
+    // 모든 필수 박스가 선택되었는지 확인
+    function checkSubmitState() {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phoneNumber = document.getElementById('phone-number').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const checkPassword = document.getElementById('checkPassword').value.trim();
+
+        // 모든 필수 입력 필드가 채워져 있는지 확인
+        const allFieldsFilled = name && email && phoneNumber && password && checkPassword;
+
+        submit.disabled = !(allChecked && allFieldsFilled);
+    }
+
+    // 필수 체크박스 변경 시 이벤트 리스너
+    requiredCheckBoxes.forEach(checkbox => {
+        checkbox.addEventListener('change', checkSubmitState);
+    });
+
+    // 입력 필드 변경 시 이벤트 리스너
+    document.querySelectorAll('#name, #email, #phone-number, #password, #checkPassword').forEach(input => {
+        input.addEventListener('input', checkSubmitState);
+    });
+
+    // 폼 제출 이벤트 리스너
+    submit.addEventListener('click', function () {
+        // 입력 필드 확인
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phoneNumber = document.getElementById('phone-number').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const checkPassword = document.getElementById('checkPassword').value.trim();
+        const allChecked = requiredCheckBoxes.every(checkbox => checkbox.checked);
+
+        if (!name || !email || !phoneNumber || !password || !checkPassword) {
+            alert("모든 입력 칸을 작성해 주세요.");
+            return;
+        }
+        if (!phoneNumberPattern.test(phoneNumber)) {
+            alert("유효한 전화번호를 입력해 주세요.");
+            return;
+        }
+        if (password !== checkPassword) {
+            alert("비밀번호가 일치하지 않습니다.");
+            return;
+        }
+        if (!allChecked) {
+            alert("필수 이용약관 동의를 해주세요.");
+            return;
+        }
+        alert("회원가입이 완료되었습니다.");
+        window.location.href = "mypage.html";
+    });
+
+    // 초기 상태에서 제출 버튼 비활성화
+    checkSubmitState();
+</script>
+</body>
 </html>
