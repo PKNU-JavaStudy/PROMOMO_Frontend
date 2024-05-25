@@ -334,7 +334,7 @@ ul.stack-icon li:nth-child(2n) {
   /* 모달창 안내문구 폰트 설정 */
   padding-bottom: 30px;
 }
-.button-wrap  button {
+.button-wrap button {
   /* 모달창 버튼 글자 중앙정렬 */
   text-align: center;
 }

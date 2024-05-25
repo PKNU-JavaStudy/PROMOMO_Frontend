@@ -25,6 +25,8 @@
   <script defer src="./common/header.js"></script>
   <script defer src="./common/footer.js"></script>
   <script defer src="./js/kanban.js"></script>
+  <script defer src="./js/gantt.js"></script>
+  <script defer src="./js/link_input.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
@@ -40,7 +42,7 @@
     <div class="note-cont">
       <h1>개발자 커뮤니티 사이트 | 개발바닥</h1>
       <div class="note-info">
-        <div class="note-mem">
+        <div class="note-mem sub-title">
           <h2>👤 프로젝트 멤버</h2>
           <div class="mem-grid">
             <a href="">
@@ -71,12 +73,15 @@
           </div>
         </div>
         <div class="note-link">
-          <input type="text" placeholder="🔗링크 연결">
-          <input type="text" placeholder="🔗링크 연결">
-          <input type="text" placeholder="🔗링크 연결">
+          <input type="text" id="linkInput" placeholder="링크를 입력하세요">
+          <input type="text" id="altTextInput" placeholder="링크가 이동하는 곳을 입력하세요.">
+          <button onclick="updateLink()">확인</button>
+
+          <p id="displayArea"></p>
+          <!-- <input type="text" placeholder="🔗링크를 입력하세요"> -->
         </div>
       </div>
-      <div class="note-kanban">
+      <div class="note-kanban sub-title">
         <h2>📝 게시판</h2>
         <div class="dropzone-wrap">
           <button id="add" class="open-modal">
@@ -89,7 +94,6 @@
                   <h3>Todo 📝</h3>
                   <span>3</span>
                 </div>
-                <i><i class="fa-solid fa-ellipsis-vertical"></i></i>
               </div>
             </div>
             <div class="dropzone" id="inProgress">
@@ -98,7 +102,6 @@
                   <h3>In Progress 🚀</h3>
                   <span>3</span>
                 </div>
-                <i><i class="fa-solid fa-ellipsis-vertical"></i></i>
               </div>
             </div>
             <div class="dropzone" id="done">
@@ -107,7 +110,6 @@
                   <h3>Done ✔</h3>
                   <span>3</span>
                 </div>
-                <i><i class="fa-solid fa-ellipsis-vertical"></i></i>
               </div>
             </div>
           </div>
@@ -131,18 +133,16 @@
               </div>
               <div>
                 <label for="">기간</label>
-                <input type="text" name="daterange" value="05/01/2024 - 05/15/2024" />
+                <input type="text" name="daterange" />
               </div>
               <div>
                 <label for="">책임자</label>
-                <select name="responsible" id="responsible">
-                  <option value="최재영">최재영</option>
-                  <option value="김동건">김동건</option>
-                  <option value="이윤지">이윤지</option>
-                  <option value="한지수">한지수</option>
-                </select>
-                <!-- 선택된 책임자를 보여주는 영역 -->
-                <div id="selectedResponsible"></div>
+                <div name="responsible" id="responsible">
+                  <input type="checkbox" value="최재영" id="name01"><label for="name01">최재영</label>
+                  <input type="checkbox" value="김동건" id="name02"><label for="name02">김동건</label>
+                  <input type="checkbox" value="이윤지" id="name03"><label for="name03">이윤지</label>
+                  <input type="checkbox" value="한지수" id="name04"><label for="name04">한지수</label>
+                </div>
               </div>
             </form>
             <div class="btn-wrap">
@@ -151,19 +151,32 @@
           </div>
         </div>
       </div>
-      <div class="note-chart">
+      <div class="note-chart sub-title">
         <h2>📆 프로젝트 일정</h2>
-        <button id="planBtn" class="modal-open02">일정 추가</button>
+        <button id="planBtn" class="modal-open02">
+          <i class="fa-solid fa-plus"></i>Add Plan
+        </button>
+        <label>삭제할 작업명 :
+          <select id="deleteTaskName"></select>
+        </label><br />
+        <button type="button" onclick="deleteTask()">작업 삭제</button>
         <div id="chart_div"></div>
         <div class="bg02"></div>
         <div class="modal02">
           <div class="modal-header">
             <a href="#" class="close-modal02"><i class="fa-solid fa-xmark"></i></a>
           </div>
-          <form>
-            <label>작업담당자 : <input type="text" id="taskId" /></label><br />
-            <label>작업명 : <input type="text" id="taskName" /></label><br />
-            <label>작업종류 :
+          <form class="modal-cont">
+            <div>
+              <label for="">작업담당자</label>
+              <input type="text" id="taskId" />
+            </div>
+            <div>
+              <label for="">작업명</label>
+              <input type="text" id="taskName">
+            </div>
+            <div>
+              <label for="">작업분류</label>
               <select id="resource">
                 <option selected>작업을 선택하세요</option>
                 <option value="feature">Feature</option>
@@ -172,27 +185,47 @@
                 <option value="design">Design</option>
                 <option value="study">Study</option>
               </select>
-            </label><br />
-            <label>시작날짜 : <input type="date" id="startDate" /></label><br />
-            <label>종료날짜 : <input type="date" id="endDate" /></label><br />
-            <button type="button" onclick="addTask()">작업 추가</button>
-            <br><br>
-            <label>삭제할 작업명 :
-              <select id="deleteTaskName"></select>
-            </label><br />
-            <button type="button" onclick="deleteTask()">작업 삭제</button>
+            </div>
+            <div>
+              <label for="">시작날짜</label>
+              <input type="date" id="startDate" />
+            </div>
+            <div>
+              <label for="">종료날짜</label>
+              <input type="date" id="endDate" />
+            </div>
           </form>
           <div class="btn-wrap">
-            <button id="createBtn">등록/수정하기</button>
+            <button id="createBtn" onclick="addTask()">등록/수정하기</button>
           </div>
         </div>
 
 
       </div>
-      <div class="note-chat">
+      <div class="note-chat sub-title">
         <h2>💬 소통해요</h2>
         <div class="chatzone">
-
+          <div class="chat other">
+            <P class="name">이윤지</p>
+            <div class="flex">
+              <span class="talk">프로젝트 진행 사항 공유해주세요~</span>
+              <b class="time">2023.05.25 오후 9시 11분</b>
+            </div>
+          </div>
+          <div class="chat other">
+            <P class="name">한지수</p>
+            <div class="flex">
+              <span class="talk">프론트엔드 진행 중 입니다.</span>
+              <b class="time">2023.05.25 오후 9시 15분</b>
+            </div>
+          </div>
+          <div class="chat my">
+            <P class="name">최재영(나)</p>
+            <div class="flex">
+              <span class="talk">ERD 작성 중입니다.</span>
+              <b class="time">2023.05.25 오후 9시 20분</b>
+            </div>
+          </div>
         </div>
         <div class="inputzone">
           <img src="" alt="">
@@ -213,11 +246,13 @@
   document.querySelector(".close-modal").addEventListener("click", function () {
     document.querySelector(".modal-bg").classList.remove("visible");
     document.querySelector(".modal").classList.remove("visible");
+    resetModal();
   });
 
   document.querySelector(".close-modal-back").addEventListener("click", function () {
     document.querySelector(".modal-bg").classList.remove("visible");
     document.querySelector(".modal").classList.remove("visible");
+    resetModal();
   });
 
   // 삭제 모달
@@ -249,21 +284,6 @@
 
       document.body.classList.remove("modal-open");
     }
-  });
-  $(function () {
-    $('input[name="daterange"]').daterangepicker(
-      {
-        opens: "left",
-      },
-      function (start, end, label) {
-        console.log(
-          "A new date selection was made: " +
-          start.format("YYYY-MM-DD") +
-          " to " +
-          end.format("YYYY-MM-DD")
-        );
-      }
-    );
   });
 </script>
 
