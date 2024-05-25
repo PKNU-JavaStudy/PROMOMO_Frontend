@@ -5,11 +5,10 @@
     justify-content: space-between;
 }
 /* 전체 body 스타일링 */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* 프로필 정보 */
@@ -19,8 +18,8 @@ body {
     text-align: left;
     background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    border-color: #fff;
+    position: relative;
 }
 
 /* 프로필 이미지 */
@@ -31,22 +30,38 @@ body {
     margin-bottom: 20px;
 }
 
+/* 마이페이지 수정 버튼 추가_5.22 */
+.profile-section .edit-btn {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    justify-content: right;
+    border-radius: 20px;
+    border: none;
+    color: #F3F3F3;
+    background-color: #00dada;
+    font-size: 1rem;
+    padding: 5px 15px 5px 15px;
+    }
+
 
 h1 {
     font-size: 2.188rem;
+    margin-bottom: 5px;
 
 }
 
 .year {
-    margin-top: 1px;
+    /*간격수정_5.21*/
+    margin-top: 5px;
     font-size: 0.938rem;
     color: #969696;
 }
 
-
-.profile-section h1, .profile-section p, .profile-section textarea, .profile-section a {
-    margin-left: 20px; /* 왼쪽 정렬을 위한 외부 여백 조정 */
-}
+/* 필요없는 코드 */
+/*.profile-section h1, .profile-section p, .profile-section textarea, .profile-section a {*/
+/*    margin-left: 20px; !* 왼쪽 정렬을 위한 외부 여백 조정 *!*/
+/*}*/
 
 .github-link {
     display: block; /* 인라인 블록에서 블록으로 변경 */
@@ -54,6 +69,7 @@ h1 {
     text-decoration: none;
     font-size: 16px;
     margin-top: 52px;
+    margin-bottom: 29px;
 }
 
 /* 링크에 커서가 있을 때 밑줄 및 색상 변경 */
@@ -72,7 +88,7 @@ a.github-link:hover {
 /* 자기소개 글 입력 칸 */
 #text-input {
     width: 564px;
-    height: 100px; /* 대략 3줄의 높이 */
+    height: 69px; /* 대략 3줄의 높이 */
     font-size: 1rem;
     margin-top: 28px;
     border: none; /* 테두리 제거 */
@@ -90,17 +106,18 @@ a.github-link:hover {
 .underline {
     margin-top: 62px;
     margin-bottom: 62px;
-    color: #969696;
+    color: #D9D9D9;
 }
 
 /* 기술 색션 */
 .skills-section, .programs-section {
     display: flex;
     align-items: center;
-    padding: 20px;
     border-radius: 10px;
-    margin-top: 20px;
+    padding: 5px;
+    margin-top: 16px;
     margin-bottom: 10px;
+    /*색상변경_5.21*/
     background-color: #fff;
 }
 
@@ -110,54 +127,57 @@ a.github-link:hover {
 
 
 .tags.skills .tag {
-    padding: 4px 8px;
-    border-radius: 5px;
+    padding: 4px 5px;
+    border-radius: 3px;
     font-size: 14px;
     text-align: center;
-    font-weight: bold;
-    margin: 11px; /* 조금의 간격 추가 */
-    color: #969696;
+    /* 간격변경_5.21 */
+    margin: 5px;
+    /*색상변경_5.21*/
+    color: #666666;
 }
 
 /* 개별 기술 스택 태그 색상 */
 .front {
-    background-color: lightskyblue;
+    background-color: #E9FAFF;
 }
 
 /* 프론트엔드 */
 .back {
-    background-color: lavender;
+    background-color: #E9EEFF;
 }
 
 /* 백엔드 */
 .design {
-    background-color: lightpink;
+    background-color: #FFE9FD;
 }
 
 /* 디자인 */
 .plan {
-    background-color: lightgreen;
+    background-color: #EDFFE9;
 }
 
 /* 기획 */
 
 .tags.programs .tag {
-    padding: 4px 8px;
+    padding: 4px 5px;
     border-radius: 20px;
-    color: #969696; /* 연한 회색 텍스트 */
-    font-size: 14px;
+    /*색상변경_5.21*/
+    color: #666;
+    font-size: 13px;
     text-align: center;
-    font-weight: bold;
-    background: #ddd; /* 회색 배경 */
-    margin: 10px; /* 조금의 간격 추가 */
+    background: #F3F3F3; /* 회색 배경 */
+    /* 간격조정_5.21 */
+    margin: 3px;
     border: 1px solid transparent; /* 태두리 제거 */
 }
 
-/* 프로그램 스킬 태그 투명 배경과 연한 텍스트 색상 */
-.react, .typescript, .html, .css {
-    background-color: #ddd; /* 회색 배경 */
-    color: #fff; /* 텍스트 색상 변경 */
-}
+/*필요없는 코드*/
+/*!* 프로그램 스킬 태그 투명 배경과 연한 텍스트 색상 *!*/
+/*.react, .typescript, .html, .css {*/
+/*    background-color: #F3F3F3; !* 회색 배경 *!*/
+/*    color: #666; !* 텍스트 색상 변경 *!*/
+/*}*/
 
 /* 헤더 색션 */
 .header-flex {
@@ -169,12 +189,11 @@ a.github-link:hover {
 
 /* 프로젝트, 북마크 스타일 설정 */
 .make-pj, .bookmark {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 30px;
+    background-color: #FBFBFB;
+    padding: 20px 39px 20px 39px;
+    border-radius: 15px;
+    margin-top: 60px;
     margin-bottom: 30px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* 프로젝트, 북마크 제목 스타일 설정 */
@@ -192,6 +211,8 @@ a.github-link:hover {
     font-size: 14px;
     cursor: pointer;
     margin-left: 10px;
+    border-color: #D9D9D9;
+    color: #969696;
 }
 
 /* 프로젝트 정보 레이아웃 */
@@ -199,7 +220,7 @@ a.github-link:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 /* 생성한 프로젝트, 북마크한 프로젝트 수 색상 설정 */
@@ -208,12 +229,12 @@ a.github-link:hover {
 }
 /* 프로젝트 내용 섹션의 배경 및 여백 설정 */
 .pj-content {
-    background-color: #f9f9f9;
-    padding: 15px;
-    margin-top: 10px;
+    display: block;
+    background-color: #fff;
+    padding: 15px 39px 15px 39px;
+    margin-top: 25px;
     margin-bottom: 30px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
     position: relative;
 }
 
@@ -225,7 +246,9 @@ a.github-link:hover {
     font-size: 12px;
     border-radius: 4px;
     display: inline-block;
+    margin-top: 5px;
     margin-bottom: 5px;
+
 }
 
 .time-commitment {

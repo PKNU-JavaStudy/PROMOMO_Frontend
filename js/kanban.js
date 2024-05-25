@@ -48,10 +48,21 @@ document.getElementById("createBtn").addEventListener("click", function () {
 });
 
 // 간트차트
-document.getElementById("planBtn").addEventListener("click", function () {
-  document.querySelector(".bg02").classList.add("visible");
-  document.querySelector(".modal02").classList.add("visible");
-});
+// document.getElementById("planBtn").addEventListener("click", function () {
+//   document.querySelector(".bg02").classList.add("visible");
+//   document.querySelector(".modal02").classList.add("visible");
+// });
+// document.querySelector(".close-modal02").addEventListener("click", function () {
+//   document.querySelector(".bg02").classList.remove("visible");
+//   document.querySelector(".modal02").classList.remove("visible");
+// });
+// // document.addEventListener("click", function (event) {
+// //   if (!event.target.closest(".open-modal02, .modal02")) {
+// //     document.querySelector(".modal02").classList.remove("visible");
+// //     document.querySelector(".bg02").classList.remove("visible");
+// //     document.body.classList.remove("modal-open02");
+// //   }
+// // });
 
 google.charts.load("current", { packages: ["gantt"] });
 google.charts.setOnLoadCallback(drawChart);

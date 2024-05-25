@@ -153,12 +153,12 @@
       </div>
       <div class="note-chart">
         <h2>📆 프로젝트 일정</h2>
-        <button id="planBtn">일정 추가</button>
+        <button id="planBtn" class="modal-open02">일정 추가</button>
         <div id="chart_div"></div>
         <div class="bg02"></div>
         <div class="modal02">
           <div class="modal-header">
-            <a href="#" class="close-modal"><i class="fa-solid fa-xmark"></i></a>
+            <a href="#" class="close-modal02"><i class="fa-solid fa-xmark"></i></a>
           </div>
           <form>
             <label>작업담당자 : <input type="text" id="taskId" /></label><br />
@@ -204,28 +204,49 @@
   </div>
 </body>
 <script>
-  document
-    .querySelector(".open-modal")
-    .addEventListener("click", function () {
-      document.querySelector(".modal-bg").classList.add("visible");
-      document.querySelector(".modal").classList.add("visible");
-    });
+  // 모집완료 모달
+  document.querySelector(".open-modal").addEventListener("click", function () {
+    document.querySelector(".modal-bg").classList.add("visible");
+    document.querySelector(".modal").classList.add("visible");
+  });
 
-  document
-    .querySelector(".close-modal")
-    .addEventListener("click", function () {
-      document.querySelector(".modal-bg").classList.remove("visible");
-      document.querySelector(".modal").classList.remove("visible");
-    });
+  document.querySelector(".close-modal").addEventListener("click", function () {
+    document.querySelector(".modal-bg").classList.remove("visible");
+    document.querySelector(".modal").classList.remove("visible");
+  });
 
+  document.querySelector(".close-modal-back").addEventListener("click", function () {
+    document.querySelector(".modal-bg").classList.remove("visible");
+    document.querySelector(".modal").classList.remove("visible");
+  });
+
+  // 삭제 모달
+  document.querySelector(".open-modal02").addEventListener("click", function () {
+    document.querySelector(".bg02").classList.add("visible");
+    document.querySelector(".modal02").classList.add("visible");
+  });
+
+  document.querySelector(".close-modal02-back").addEventListener("click", function () {
+    document.querySelector(".bg02").classList.remove("visible");
+    document.querySelector(".modal02").classList.remove("visible");
+  });
+
+  document.querySelector(".close-modal02").addEventListener("click", function () {
+    document.querySelector(".bg02").classList.remove("visible");
+    document.querySelector(".modal02").classList.remove("visible");
+  });
+
+  // 바깥영역 클릭 시 종료
   document.addEventListener("click", function (event) {
     if (
-      !event.target.closest(
-        ".modal, .open-modal, .open-modal02, .open-modal03"
-      )
+      !event.target.closest(".modal, .open-modal, .open-modal02, .modal02")
     ) {
       document.querySelector(".modal").classList.remove("visible");
       document.querySelector(".modal-bg").classList.remove("visible");
+
+      document.querySelector(".modal02").classList.remove("visible");
+      document.querySelector(".bg02").classList.remove("visible");
+
       document.body.classList.remove("modal-open");
     }
   });
