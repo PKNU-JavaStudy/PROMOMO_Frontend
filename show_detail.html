@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>모집(Mo.zip)</title>
+  <title>모집(mo.zip) - 프로젝트 자랑</title>
   <!-- css / font -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -110,31 +110,31 @@
               </p>
             </div>
             <div class="application-box">
-                <div class="profile-top">
-                  <img src="./img/profile_sample.png" alt="">
-                  <div>
-                    <h3>이윤지</h3>
-                    <p class="box-count">2024년 4월 30일</p>
-                  </div>
-                  <button class="addmem-button add">답글</button>
+              <div class="profile-top">
+                <img src="./img/profile_sample.png" alt="">
+                <div>
+                  <h3>이윤지</h3>
+                  <p class="box-count">2024년 4월 30일</p>
                 </div>
-                <p class="comment">
-                  프로젝트 잘 보고 갑니다~
-                </p>
+                <button class="addmem-button add">답글</button>
               </div>
-              <div class="application-box">
-                <div class="profile-top">
-                  <img src="./img/profile_sample.png" alt="">
-                  <div>
-                    <h3>이윤지</h3>
-                    <p class="box-count">2024년 4월 30일</p>
-                  </div>
-                  <button class="addmem-button add">답글</button>
+              <p class="comment">
+                프로젝트 잘 보고 갑니다~
+              </p>
+            </div>
+            <div class="application-box">
+              <div class="profile-top">
+                <img src="./img/profile_sample.png" alt="">
+                <div>
+                  <h3>이윤지</h3>
+                  <p class="box-count">2024년 4월 30일</p>
                 </div>
-                <p class="comment">
-                  프로젝트 잘 보고 갑니다~
-                </p>
+                <button class="addmem-button add">답글</button>
               </div>
+              <p class="comment">
+                프로젝트 잘 보고 갑니다~
+              </p>
+            </div>
           </div>
           <div class="aplly-box">
             <div class="profile-pic">
@@ -155,31 +155,32 @@
           <p>안녕하세요 프론트엔드 개발자 이윤지 입니다.</p>
         </div>
         <button class="right-btn bookmark"><i class="fa-regular fa-bookmark"></i>북마크</button>
-        <a href="https://github.com/LegdayDev" target="_blank"><button class="right-btn confirm"><i class="fa-brands fa-github"></i>깃허브 링크</button></a>
+        <a href="https://github.com/LegdayDev" target="_blank"><button class="right-btn confirm"><i
+              class="fa-brands fa-github"></i>깃허브 링크</button></a>
         <div class="edit-btn">
           <a href="show_create.html"><button class="right-btn">수정</button></a>
           <button class="right-btn open-modal">삭제</button>
         </div>
         <div class="sc-member-list">
-            <div class="sc-title-box">
-                <p class="sc-title">👩‍👦‍👦 프로젝트 참여 멤버</p>
-                <p class="members-length">4/10</p>
-            </div>
+          <div class="sc-title-box">
+            <p class="sc-title">👩‍👦‍👦 프로젝트 참여 멤버</p>
+            <p class="members-length">4/10</p>
+          </div>
         </div>
       </div>
       <!-- 모달창 -->
       <div class="modal-bg">
       </div>
       <div class="modal">
-          <div class="modal-header">
-              <a href="#" class="close-modal"><i class="fa-solid fa-xmark"></i></a>
-          </div>
-          <h3>게시글을 삭제하시겠습니까?</h3>
-          <p>삭제 후에는 게시글을 되돌릴 수 없습니다.</p>
-          <div class="button-wrap">
-              <button class="close-modal-back">돌아가기</button>
-              <button class="submit-modal" type="submit">삭제하기</button>
-          </div>
+        <div class="modal-header">
+          <a href="#" class="close-modal"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+        <h3>게시글을 삭제하시겠습니까?</h3>
+        <p>삭제 후에는 게시글을 되돌릴 수 없습니다.</p>
+        <div class="button-wrap">
+          <button class="close-modal-back">돌아가기</button>
+          <button class="submit-modal" type="submit">삭제하기</button>
+        </div>
       </div>
     </div>
   </main>
@@ -202,7 +203,7 @@
 
   document.addEventListener("click", function (event) {
     if (
-            !event.target.closest(".modal, .open-modal, .open-modal02, .modal02")
+      !event.target.closest(".modal, .open-modal, .open-modal02, .modal02")
     ) {
       document.querySelector(".modal").classList.remove("visible");
       document.querySelector(".modal-bg").classList.remove("visible");
@@ -211,4 +212,5 @@
     }
   });
 </script>
+
 </html>
