@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>모집(mo.zip) - 로그인</title>
+  <title>모집(mo.zip) - 아이디 찾기</title>
   <!-- font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -24,33 +24,25 @@
 <body>
   <main>
     <div class="wrap flex user-title">
-      <h1>로그인</h1>
-      <form class="submit-box" action="/submit-login" method="POST">
-        <!-- 로그인 데이터를 처리할 서버의 URL -->
+      <h1>아이디 찾기</h1>
+      <form class="submit-box">
         <div class="input-group">
-          <h2 for="email">이메일</h2>
-          <input type="email" id="email" placeholder="mozip@mozip.com" required>
+          <h2 for="name">이름</h2>
+          <input type="text" id="name" class="input-padding" placeholder="이름을 입력해주세요." minlength="2" maxlength="5"
+            required>
         </div>
         <div class="input-group">
-          <h2 for="password">비밀번호</h2>
-          <input type="password" id="password" placeholder="비밀번호를 입력하세요." minlength="5" required>
+          <h2 for="phoneNumber">전화번호</h2>
+          <input type="text" id="phone" class="input-padding" placeholder="전화번호를 입력해주세요(-제외)" maxlength="11" required>
         </div>
-        <div class="inputLogin">
-          <input type="submit" value="로그인" class="inputLogin">
-        </div>
-        <div class="separator">또는</div> <!-- 시각적 구분선 추가 -->
-        <div class="kakaoLogin">
-          <input type="submit" value="카카오 로그인" class="kakao">
+        <div class="inputFind">
+          <input type="submit" value="아이디 찾기" class="find-submit">
         </div>
         <div class="submit">아직 회원이 아니신가요??
           <span><a href="join.html">가입하기</a></span> <!-- 회원가입 페이지 링크 수정 -->
-          <br>
         </div>
         <div class="forgot">
-          <ul>
-            <li><a href="find_id.html">아이디 찾기</a></li>
-            <li><a href="find_password.html">비밀번호 찾기</a></li>
-          </ul>
+          <a href="find_password.html">비밀번호 찾기</a></span>
         </div>
       </form>
 
