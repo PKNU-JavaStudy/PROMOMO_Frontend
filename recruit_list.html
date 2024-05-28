@@ -49,18 +49,28 @@
         <button class="btn-write open-modal">모집글 작성하기</button>
       </div>
       <div class="project-list">
-        <div class="list-top">
+        <div class="search">
           <input
             type="text"
             placeholder="제목, 내용으로 검색"
             class="recruit-ipt"
           />
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="list-top">
+          <div class="tapmenu">
+            <ul>
+              <li class="on"><a href="">사이드 프로젝트</a></li>
+              <li><a href="">스터디/모임</a></li>
+            </ul>
+          </div>
           <select class="select">
             <option value="all">전체 모집 글</option>
             <option value="ing">모집 중</option>
             <option value="done">모집 완료</option>
           </select>
         </div>
+
         <div class="lists">
           <a href="recruit_detail.html" class="project-box">
             <span class="tag">사이드 프로젝트</span>
