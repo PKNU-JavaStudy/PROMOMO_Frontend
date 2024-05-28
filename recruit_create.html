@@ -35,8 +35,8 @@
                     <input class="rc-title" type="text" placeholder="제목을 입력하세요" maxlength="50" />
 
                     <div class="rc-summarize">
-                        <p class="s-title">요약</p>
-                        <textarea rows="4" cols="40" placeholder="요약 내용을 써주세요 ~"></textarea>
+                        <p class="s-title">주제</p>
+                        <textarea id="subject" rows="1" cols="20" placeholder="주제를 20자 내로 써주세요 ~"></textarea>
                     </div>
 
                     <div class="rc-role">
@@ -95,6 +95,13 @@
                                 <option value="CSS">CSS</option>
                                 <option value="JS">JS</option>
                                 <option value="React">React</option>
+                                <option value="Vue.js">Vue.js</option>
+                                <option value="Angular">Angular</option>
+                                <option value="Flutter">Flutter</option>
+                                <option value="React Native">React Native</option>
+                                <option value="Flask">Flask</option>
+                                <option value="Node.js">Node.js</option>
+                                <option value="TypeScript">TypeScript</option>
                             </select>
                         </div>
                     </div>
@@ -145,6 +152,20 @@
             </div>
         </div>
         <script>
+            // 프로젝트 주제(textarea) : 1줄만 쓰게 제한
+            document.getElementById('subject').addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                }
+            });
+
+            // 프로젝트 주제(textarea) 입력 칸 : 20자 글자 제한
+            document.getElementById('subject').addEventListener('input', function() {
+                if (this.value.length > 20) {
+                    this.value = this.value.slice(0, 20);
+                }
+            });
+
             document.querySelector(".open-modal").addEventListener("click", function () {
                 document.querySelector(".modal-bg").classList.add("visible");
                 document.querySelector(".modal").classList.add("visible");

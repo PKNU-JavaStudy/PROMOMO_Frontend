@@ -20,47 +20,26 @@ $(function () {
   );
 });
 
-// 선택된 담당자 정보를 저장하는 배열
-let selectedResponsibles = [];
-// 담당자 선택 시 선택된 담당자를 옆에 표시
-document.getElementById("responsible").addEventListener("change", function () {
-  const selected = document.getElementById("responsible").value;
-  const displayArea = document.getElementById("selectedResponsible");
-  // 이미 선택된 담당자는 추가하지 않음
-  if (!selectedResponsibles.some((res) => res.name === selected)) {
-    selectedResponsibles.push({
-      name: selected,
-      index: selectedResponsibles.length,
-    });
-    const span = document.createElement("span");
-    span.textContent = selected;
-    span.style.marginRight = "10px";
-    span.classList.add(`responsible-${selectedResponsibles.length - 1}`); // 고유 클래스 추가
-    displayArea.appendChild(span);
-  }
-});
-
 document.getElementById("createBtn").addEventListener("click", function () {
   const category = document.getElementById("category").value;
   const title = document.querySelector('input[name="title"]').value;
   const daterange = document.querySelector('input[name="daterange"]').value;
+  const select = document.getElementById("responsible-select");
   const card = document.createElement("div");
   card.className = "card";
 
-  let responsibleHTML = "";
-  document
-    .querySelectorAll('#responsible input[type="checkbox"]:checked')
-    .forEach((checkbox) => {
-      const resName = checkbox.nextElementSibling.textContent;
-      responsibleHTML += `<li class="responsible">${resName}</li>`;
-    });
+  const selectedOption = select.options[select.selectedIndex].text;
+  const responsibleHTML = `<span class="responsible">${selectedOption}</span>`;
 
   card.innerHTML = `
-    <h4>${title}</h4>
-    <p>📆 ${daterange}</p>
-    <ul>🧑‍💼 ${responsibleHTML}</ul>
-    <button class="delete-btn"><i class="fa-solid fa-xmark"></i></button>`;
+        <h4>${title}</h4>
+        <div>
+        <span>👨‍💻 ${selectedOption} | </span>
+        <span>📆 ${daterange}</span>
+        </div>
+        <button class="delete-btn"><i class="fa-solid fa-xmark"></i></button>`;
 
+  console.log(selectedOption);
   if (category === "Todo 📃") {
     document.getElementById("todo").appendChild(card);
   } else if (category === "In Progress 🚀") {
@@ -73,6 +52,7 @@ document.getElementById("createBtn").addEventListener("click", function () {
     card.remove();
   });
 
+  alert("카드를 등록하시겠습니까?");
   document.querySelector(".modal-bg").classList.remove("visible");
   document.querySelector(".modal").classList.remove("visible");
   resetModal();
@@ -80,9 +60,5 @@ document.getElementById("createBtn").addEventListener("click", function () {
 
 function resetModal() {
   document.querySelector('input[name="title"]').value = "";
-  document
-    .querySelectorAll('#responsible input[type="checkbox"]')
-    .forEach((checkbox) => {
-      checkbox.checked = false;
-    });
+  document.getElementById("responsible-select").selectedIndex = 0;
 }
