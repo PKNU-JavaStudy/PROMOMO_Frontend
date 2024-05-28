@@ -315,6 +315,7 @@ a.github-link:hover {
 /* 라디오 버튼 간격 설정 */
 .radio label {
     margin-right: 20px; /* 오른쪽 마진을 추가하여 간격을 넓힘 */
+    color: #717171;
 }
 
 
@@ -363,6 +364,11 @@ a.github-link:hover {
 label {
     display: block;
     margin-bottom: 5px;
+}
+
+/* 마이페이지 이름 border 삭제 데이터 들고와서 이름 넣기 */
+#name {
+    border: none;
 }
 
 /* 입력칸 공통 설정 */
@@ -432,7 +438,7 @@ select {
 
 
 /* 완료 버튼 색상 모양 설정 */
-.button-link {
+#mypage-submit {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -449,6 +455,6 @@ select {
 }
 
 /* 버튼 호버시 색상 */
-button-link:hover {
+#mypage-submit:hover {
     background-color: #009393;
 }

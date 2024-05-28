@@ -168,6 +168,8 @@ input[type="submit"]:hover {
   display: flex;
   align-items: center;
   margin: 15px 0;
+  /* 색상 변경 */
+  color: #898989;
 }
 
 .join_checkBox input[type="checkbox"] {
