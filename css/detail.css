@@ -155,8 +155,8 @@ ul.stack-icon {
 
 ul.stack-icon img {
   /* 기술 스택 이미지 크기 설정 */
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 1.4rem;
+  /* height: 1.7rem; */
   margin-right: 7px;
 }
 
@@ -303,7 +303,8 @@ ul.stack-icon li:nth-child(3n) {
 /* show_detail */
 .app-wrap-show .addmem-button {
   /* 답글 버튼 스타일 설정 */
-  display: inline-block;
+
+  /* display: inline-block;
   width: 65px;
   padding: 5px;
   color: var(--lightgray-font);
@@ -311,12 +312,12 @@ ul.stack-icon li:nth-child(3n) {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 13px; */
 }
 
 .app-wrap-show .addmem-button.add:hover {
   /* 답글 버튼 호버 시 색 설정 */
-  color: #626262;
+  /* color: #626262; */
 }
 
 .app-wrap-show .box-count {
