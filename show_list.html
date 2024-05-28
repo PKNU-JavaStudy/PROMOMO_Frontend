@@ -44,12 +44,20 @@
           />
           <button><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
-        <select class="select">
-          <option value="new">최신순</option>
-          <option value="old">오래된순</option>
-          <option value="hot">인기순</option>
-          <option value="save">북마크순</option>
-        </select>
+        <div class="show-flex">
+          <div class="tapmenu">
+            <ul>
+              <li class="on"><a href="">사이드 프로젝트</a></li>
+              <li><a href="">스터디/모임</a></li>
+            </ul>
+          </div>
+          <select class="select">
+            <option value="new">최신순</option>
+            <option value="old">오래된순</option>
+            <option value="hot">인기순</option>
+            <option value="save">북마크순</option>
+          </select>
+        </div>
       </div>
       <div class="show-lists">
         <a href="show_detail.html" class="show-box">
@@ -268,6 +276,9 @@
             </ul>
           </div>
         </a>
+      </div>
+      <div class="btn-wrap">
+        <a href="show_create.html" class="write-btn"><span>✏</span></a>
       </div>
     </div>
   </body>

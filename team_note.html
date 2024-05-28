@@ -59,10 +59,9 @@
   </head>
 
   <body>
-    <div class="top-bg">
+    <div class="top-bg"></div>
+    <div class="wrap team_note">
       <div class="profile-img"></div>
-    </div>
-    <div class="wrap">
       <div class="note-cont">
         <h1>개발자 커뮤니티 사이트 | 개발바닥</h1>
         <div class="note-info">
@@ -171,24 +170,12 @@
                 </div>
                 <div>
                   <label for="">책임자</label>
-                  <div name="responsible" id="responsible">
-                    <input type="checkbox" value="최재영" id="name01" /><label
-                      for="name01"
-                      >최재영</label
-                    >
-                    <input type="checkbox" value="김동건" id="name02" /><label
-                      for="name02"
-                      >김동건</label
-                    >
-                    <input type="checkbox" value="이윤지" id="name03" /><label
-                      for="name03"
-                      >이윤지</label
-                    >
-                    <input type="checkbox" value="한지수" id="name04" /><label
-                      for="name04"
-                      >한지수</label
-                    >
-                  </div>
+                  <select name="" id="responsible-select">
+                    <option value="최재영">최재영</option>
+                    <option value="김동건">김동건</option>
+                    <option value="이윤지">이윤지</option>
+                    <option value="한지수">한지수</option>
+                  </select>
                 </div>
               </form>
               <div class="btn-wrap">
@@ -216,10 +203,10 @@
               ></a>
             </div>
             <form class="modal-cont">
-              <div>
+              <!-- <div>
                 <label for="">작업담당자</label>
                 <input type="text" id="taskId" />
-              </div>
+              </div> -->
               <div>
                 <label for="">작업명</label>
                 <input type="text" id="taskName" />
