@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./css/common.css"/>
     <link rel="stylesheet" href="./css/mypage.css"/>
 
-    <script defer src="./js/mypage.js"></script>
+    <script defer src="./js/02donggun.js"></script>
     <script src="./js/common.js"></script>
     <script defer src="./common/header.js"></script>
     <script defer src="./common/footer.js"></script>
@@ -28,7 +28,7 @@
         <div class="edit-section">
             <img src="img/cinnamoroll.jpeg" alt="Profile Image" class="profile-image">
             <div class="form-container">
-                <form id="profile-form">
+                <form id="profile-form" action="mypage.html">
                     <div class="edit-group">
                         <h2>이름</h2>
                         <input type="text" id="name" disabled>
@@ -36,7 +36,7 @@
                     <div class="form-group">
                         <div class="input-group">
                             <h2>경력 <span class="required">*</span></h2>
-                            <div class="radio" id="experience-group">
+                            <div class="radio" id="experience-container">
                                 <label><input type="radio" name="experience" required>학생 / 취업준비생 </label>
                                 <label><input type="radio" name="experience" required>신입</label>
                                 <label><input type="radio" name="experience" required>1~3년차</label>
@@ -47,20 +47,18 @@
                         <div class="introduce">
                             <h2>자기소개</h2>
                             <textarea class="introduce-input" style="resize: none" type="text" name="title"
-                                      maxlength="100" placeholder="자기소개를 입력해주세요."></textarea>
+                                      maxlength="312" placeholder="자기소개를 입력해주세요."></textarea>
                         </div>
                         <div class="link">
-                            <h2>깃허브 레포지토리 링크<span class="maxlength">0/100</span></h2>
-                            <input class="sc-input" style="resize: none" type="text" name="title" maxlength="100"
+                            <h2>깃허브 레포지토리 링크<span id = "charCount" class="maxlength">0/100</span></h2>
+                            <input id = "urlInput" class="sc-input" style="resize: none" type="text" name="title" maxlength="100"
                                    placeholder="URL을 입력하세요."></input>
                         </div>
                         <h2 class="section">원하는 직군 <span class="required">*</span></h2>
-                        <div class="select-skills">
-                            <div class="select-skills">
-                                <span class="skill">프론트엔드</span>
+                            <div class="select-skills" id="skill-container">
+                                <!--아이콘 들어가는 곳-->
                             </div>
-                        </div>
-                        <select id="role">
+                        <select id="skill">
                             <option value="">--선택--</option>
                             <option value="frontend">프론트엔드</option>
                             <option value="backend">백엔드</option>
@@ -69,12 +67,9 @@
                         </select>
 
                         <h2 class="section">기술 스택 <span class="required">*</span></h2>
-                        <div class="select-programs">
-
-                            <div class="select-programs">
-                                <span class="program">React</span>
+                            <div class="select-programs" id="stack-container">
+                                <!--아이콘 들어가는 곳-->
                             </div>
-                        </div>
                         <select id="stack">
                             <option value="">--선택--</option>
                             <option value="java">Java</option>
