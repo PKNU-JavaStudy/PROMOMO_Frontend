@@ -56,22 +56,61 @@
 .project-list {
   width: 100%;
 }
+.search {
+  position: relative;
+}
+.search input[type="text"] {
+  width: 100%;
+}
+.search button {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+}
+.search button i {
+  font-size: 1.5rem;
+}
 
 .list-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 50px;
 }
 
 .recruit-ipt {
   width: 600px;
   border-radius: 30px;
-  padding: 14px 20px;
+  padding: 15px 30px;
   border: 1px solid var(--border-color);
+  font-size: 1.25rem;
+}
+.tapmenu ul {
+  display: flex;
+}
+.tapmenu ul li {
+  text-align: center;
+  border: 1px solid var(--main-color);
+  border-radius: 30px;
+  padding: 10px 15px;
+  margin-right: 15px;
+}
+.tapmenu ul li a {
+  font-size: 0.815rem;
+}
+.tapmenu ul li.on {
+  background-color: var(--main-color);
+}
+.tapmenu ul li.on a {
+  color: #fff;
+  font-weight: 600;
 }
 
 .lists {
-  margin-top: 40px;
+  margin-top: 15px;
 }
 
 .project-box {
@@ -197,6 +236,12 @@
   width: 100%;
   display: flex;
 }
+.show-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0 20px;
+}
 
 .show-ipt {
   width: 700px;
@@ -208,7 +253,6 @@
 }
 
 .show-top select {
-  margin: 50px 0 20px;
   float: right;
 }
 
@@ -255,7 +299,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .box-text p {
@@ -272,7 +316,7 @@ ul.lang {
 }
 
 ul.lang li {
-  margin-top: 30px;
+  margin-top: 10px;
   background-color: #6acfcb;
   color: #fff;
   border-radius: 5px;
@@ -283,11 +327,11 @@ ul.lang li {
 
 ul.count {
   display: flex;
-  padding-top: 17px;
+  padding-top: 15px;
 }
 
 ul.count li {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   padding-right: 7px;
 }
 
@@ -342,13 +386,15 @@ ul.count li {
 }
 .teamnote-list-wrap {
   display: grid;
+  column-gap: 15px;
+  row-gap: 30px;
   grid-template-columns: repeat(3, 1fr);
   margin: 55px 0;
   justify-content: space-between;
 }
 
 .show-box {
-  width: 320px;
+  width: 100%;
   border-radius: 10px;
   border: 1px solid var(--border-color);
   overflow: hidden;
@@ -365,28 +411,4 @@ ul.count li {
 .show-box img {
   transition: 0.3s;
   height: 100%;
-}
-
-.box-text {
-  overflow: hidden;
-  background-color: #fff;
-  padding: 17px;
-}
-
-.box-text h2 {
-  font-size: 1.125rem;
-  width: 285px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-bottom: 20px;
-}
-
-.box-text p {
-  font-size: 0.815rem;
-  line-height: 1.1rem;
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
 }

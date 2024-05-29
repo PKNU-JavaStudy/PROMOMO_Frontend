@@ -11,7 +11,10 @@
     align-items: center;
 }
 
-/* 프로필 정보 */
+/*마이페이지*/
+
+
+/* 마이페이지 프로필 정보 */
 .profile-container {
     width: 100%;
     margin: 20px auto;
@@ -22,13 +25,14 @@
     position: relative;
 }
 
-/* 프로필 이미지 */
-.profile-section img.profile-image {
+/* 마이페이지 프로필 이미지 */
+.profile-section img.profile-image, .edit-section img.profile-image {
     width: 181px;
     height: 181px;
     border-radius: 50%;
     margin-bottom: 20px;
 }
+
 
 /* 마이페이지 수정 버튼 추가_5.22 */
 .profile-section .edit-btn {
@@ -44,13 +48,13 @@
     padding: 5px 15px 5px 15px;
     }
 
-
+/* 마이페이지 이름*/
 h1 {
     font-size: 2.188rem;
     margin-bottom: 5px;
 
 }
-
+/*마이페이지 경력칸*/
 .year {
     /*간격수정_5.21*/
     margin-top: 5px;
@@ -58,11 +62,7 @@ h1 {
     color: #969696;
 }
 
-/* 필요없는 코드 */
-/*.profile-section h1, .profile-section p, .profile-section textarea, .profile-section a {*/
-/*    margin-left: 20px; !* 왼쪽 정렬을 위한 외부 여백 조정 *!*/
-/*}*/
-
+/*마이페이지 깃허브 링크*/
 .github-link {
     display: block; /* 인라인 블록에서 블록으로 변경 */
     color: black;
@@ -85,7 +85,7 @@ a.github-link:hover {
     margin-right: 10px;
 }
 
-/* 자기소개 글 입력 칸 */
+/* 마이페이지 자기소개 */
 #text-input {
     width: 564px;
     height: 69px; /* 대략 3줄의 높이 */
@@ -103,12 +103,6 @@ a.github-link:hover {
 }
 
 
-.underline {
-    margin-top: 62px;
-    margin-bottom: 62px;
-    color: #D9D9D9;
-}
-
 /* 기술 색션 */
 .skills-section, .programs-section {
     display: flex;
@@ -125,7 +119,7 @@ a.github-link:hover {
     margin-right: 10px; /* 아이콘과 태그들 사이의 간격 */
 }
 
-
+/*기술 스택 태그 모양*/
 .tags.skills .tag {
     padding: 4px 5px;
     border-radius: 3px;
@@ -158,7 +152,6 @@ a.github-link:hover {
 }
 
 /* 기획 */
-
 .tags.programs .tag {
     padding: 4px 5px;
     border-radius: 20px;
@@ -172,14 +165,14 @@ a.github-link:hover {
     border: 1px solid transparent; /* 태두리 제거 */
 }
 
-/*필요없는 코드*/
-/*!* 프로그램 스킬 태그 투명 배경과 연한 텍스트 색상 *!*/
-/*.react, .typescript, .html, .css {*/
-/*    background-color: #F3F3F3; !* 회색 배경 *!*/
-/*    color: #666; !* 텍스트 색상 변경 *!*/
-/*}*/
+/* 마이페이지 언더라인 */
+.underline {
+    margin-top: 62px;
+    margin-bottom: 62px;
+    color: #D9D9D9;
+}
 
-/* 헤더 색션 */
+/* 내가 만든 프로젝트, 북마크 헤더 색션 */
 .header-flex {
     display: flex;
     align-items: center;
@@ -204,15 +197,15 @@ a.github-link:hover {
 
 }
 
-/* 드롭다운 메뉴 */
+/* 프로젝트, 북마크 헤더 드롭다운 메뉴 */
 .dropdown {
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
-    margin-left: 10px;
     border-color: #D9D9D9;
     color: #969696;
+    width: 125px;
 }
 
 /* 프로젝트 정보 레이아웃 */
@@ -274,4 +267,197 @@ a.github-link:hover {
     color: #666;
     display: block;
     margin-top: 20px;
+}
+
+
+
+/*!*마이페이지 수정*!*/
+
+
+
+/* 폼 그룹 설정 */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 폼 그룹 제목 설정 */
+.form-group h2{
+    margin-top: 18px;
+}
+
+
+/* 프로필 섹션 설정 */
+.edit-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;   /* 자동 마진 */
+}
+
+/* 필수사항 텍스트 설정 */
+.required {
+    color: palevioletred;
+    justify-content: right;
+}
+
+/* 라디오 버튼 스타일 */
+.radio {
+    display: flex;
+    flex-direction: row;
+    appearance: none;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-bottom: 53px;
+}
+
+/* 라디오 버튼 간격 설정 */
+.radio label {
+    margin-right: 20px; /* 오른쪽 마진을 추가하여 간격을 넓힘 */
+    color: #717171;
+}
+
+
+/* 자기소개 입력칸 */
+.introduce-input {
+    width: 584px;
+    height: 182px;
+    margin-bottom: 38px;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    justify-items: start;
+}
+
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* 글자수 제한 폰트 설정 */
+.maxlength {
+    display: flex;
+    flex-direction: row;
+    color: #D9D9D9;
+}
+
+/* 각 섹션 마진 설정 */
+.section {
+    margin-bottom: 35px;
+}
+
+/* 드롭다운 아래쪽 마진 */
+#role {
+    margin-bottom: 67px;
+}
+
+/* 링크 헤더 스타일 */
+.link h2 {
+    display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: space-between;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* 마이페이지 이름 border 삭제 데이터 들고와서 이름 넣기 */
+#name {
+    border: none;
+}
+
+/* 입력칸 공통 설정 */
+input[type="text"],
+input[type="url"],
+textarea,
+select {
+    width: 584px;
+    padding: 12px 8px;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+/* 특수 입력 필드 */
+.sc-input {
+    margin-bottom: 33px;
+    margin-top: 21px;
+    width: 584px;
+    height: 44px;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+}
+
+
+/*직군, 스택 아이콘 설정*/
+.select-skills, .select-programs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* 선택 사항: 항목들 사이의 간격 추가 */
+    width: 584px;
+}
+
+.skill, .stack {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border: 1px solid #00dada;
+    border-radius: 15px;
+    background-color: #00dada;
+    color: #ffffff;
+    margin-right: 10px;
+    flex: 0 0 auto; /* 아이템이 고정된 너비로 나타나도록 */
+}
+
+.remove {
+    margin-left: 5px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+
+
+
+/* 스킬, 프로그램 제목 마진 설정 */
+.skills-section h2, .programs-section h2 {
+    margin-right: 10px; /* 텍스트와 태그 사이의 간격 */
+    white-space: nowrap; /* 텍스트가 줄바뀌지 않도록 */
+    flex-shrink: 0; /* 텍스트가 축소되지 않도록 */
+}
+
+/* 태그 간격 조정 */
+.tags.skills .tag.front, .tags.programs .tag.react {
+    margin-right: 4px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+
+/* 완료 버튼 색상 모양 설정 */
+#mypage-submit {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #00dada;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 584px;
+    height: 60px;
+    line-height: 42px;
+    margin-top: 83px;
+}
+
+/* 버튼 호버시 색상 */
+#mypage-submit:hover {
+    background-color: #009393;
 }

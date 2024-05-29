@@ -87,6 +87,7 @@
 
 p.title-contents {
   /* 본문 내용의 소제목 font 설정 */
+  /* 프로젝트 요약 폰트 설정 */
   font-size: 1.25rem;
   padding: 40px 0;
   font-weight: 800;
@@ -99,6 +100,7 @@ ul.recruit-icon {
 
 p.content {
   /* 본문 내용(요약) 줄 간격 설정 */
+  /* 요약 내용 글자 간격 설정 */
   line-height: 1.5rem;
 }
 
@@ -153,14 +155,20 @@ ul.stack-icon {
 
 ul.stack-icon img {
   /* 기술 스택 이미지 크기 설정 */
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 1.4rem;
+  /* height: 1.7rem; */
   margin-right: 7px;
 }
 
 ul.stack-icon li:nth-child(2n) {
   /* 기술스택 두번째 줄 정렬 */
   padding-right: 20px;
+  font-weight: 600;
+}
+
+ul.stack-icon li:nth-child(3n) {
+  /* 기술스택 두번째 줄 정렬 */
+  /* padding-right: 20px; */
   font-weight: 600;
 }
 
@@ -191,7 +199,7 @@ ul.stack-icon li:nth-child(2n) {
 
 .fa-circle-info {
   /* 저요저요 info 아이콘 */
-  position: relative;   /* 없어도 될듯..?*/
+  position: relative; /* 없어도 될듯..?*/
 }
 
 .fa-circle-info:hover::after {
@@ -216,6 +224,24 @@ ul.stack-icon li:nth-child(2n) {
   row-gap: 25px;
   padding-bottom: 55px;
 }
+/* -------------------------------------- */
+/* show_detail */
+.app-wrap-show {
+  /* 댓글창 간격 설정 */
+  padding-bottom: 10px;
+}
+
+.app-wrap-show .application-box {
+  /* 댓글상자 틀 생성 */
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: rgb(236, 236, 236);
+  flex-direction: column;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+/* -------------------------------------- */
 
 .app-wrap .application-box {
   /* 저요저요 멤버추가 댓글상자 */
@@ -273,6 +299,75 @@ ul.stack-icon li:nth-child(2n) {
   cursor: pointer;
   font-size: 13px;
 }
+/* ----------------------------------------- */
+/* show_detail */
+.app-wrap-show .addmem-button {
+  /* 답글 버튼 스타일 설정 */
+
+  /* display: inline-block;
+  width: 65px;
+  padding: 5px;
+  color: var(--lightgray-font);
+  background-color: rgb(236, 236, 236);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px; */
+}
+
+.app-wrap-show .addmem-button.add:hover {
+  /* 답글 버튼 호버 시 색 설정 */
+  /* color: #626262; */
+}
+
+.app-wrap-show .box-count {
+  /* 댓글 날짜 font 설정 */
+  text-align: right;
+  font-size: 12px;
+  color: var(--lightgray-font);
+  padding-top: 10px;
+  padding-right: 5px;
+}
+
+.profile-top-show .addmem-button.done {
+  /* 댓글 상자 멤버 버튼 색상 설정 */
+  background-color: var(--gray-font);
+}
+
+.application-box .profile-top-show {
+  /* 댓글 상자 내 프로필 영역 설정 */
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 15px;
+}
+
+.application-box .profile-top-show img {
+  /* 댓글 상자 프로필사진 설정 */
+  width: 60px;
+  height: 60px;
+  margin-right: 13px;
+}
+
+.application-box .profile-top-show h3 {
+  /* 댓글 상자 이름 설정 */
+  font-weight: 600;
+  padding-top: 9px;
+}
+
+.application-box .profile-top-show p {
+  /* 댓글 상자 소개문 설정 */
+  font-size: 0.815rem;
+  color: var(--gray-font);
+}
+
+.application-box .profile-top-show button {
+  /* 댓글 상자 멤버 추가 버튼 위치 및 크기 설정 */
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* ----------------------------------------- */
 
 .profile-top .addmem-button.done {
   /* 댓글 상자 멤버 버튼 색상 설정 */
@@ -349,6 +444,51 @@ ul.stack-icon li:nth-child(2n) {
   top: 167px;
   height: 495px;
 }
+/* ------------------------------------- */
+/* show_detail */
+.right-box-show {
+  position: sticky;
+  top: 167px;
+  height: 765px;
+  width: 273px;
+}
+
+.right-box-show .profile-box {
+  /* right-box 프로필 틀 설정 */
+  width: 273px;
+  border-radius: 10px;
+  background-color: #f3f3f3;
+  padding: 30px 40px;
+  text-align: center;
+}
+
+.right-box-show .profile-box h3 {
+  /* right-box 이름 설정 */
+  padding-top: 14px;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.right-box-show .profile-box p {
+  /* right-box 소개문 설정 */
+  padding-top: 10px;
+  color: #868686;
+  text-align: left;
+  font-size: 0.815rem;
+  line-height: 1.2rem;
+}
+
+.right-box-show .right-btn {
+  /* right-box 버튼 색상 밑 크기 설정 */
+  margin: 17px 0 0px;
+  padding: 15px 0;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--main-color);
+  font-weight: 600;
+  color: var(--main-color);
+}
+/* ----------------------------------------- */
 
 .right-box .profile-box {
   /* right-box 프로필 틀 설정 */
@@ -397,6 +537,18 @@ ul.stack-icon li:nth-child(2n) {
   color: #fff;
 }
 
+/* -------------------------------------- */
+/* show_detail */
+.right-btn.confirm-show {
+  border: 1px solid black;
+  background-color: black;
+  color: #fff;
+}
+.right-btn .fa-github {
+  color: #fff;
+}
+/* -------------------------------------- */
+
 .edit-btn {
   /* right-box 수정, 삭제 버튼 정렬 */
   display: grid;
@@ -416,6 +568,56 @@ ul.stack-icon li:nth-child(2n) {
   color: var(--main-color);
   padding-right: 5px;
 }
+
+/* ------------------------------------ */
+/* show_detail */
+
+.sc-title-box .sc-title-show {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 15px 0 20px;
+}
+
+.sc-title-box .members-length {
+  padding-top: 15px;
+  color: var(--tag-bgcolor);
+  font-size: 0.825rem;
+}
+
+.sc-member-list {
+  margin-top: 20px;
+}
+
+.modal h3 {
+  /* 모달창 안내문구 폰트 설정 */
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+.modal p {
+  /* 모달창 안내문구 폰트 설정 */
+  padding-bottom: 30px;
+}
+.button-wrap button {
+  /* 모달창 버튼 글자 중앙정렬 */
+  text-align: center;
+}
+.button-wrap .close-modal-back {
+  /* 모달창 버튼 간격두기 */
+  margin-bottom: 40px;
+  border: 1px solid var(--tag-bgcolor);
+}
+
+.button-wrap .submit-modal {
+  /* 모달창 삭제버튼 색 설정 */
+  background-color: var(--main-color);
+  border: none;
+  color: white;
+}
+.submit-modal:hover {
+  /* 모달창 삭제 버튼 hover 설정 */
+  background-color: var(--main-hover-color);
+}
+/* ------------------------------------ */
 
 .right-box span {
   /* right-box 프로젝트 참여 멤버 이름 설정 */
@@ -446,7 +648,7 @@ ul.stack-icon li:nth-child(2n) {
   background-color: var(--main-hover-color);
 }
 
-.button-wrap .close-modal-back{
+.button-wrap .close-modal-back {
   /* 모집완료버튼 -> 돌아가기 버튼*/
   border: 1px solid var(--tag-bgcolor);
   margin-bottom: 40px;
@@ -464,7 +666,7 @@ ul.stack-icon li:nth-child(2n) {
   margin-top: 10px;
 }
 
-.button-wrap .close-modal02-back{
+.button-wrap .close-modal02-back {
   /* 삭제버튼 -> 돌아가기 버튼*/
   margin-top: 25px;
   border: 1px solid var(--tag-bgcolor);
