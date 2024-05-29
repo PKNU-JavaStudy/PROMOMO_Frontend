@@ -1,5 +1,3 @@
-
-
 // 회원가입 유효성 js
 // 변수 선언
 const form = document.getElementById("signup-form");  // 전체 폼
@@ -126,61 +124,4 @@ submit.addEventListener('click', function () {
 // 초기 상태에서 제출 버튼 비활성화
 checkSubmitState();
 
-
-
-// 마이페이지 유효성 js
-// document.getElementById("profile-form").addEventListener("submit", function(event) {
-//     event.preventDefault();  // 기본 폼 제출 동작을 막음
-//
-//     const roleSelect = document.getElementById("role");
-//     const stackSelect = document.getElementById("stack");
-//
-//     let roleSelected = roleSelect.value !== "" && roleSelect.value !== "직군을 선택하세요";
-//     let stackSelected = stackSelect.value !== "" && stackSelect.value !== "기술 스택을 선택하세요";
-//
-//     if (!roleSelected) {
-//         alert("원하는 직군을 선택해 주세요.");
-//         roleSelect.style.borderColor = "red";
-//     } else {
-//         roleSelect.style.borderColor = "gray";
-//     }
-//
-//     if (!stackSelected) {
-//         alert("기술 스택을 선택해 주세요.");
-//         stackSelect.style.borderColor = "red";
-//     } else {
-//         stackSelect.style.borderColor = "gray";
-//     }
-//
-//     if (roleSelected && stackSelected) {
-//         alert("폼이 성공적으로 제출되었습니다.");
-//         window.location.href = "mypage.html"; // 테스트 후 실제 페이지로 이동
-//     }
-// });
-
-// 마이페이지 원하는 직군, 기술 스택 동적으로 띄우기
-function initializeForm() {
-    document.getElementById('role').value = '';
-    document.getElementById('stack').value = '';
-}
-
-function handleSubmit(event) {
-    event.preventDefault(); // 기본 제출 동작 방지
-    const role = document.getElementById('role').value;
-    const stack = document.getElementById('stack').value;
-
-    if (!role) {
-        alert('원하시는 직군을 선택해주세요.');
-        return;
-    } else if(!stack) {
-        alert("기술 스택을 선택해주세요.");
-        return;
-    } alert("수정이 완료되었습니다.")
-}
-
-// 페이지 로드 시 폼 초기화
-window.onload = function() {
-    initializeForm();
-    document.getElementById('mypage-submit').addEventListener('click', handleSubmit)
-};
 
