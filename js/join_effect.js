@@ -70,3 +70,4 @@ submit.addEventListener('click', function () {
 
 // 초기 상태에서 제출 버튼 비활성화
 checkSubmitState();
+
