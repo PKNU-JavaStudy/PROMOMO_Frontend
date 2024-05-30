@@ -38,19 +38,57 @@ h5 {
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.16);
   transition: 0.3s;
 }
-p.pj-type {
+.pj-type {
   display: inline-block;
-  background-color: var(--tag-bgcolor);
   border-radius: 3px;
   color: #fff;
   font-size: 0.813rem;
   padding: 4px 9px;
+  margin-right: 5px;
 }
+.pj-type.pj {
+  background-color: #ffadad;
+}
+.pj-type.study {
+  background-color: #aaec90;
+}
+.pj-tag {
+  color: #fff;
+  font-size: 0.813rem;
+  font-weight: 500;
+  border-radius: 3px;
+  padding: 4px 7px;
+}
+.pj-tag.fire {
+  background-color: #ffe8e8;
+  color: #ea726f;
+}
+.pj-tag.new {
+  background-color: #fff9d5;
+  color: #fdb900;
+}
+.pj-tag.hot {
+  background-color: #f1f7ff;
+  color: #74a0e2;
+}
+.pj-work {
+  display: flex;
+  margin-top: 15px;
+}
+.pj-work li {
+  background-color: #f1f7ff;
+  color: #74a0e2;
+  font-size: 0.75rem;
+  margin-right: 3px;
+  padding: 4px 7px;
+  border-radius: 3px;
+}
+
 h1.pj-title {
   display: block;
   font-size: 1.25rem;
-  padding-top: 10px;
-  width: 370px;
+  padding-top: 15px;
+  width: 400px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -59,7 +97,7 @@ h1.pj-title:hover {
   text-decoration: underline;
 }
 p.pj-content {
-  width: 370px;
+  width: 425px;
   font-size: 0.875rem;
   padding-top: 15px;
   display: -webkit-box;
@@ -71,28 +109,30 @@ p.pj-content {
 }
 p.pj-use {
   color: var(--lightgray-font);
-  font-size: 0.815rem;
-  padding-top: 30px;
+  font-size: 0.9rem;
+  padding-top: 20px;
 }
 p.pj-use i {
   color: var(--lightgray-font);
   padding-right: 20px;
   width: 0.815rem;
 }
-.cont-box ul {
+.pj-info {
   display: flex;
-  padding-top: 25px;
+  padding-top: 15px;
 }
-.cont-box ul li {
+.pj-info li {
   color: var(--lightgray-font);
   font-size: 0.815rem;
   padding-right: 10px;
 }
-.cont-box ul li:nth-child(1) {
-  border-right: 1px solid var(--lightgray-font);
+.pj-info li i {
+  font-size: 0.875rem;
+  color: var(--lightgray-font);
+  padding-right: 3px;
 }
-.cont-box ul li:nth-child(2) {
-  padding-left: 10px;
+.pj-info li:nth-child(2) {
+  padding-left: 4px;
 }
 .cont-swiper > .swiper-button-prev {
   left: 0px;
