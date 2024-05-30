@@ -276,9 +276,33 @@ a.github-link:hover {
 
 
 /* 폼 그룹 설정 */
-.form-group {
+.form-group, .wanted {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#experience-container, #urlInput, #skill, #stack {
+    width: 280px;
+}
+
+#urlInput {
+    margin-left: 26px;
+    width: 280px;
+}
+
+/* 링크 헤더 스타일 */
+.link h2 {
+    display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: space-between;
+    margin-left: 26px;
+}
+
+.h2 .section {
+    display: flex;
+
 }
 
 /* 폼 그룹 제목 설정 */
@@ -336,6 +360,29 @@ a.github-link:hover {
     align-items: flex-start;
 }
 
+.skill-select{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 305px;
+}
+
+
+.introduce {
+    margin-bottom: 20px;
+}
+.introduce h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.introduce-input {
+    display: flex;
+    flex-direction: column;
+
+}
+
 /* 글자수 제한 폰트 설정 */
 .maxlength {
     display: flex;
@@ -343,21 +390,10 @@ a.github-link:hover {
     color: #D9D9D9;
 }
 
-/* 각 섹션 마진 설정 */
-.section {
-    margin-bottom: 35px;
-}
 
 /* 드롭다운 아래쪽 마진 */
 #role {
     margin-bottom: 67px;
-}
-
-/* 링크 헤더 스타일 */
-.link h2 {
-    display: flex;
-    align-items: center; /* 세로 중앙 정렬 */
-    justify-content: space-between;
 }
 
 
@@ -383,6 +419,7 @@ select {
     box-sizing: border-box;
     margin-top: 22px;
     margin-bottom: 22px;
+    width: 280px;
 }
 
 /* 특수 입력 필드 */
@@ -396,15 +433,17 @@ select {
 }
 
 
-/*직군, 스택 아이콘 설정*/
+/*직군 아이콘 설정*/
 .select-skills, .select-programs {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* 선택 사항: 항목들 사이의 간격 추가 */
-    width: 584px;
+    margin-top: 10px;
+    gap: 10px; /* 항목들 사이의 간격 추가 */
+    width: 280px;
+
 }
 
-.skill, .stack {
+.selected-item {
     display: flex;
     align-items: center;
     padding: 5px 10px;
@@ -416,27 +455,10 @@ select {
     flex: 0 0 auto; /* 아이템이 고정된 너비로 나타나도록 */
 }
 
-.remove {
+.remove-btn {
     margin-left: 5px;
     cursor: pointer;
     color: #ffffff;
-}
-
-
-
-
-/* 스킬, 프로그램 제목 마진 설정 */
-.skills-section h2, .programs-section h2 {
-    margin-right: 10px; /* 텍스트와 태그 사이의 간격 */
-    white-space: nowrap; /* 텍스트가 줄바뀌지 않도록 */
-    flex-shrink: 0; /* 텍스트가 축소되지 않도록 */
-}
-
-/* 태그 간격 조정 */
-.tags.skills .tag.front, .tags.programs .tag.react {
-    margin-right: 4px;
-    margin-top: 22px;
-    margin-bottom: 22px;
 }
 
 
