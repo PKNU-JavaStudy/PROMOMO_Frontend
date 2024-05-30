@@ -345,6 +345,29 @@ a.github-link:hover {
   align-items: flex-start;
 }
 
+.skill-select{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 305px;
+}
+
+
+.introduce {
+    margin-bottom: 20px;
+}
+.introduce h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.introduce-input {
+    display: flex;
+    flex-direction: column;
+
+}
+
 /* 글자수 제한 폰트 설정 */
 .maxlength {
   display: flex;
@@ -357,10 +380,12 @@ a.github-link:hover {
   margin-bottom: 35px;
 }
 
+
 /* 드롭다운 아래쪽 마진 */
 #role {
   margin-bottom: 67px;
 }
+
 
 /* 링크 헤더 스타일 */
 .link h2 {
@@ -368,6 +393,7 @@ a.github-link:hover {
   align-items: center; /* 세로 중앙 정렬 */
   justify-content: space-between;
 }
+
 
 label {
   display: block;
@@ -391,6 +417,7 @@ select {
   box-sizing: border-box;
   margin-top: 22px;
   margin-bottom: 22px;
+
 }
 
 /* 특수 입력 필드 */
@@ -402,6 +429,7 @@ select {
   border: 1px solid #d9d9d9;
   border-radius: 10px;
 }
+
 
 /*직군, 스택 아이콘 설정*/
 .select-skills,
@@ -446,6 +474,7 @@ select {
   margin-top: 22px;
   margin-bottom: 22px;
 }
+
 
 /* 완료 버튼 색상 모양 설정 */
 #mypage-submit {
