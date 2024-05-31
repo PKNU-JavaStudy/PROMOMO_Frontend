@@ -21,6 +21,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
 
+  <script defer src="js/01jaeyoung.js"></script>
   <script src="./js/common.js"></script>
   <script defer src="./common/header.js"></script>
   <script defer src="./common/footer.js"></script>
@@ -101,8 +102,11 @@
           </div>
           <div class="cont-flex">
             <div>
-              <label for="" class="s-title">기술스택</label>
-              <select name="" id="">
+              <label for="stack" class="s-title">기술스택</label>
+              <div class="select-programs" id="stack-container">
+                <!--아이콘 들어가는 곳-->
+              </div>
+              <select name="stack" id="stack">
                 <option value="all">기술스택 선택</option>
                 <option value="Java">Java</option>
                 <option value="C++">C++</option>
@@ -123,13 +127,16 @@
               </select>
             </div>
             <div>
-              <label for="" class="s-title">모집분야</label>
-              <select name="" id="">
-                <option value="">전체</option>
-                <option value="">프론트엔드</option>
-                <option value="">백엔드</option>
-                <option value="">디자인</option>
-                <option value="">기회</option>
+              <label for="skill" class="s-title">모집분야</label>
+              <div class="select-skills" id="skill-container">
+                <!--아이콘 들어가는 곳-->
+              </div>
+              <select name="skill" id="skill">
+                <option value="all">전체</option>
+                <option value="frontend">프론트엔드</option>
+                <option value="backend">백엔드</option>
+                <option value="design">디자인</option>
+                <option value="opp">기회</option>
               </select>
             </div>
           </div>

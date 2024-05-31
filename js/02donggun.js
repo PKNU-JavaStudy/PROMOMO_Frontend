@@ -27,12 +27,11 @@ urlInput.addEventListener('input', () => {
     }
 });
 
-// 마이페이지 수정 원하는 직군, 기술 스택 동적으로 띄우기
+// 기술스택 동적으로 바꾸기
 document.addEventListener("DOMContentLoaded", () => {
     const skillSelect = document.getElementById("skill");
     const stackSelect = document.getElementById("stack");
     const profileForm = document.getElementById("profile-form");
-    const careerSelect = document.getElementById("experience-container");
 
     skillSelect.addEventListener("change", () => {
         handleSelectChange(skillSelect, "skill-container");
@@ -49,7 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const selectedText = selectElement.options[selectElement.selectedIndex].text;
         const selectedIndex = selectElement.selectedIndex;
 
-        if (!selectedValue) return;
+        if (selectedValue === "all" || selectedValue === "") return; // "전체" 또는 "기술스택 선택"은 처리하지 않음
+
         // 기존 옵션 제거
         selectElement.remove(selectElement.selectedIndex);
 
@@ -70,18 +70,31 @@ document.addEventListener("DOMContentLoaded", () => {
             const newOption = document.createElement('option');
             newOption.value = selectedValue;
             newOption.text = selectedText;
-            selectElement.add(newOption);
 
             // 원래 위치에 다시 추가
-            selectElement.add(newOption, selectedIndex);
+            if (selectedIndex >= selectElement.length) {
+                selectElement.add(newOption);
+            } else {
+                selectElement.add(newOption, selectedIndex);
+            }
+
+            // 셀렉트 박스 초기화
+            selectElement.selectedIndex = 0; // 첫 번째 옵션(기본값)으로 초기화
         };
 
         icon.appendChild(removeBtn);
         iconContainer.appendChild(icon);
 
         // 셀렉트 박스 초기화
-        selectElement.value = "";
+        selectElement.selectedIndex = 0; // 첫 번째 옵션(기본값)으로 초기화
     }
+
+    function validateForm(event) {
+        // 폼 검증 로직을 여기에 추가합니다.
+        event.preventDefault();
+        alert("폼이 제출되었습니다.");
+    }
+
 
     function validateForm(event) {
         const skillContainer = document.getElementById('skill-container');
