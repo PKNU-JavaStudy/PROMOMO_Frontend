@@ -245,6 +245,18 @@
             <span class="talk">프로젝트 진행 사항 공유해주세요~</span>
             <b class="time">2023.05.25 오후 9시 11분</b>
           </div>
+          <div class="chat my">
+            <p class="name">최재영(나)</p>
+            <div class="flex">
+              <span class="talk">ERD 작성 중입니다.</span>
+              <b class="time">2023.05.25 오후 9시 20분</b>
+            </div>
+          </div>
+        </div>
+        <div class="inputzone">
+          <img src="" alt="" />
+          <input type="text" />
+          <button>입력하기</button>
         </div>
         <div class="chat other">
           <p class="name">한지수</p>
@@ -273,6 +285,7 @@
 <script>
   // 모집완료 모달
   document
+
           .querySelector(".open-modal")
           .addEventListener("click", function () {
             document.querySelector(".modal-bg").classList.add("visible");
@@ -321,6 +334,7 @@
   document.addEventListener("click", function (event) {
     if (
             !event.target.closest(".modal, .open-modal, .open-modal02, .modal02")
+
     ) {
       document.querySelector(".modal").classList.remove("visible");
       document.querySelector(".modal-bg").classList.remove("visible");

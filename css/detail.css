@@ -12,6 +12,20 @@
   color: #fff;
   border-radius: 3px;
 }
+.pj-type {
+  display: inline-block;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 0.813rem;
+  padding: 4px 9px;
+  margin-right: 5px;
+}
+.pj-type.pj {
+  background-color: #ffadad;
+}
+.pj-type.study {
+  background-color: #aaec90;
+}
 
 .title-wrap .title {
   /* 제목 타이틀 글자 스타일 설정 */
@@ -58,11 +72,14 @@
   display: flex;
   align-items: center;
 }
+.info-wrap .count i {
+  font-size: 0.815rem;
+}
 
 .info-wrap .count li {
   /* 카운터 폰트 크기 및 색상 맞추기 */
   font-size: 0.815rem;
-  color: var(--lightgray-font);
+  color: #5d5d5d;
   padding: 0 5px;
 }
 
@@ -85,12 +102,38 @@
   padding-right: 3px;
 }
 
-p.title-contents {
+.list-wrap table {
+  width: 100%;
+  margin-top: 35px;
+}
+.list-wrap table tr td {
+  padding-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.list-wrap table tr td:nth-child(2n + 1) {
+  width: 15%;
+}
+.list-wrap table tr td:nth-child(2n) {
+  width: 35%;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--gray-font);
+}
+.pj-intro {
+  padding-top: 80px;
+}
+.title-contents {
   /* 본문 내용의 소제목 font 설정 */
   /* 프로젝트 요약 폰트 설정 */
   font-size: 1.25rem;
+  padding: 0 0 15px;
+  font-weight: 700;
+  border-bottom: 1px solid var(--border-color);
+}
+.title-contents.app {
   padding: 40px 0;
-  font-weight: 800;
+  border-bottom: none;
 }
 
 ul.recruit-icon {
@@ -102,11 +145,7 @@ p.content {
   /* 본문 내용(요약) 줄 간격 설정 */
   /* 요약 내용 글자 간격 설정 */
   line-height: 1.5rem;
-}
-
-p.content.bottom {
-  /* 본문 내용과 댓글창 구분 선 */
-  padding-bottom: 95px;
+  padding: 40px 0;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -218,10 +257,6 @@ ul.stack-icon li:nth-child(3n) {
 
 .app-wrap {
   /* 저요저요 참여댓글 창 정렬 */
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 30px;
-  row-gap: 25px;
   padding-bottom: 55px;
 }
 /* -------------------------------------- */
@@ -233,32 +268,69 @@ ul.stack-icon li:nth-child(3n) {
 
 .app-wrap-show .application-box {
   /* 댓글상자 틀 생성 */
-  display: flex;
-  justify-content: space-between;
   border-radius: 10px;
-  background-color: rgb(236, 236, 236);
-  flex-direction: column;
   padding: 15px 20px;
   margin-bottom: 20px;
 }
 /* -------------------------------------- */
 
+.app {
+  padding-top: 40px;
+}
+
 .app-wrap .application-box {
   /* 저요저요 멤버추가 댓글상자 */
+  position: relative;
   display: flex;
   justify-content: space-between;
   border-radius: 10px;
-  background-color: rgb(236, 236, 236);
+  background-color: rgb(241 241 241);
   flex-direction: column;
-  padding: 15px 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.work {
+  background-color: #f1f7ff;
+  color: #74a0e2;
+  font-size: 0.65rem;
+  padding: 4px 7px;
+  border-radius: 3px;
+}
+.work.top {
+  font-size: 0.875rem;
+}
+.skill {
+  display: flex;
+  align-items: center;
+}
+.skill li img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+.career {
+  font-size: 0.65rem;
+  padding: 4px 7px;
+  border-radius: 3px;
+  background-color: #e1ffd8;
+  color: #4dc900;
+}
+.career.right,
+.work.right {
+  font-size: 0.75rem;
+}
+.right-tag {
+  display: flex;
+  justify-content: center;
+}
+.right-tag span {
+  margin: 0 5px;
 }
 
 .application-box .profile-top {
   /* 댓글 상자 내 프로필 영역 설정 */
   position: relative;
   display: flex;
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 15px;
 }
 
 .application-box .profile-top img {
@@ -271,7 +343,8 @@ ul.stack-icon li:nth-child(3n) {
 .application-box .profile-top h3 {
   /* 댓글 상자 이름 설정 */
   font-weight: 600;
-  padding-top: 9px;
+  padding-top: 13px;
+  font-size: 1.25rem;
 }
 
 .application-box .profile-top p {
@@ -308,7 +381,7 @@ ul.stack-icon li:nth-child(3n) {
   width: 65px;
   padding: 5px;
   color: var(--lightgray-font);
-  background-color: rgb(236, 236, 236);
+  background-color: rgb(242, 242, 242);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -320,13 +393,13 @@ ul.stack-icon li:nth-child(3n) {
   /* color: #626262; */
 }
 
-.app-wrap-show .box-count {
+.app-date {
   /* 댓글 날짜 font 설정 */
-  text-align: right;
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
   font-size: 12px;
   color: var(--lightgray-font);
-  padding-top: 10px;
-  padding-right: 5px;
 }
 
 .profile-top-show .addmem-button.done {
@@ -525,10 +598,18 @@ ul.stack-icon li:nth-child(3n) {
   font-weight: 600;
   color: var(--main-color);
 }
-
+.right-btn.apply {
+  background-color: var(--main-color);
+  color: #fff;
+}
 .right-btn.bookmark {
   /* right-box 북마크 색상 설정 */
   background-color: #fff;
+}
+.right-btn.github {
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
 }
 
 .right-btn.confirm {
@@ -622,9 +703,17 @@ ul.stack-icon li:nth-child(3n) {
 .right-box span {
   /* right-box 프로젝트 참여 멤버 이름 설정 */
   display: block;
-  margin-top: 30px;
+  margin-top: 10px;
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 0.65rem;
+}
+.current-mem {
+  padding-top: 30px;
+}
+.current-mem span {
+  display: inline;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .confirm:hover {
@@ -704,4 +793,30 @@ ul.stack-icon li:nth-child(3n) {
   padding-top: 40px;
   color: var(--tag-bgcolor);
   font-size: 0.825rem;
+}
+.show-btn {
+  text-align: center;
+}
+.show-btn button {
+  padding: 15px 30px;
+  border-radius: 8px;
+  border: none;
+  text-align: 1.25rem;
+  font-weight: 500;
+}
+.show-btn button.like i {
+  padding-right: 4px;
+  color: #fff;
+}
+.show-btn button.list i {
+  padding-right: 4px;
+}
+.show-btn button.like {
+  background-color: var(--main-color);
+  color: #fff;
+  margin-right: 10px;
+}
+
+.show p.content {
+  border: none;
 }
