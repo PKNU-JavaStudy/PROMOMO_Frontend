@@ -25,26 +25,22 @@
 }
 
 /* 마이페이지 프로필 이미지 */
-/* .profile-section img.profile-image,
-.edit-section img.profile-image {
-  width: 181px;
-  height: 181px;
+.profile-img {
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  margin-bottom: 20px;
-} */
-
+  overflow: hidden;
+  margin-bottom: 40px;
+}
 /* 마이페이지 수정 버튼 추가_5.22 */
 .profile-section .edit-btn {
   position: absolute;
-  right: 20px;
-  display: flex;
-  justify-content: right;
-  border-radius: 20px;
-  border: none;
-  color: #f3f3f3;
-  background-color: #00dada;
+  right: 0px;
+  border-radius: 5px;
+  color: #ffff;
+  background-color: var(--main-color);
   font-size: 1rem;
-  padding: 5px 15px 5px 15px;
+  padding: 18px 25px;
 }
 
 /* 마이페이지 이름*/
@@ -59,17 +55,23 @@ h1 {
   font-size: 0.938rem;
   color: #969696;
 }
-
-/*마이페이지 깃허브 링크*/
-.github-link {
-  display: block; /* 인라인 블록에서 블록으로 변경 */
-  color: black;
-  text-decoration: none;
-  font-size: 16px;
-  margin-top: 52px;
-  margin-bottom: 29px;
+.container {
+  margin: 60px 0;
 }
 
+.skill-flex i {
+  padding-right: 15px;
+}
+.skill-flex i,
+.skill-flex a {
+  font-size: 1.25rem;
+}
+.work {
+  background-color: #f1f7ff;
+  color: #74a0e2;
+  padding: 4px 7px;
+  border-radius: 3px;
+}
 /* 링크에 커서가 있을 때 밑줄 및 색상 변경 */
 a.github-link:hover {
   text-decoration: underline;
@@ -105,7 +107,11 @@ a.github-link:hover {
   width: 181px;
   height: 181px;
   border-radius: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 55px;
+}
+.skill-flex {
+  display: flex;
+  margin-bottom: 30px;
 }
 
 .career {
@@ -119,7 +125,6 @@ a.github-link:hover {
 }
 
 /* 기술 색션 */
-.skills-section,
 .programs-section {
   display: flex;
   align-items: center;
@@ -170,22 +175,11 @@ a.github-link:hover {
 /* 기획 */
 .tags.programs .tag {
   padding: 4px 5px;
-  border-radius: 20px;
-  /*색상변경_5.21*/
+  border-radius: 4px;
   color: #666;
-  font-size: 13px;
   text-align: center;
-  background: #f3f3f3; /* 회색 배경 */
-  /* 간격조정_5.21 */
-  margin: 3px;
-  border: 1px solid transparent; /* 태두리 제거 */
-}
-
-/* 마이페이지 언더라인 */
-.underline {
-  margin-top: 62px;
-  margin-bottom: 62px;
-  color: #d9d9d9;
+  background: #f3f3f3;
+  border: 1px solid transparent;
 }
 
 /* 내가 만든 프로젝트, 북마크 헤더 색션 */
@@ -193,25 +187,16 @@ a.github-link:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
-}
-
-/* 프로젝트, 북마크 스타일 설정 */
-.make-pj,
-.bookmark {
-  background-color: #fbfbfb;
-  padding: 20px 39px 20px 39px;
-  border-radius: 15px;
-  margin-top: 60px;
-  margin-bottom: 30px;
+  padding: 10px 0;
 }
 
 /* 프로젝트, 북마크 제목 스타일 설정 */
+.make-pj {
+  border-top: 1px solid var(--border-color);
+}
 .make-pj h2,
 .bookmark h2 {
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
+  font-size: 1.25rem;
 }
 
 /* 프로젝트, 북마크 헤더 드롭다운 메뉴 */
@@ -235,17 +220,85 @@ a.github-link:hover {
 
 /* 생성한 프로젝트, 북마크한 프로젝트 수 색상 설정 */
 .highlight {
-  color: #00dada;
+  color: var(--main-color);
 }
 /* 프로젝트 내용 섹션의 배경 및 여백 설정 */
 .pj-content {
   display: block;
-  background-color: #fff;
-  padding: 15px 39px 15px 39px;
-  margin-top: 25px;
+  background-color: #f7f7f7;
+  padding: 25px 35px;
   margin-bottom: 30px;
   border-radius: 15px;
   position: relative;
+}
+.pj-type {
+  display: inline-block;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 0.813rem;
+  padding: 4px 9px;
+  margin-right: 5px;
+}
+.pj-type.pj {
+  background-color: #ffadad;
+}
+.pj-type.study {
+  background-color: #aaec90;
+}
+
+.title {
+  padding: 12px 0 17px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.title strong {
+  position: relative;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding-right: 20px;
+}
+
+.title strong.state-ing:before {
+  content: "|";
+  position: absolute;
+  top: 2px;
+  left: 66px;
+  color: var(--gray-font);
+  font-weight: 400;
+}
+
+.title strong.state-done:before {
+  content: "|";
+  position: absolute;
+  top: 2px;
+  left: 82px;
+  color: var(--gray-font);
+  font-weight: 400;
+}
+
+.title strong.state-ing {
+  color: var(--main-color);
+}
+
+.title strong.state-done {
+  color: var(--lightgray-font);
+}
+
+.count {
+  display: flex;
+  padding-top: 30px;
+}
+
+.count li {
+  font-size: 0.875rem;
+  color: var(--lightgray-font);
+  padding: 0 5px;
+}
+.count li i {
+  font-size: 0.815rem;
+  color: var(--lightgray-font);
+  padding-right: 3px;
 }
 
 /* 프로젝트 태그의 스타일 설정, 배경색 및 글꼴 크기 조정 */
@@ -290,23 +343,32 @@ a.github-link:hover {
 /* 폼 그룹 설정 */
 .form-group {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+.input-group {
+  width: 49%;
 }
 
 /* 폼 그룹 제목 설정 */
 .form-group h2 {
+  width: 100%;
   margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* 프로필 섹션 설정 */
 .edit-section {
+  width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: auto; /* 자동 마진 */
 }
-
+.form-container {
+  width: 100%;
+}
 /* 필수사항 텍스트 설정 */
 .required {
   color: palevioletred;
@@ -331,7 +393,7 @@ a.github-link:hover {
 
 /* 자기소개 입력칸 */
 .introduce-input {
-  width: 584px;
+  width: 100%;
   height: 182px;
   margin-bottom: 38px;
   border: 1px solid #d9d9d9;
@@ -345,47 +407,36 @@ a.github-link:hover {
   align-items: flex-start;
 }
 
-.skill-select{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 305px;
+.skill-select {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 305px;
 }
-
 
 .introduce {
-    margin-bottom: 20px;
+  margin-top: 20px;
 }
 .introduce h2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .introduce-input {
-    display: flex;
-    flex-direction: column;
-
+  display: flex;
+  flex-direction: column;
 }
 
 /* 글자수 제한 폰트 설정 */
 .maxlength {
-  display: flex;
-  flex-direction: row;
   color: #d9d9d9;
 }
-
-/* 각 섹션 마진 설정 */
-.section {
-  margin-bottom: 35px;
-}
-
 
 /* 드롭다운 아래쪽 마진 */
 #role {
   margin-bottom: 67px;
 }
-
 
 /* 링크 헤더 스타일 */
 .link h2 {
@@ -393,7 +444,6 @@ a.github-link:hover {
   align-items: center; /* 세로 중앙 정렬 */
   justify-content: space-between;
 }
-
 
 label {
   display: block;
@@ -410,14 +460,13 @@ input[type="text"],
 input[type="url"],
 textarea,
 select {
-  width: 584px;
+  width: 100%;
   padding: 12px 8px;
   border: 1px solid #d9d9d9;
   border-radius: 10px;
   box-sizing: border-box;
   margin-top: 22px;
   margin-bottom: 22px;
-
 }
 
 /* 특수 입력 필드 */
@@ -430,15 +479,7 @@ select {
   border-radius: 10px;
 }
 
-
 /*직군, 스택 아이콘 설정*/
-.select-skills,
-.select-programs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px; /* 선택 사항: 항목들 사이의 간격 추가 */
-  width: 584px;
-}
 
 .skill,
 .stack {
@@ -475,25 +516,21 @@ select {
   margin-bottom: 22px;
 }
 
-
 /* 완료 버튼 색상 모양 설정 */
 #mypage-submit {
-  display: flex;
-  text-align: center;
+  width: 100%;
   justify-content: center;
-  background-color: #00dada;
-  color: white;
-  padding: 10px 15px;
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 15px 15px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  width: 584px;
-  height: 60px;
-  line-height: 42px;
-  margin-top: 83px;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 /* 버튼 호버시 색상 */
 #mypage-submit:hover {
-  background-color: #009393;
+  background-color: var(--main-hover-color);
 }

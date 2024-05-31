@@ -606,6 +606,11 @@ ul.stack-icon li:nth-child(3n) {
   /* right-box 북마크 색상 설정 */
   background-color: #fff;
 }
+.right-btn.github {
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+}
 
 .right-btn.confirm {
   /* right-box 모집완료 색상 설정 */
@@ -788,4 +793,30 @@ ul.stack-icon li:nth-child(3n) {
   padding-top: 40px;
   color: var(--tag-bgcolor);
   font-size: 0.825rem;
+}
+.show-btn {
+  text-align: center;
+}
+.show-btn button {
+  padding: 15px 30px;
+  border-radius: 8px;
+  border: none;
+  text-align: 1.25rem;
+  font-weight: 500;
+}
+.show-btn button.like i {
+  padding-right: 4px;
+  color: #fff;
+}
+.show-btn button.list i {
+  padding-right: 4px;
+}
+.show-btn button.like {
+  background-color: var(--main-color);
+  color: #fff;
+  margin-right: 10px;
+}
+
+.show p.content {
+  border: none;
 }
