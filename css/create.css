@@ -28,6 +28,7 @@ form {
   border: none;
   font-size: 1.5rem;
   font-weight: 600;
+  padding: 15px;
 }
 
 .s-title {
@@ -44,22 +45,26 @@ textarea {
   padding: 17px 20px;
   overflow-y: scroll;
 }
+
 /* 추가수정 */
 .cont-flex {
   display: flex;
   justify-content: space-between;
 }
-.cont-flex > div {
+
+.cont-flex>div {
   display: flex;
   flex-direction: column;
   width: 49%;
 }
+
 .cont-flex select {
   width: 100%;
   padding: 15px;
   border: 1px solid var(--border-color);
   border-radius: 5px;
 }
+
 .cont-flex input {
   width: 100%;
   padding: 15px;
@@ -98,16 +103,17 @@ textarea {
 }
 
 .btn-write {
-  padding: 17px 35px;
+  padding: 13px 35px;
   border-radius: 6px;
   background-color: var(--main-color);
   border: none;
   color: #fff;
   font-weight: 600;
   transition: 0.3s;
-  margin-top: 92px;
+  margin-top: 90px;
   font-size: 1.2rem;
 }
+
 .btn-write a {
   color: #fff;
   font-weight: 600;
@@ -128,7 +134,11 @@ h3 {
   display: flex;
   align-items: center;
   border: 1px solid var(--main-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
 }
+
 .submit-modal a {
   color: #fff;
 }
@@ -139,6 +149,8 @@ h3 {
   display: flex;
   align-items: center;
   border: 1px solid var(--border-color);
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .rc-info {
@@ -159,7 +171,7 @@ h3 {
 }
 
 .advice {
-  margin-top: 650px;
+  margin-top: 710px;
   border: 1px solid var(--border-color);
   background-color: #f9fafc;
   padding: 15px 15px;
@@ -202,9 +214,11 @@ h3 {
   font-size: 1.25rem;
   font-weight: 800;
 }
+
 .title-dist {
   padding-bottom: 20px;
 }
+
 .sc-thumbnail-box {
   background-color: #f3f3f3;
   height: 210px;
@@ -226,6 +240,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+
   &:hover {
     background: rgb(77, 77, 77);
     color: #fff;
@@ -243,12 +258,14 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
 }
+
 .sc-title-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 20px;
 }
+
 .sc-length {
   color: var(--tag-bgcolor);
   font-size: 0.825rem;
@@ -261,6 +278,7 @@ h3 {
   padding: 22px;
   border-radius: 10px;
 }
+
 .sc-input.tilte {
   margin-bottom: 35px;
 }
@@ -273,14 +291,17 @@ h3 {
   color: var(--tag-bgcolor);
   font-size: 0.825rem;
 }
+
 .sc-github-link {
   display: inline-block;
 }
+
 .sc-title-box-inline {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .sc-url {
   margin-top: 0;
   border: 1px solid var(--border-color);
@@ -288,9 +309,11 @@ h3 {
   border-radius: 10px;
   width: 483px;
 }
+
 .sc-url::placeholder {
   font-size: 0.825rem;
 }
+
 .sc-content textarea {
   margin-bottom: 60px;
 }
@@ -315,9 +338,11 @@ h3 {
 .stack-list {
   margin-top: 20px;
 }
+
 .sc-stack.show-create {
   margin-bottom: 60px;
 }
+
 .sc-member-list {
   display: inline-block;
   margin-top: 20px;
@@ -347,6 +372,7 @@ h3 {
   align-items: center;
   line-height: 75px;
 }
+
 .members ul li:nth-last-child(1) {
   border-bottom: none;
 }
@@ -359,16 +385,20 @@ h3 {
 .sh-btn {
   display: block;
 }
+
 /*직군 아이콘 설정*/
-.select-skills, .select-programs {
+.select-skills,
+.select-programs {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 10px;
-  gap: 10px; /* 항목들 사이의 간격 추가 */
+  gap: 10px;
+  /* 항목들 사이의 간격 추가 */
   width: 100%;
 
 }
+
 .selected-item {
   display: flex;
   align-items: center;
@@ -379,8 +409,10 @@ h3 {
   color: #ffffff;
   margin-right: 10px;
   margin-bottom: 15px;
-  flex: 0 0 auto; /* 아이템이 고정된 너비로 나타나도록 */
+  flex: 0 0 auto;
+  /* 아이템이 고정된 너비로 나타나도록 */
 }
+
 .remove-btn {
   margin-left: 5px;
   cursor: pointer;
@@ -388,7 +420,8 @@ h3 {
 }
 
 /* 특정 컨테이너에만 적용하도록 조정 */
-#skill-container, #stack-container {
+#skill-container,
+#stack-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

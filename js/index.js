@@ -1,4 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
+  //main - banner 스와이퍼
+  var swiper = new Swiper(".bnr-swiper", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    autoplay: {
+      delay: 10000, // 시간 설정
+      disableOnInteraction: false,
+    },
+  });
+
   // main - cont 스와이퍼
   var swiper = new Swiper(".cont-swiper", {
     navigation: {

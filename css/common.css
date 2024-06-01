@@ -1,8 +1,8 @@
 /* root */
 :root {
   /* color */
-  --main-color: #00c4c3;
-  --main-hover-color: #00b2b2;
+  --main-color: #7353ea;
+  --main-hover-color: #613dd6;
   --border-color: #c3c3c3;
   --tag-bgcolor: #cfcfcf;
   --gray-font: #444444;
@@ -21,7 +21,7 @@ header {
   position: sticky;
   top: 0;
   background-color: #fff;
-  border-bottom: 1px solid var(--border-color);
+  /* border-bottom: 1px solid var(--border-color); */
   z-index: 999;
 }
 
@@ -41,7 +41,7 @@ header {
 }
 
 .header-in nav a img {
-  width: 100px;
+  width: 130px;
 }
 
 .menu {
@@ -124,8 +124,8 @@ footer {
 }
 
 .footer-in a img {
-  width: 100px;
-  margin-bottom: 30px;
+  width: 130px;
+  margin-bottom: 20px;
 }
 
 .footer-in span {
