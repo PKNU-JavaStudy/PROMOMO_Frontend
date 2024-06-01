@@ -34,21 +34,73 @@ document.addEventListener("DOMContentLoaded", () => {
     const profileForm = document.getElementById("profile-form");
 
     skillSelect.addEventListener("change", () => {
-        handleSelectChange(skillSelect, "skill-container");
+        handleSingleSelectChange(skillSelect, "skill-container");
     });
 
     stackSelect.addEventListener("change", () => {
-        handleSelectChange(stackSelect, "stack-container");
+        handleMultiSelectChange(stackSelect, "stack-container");
     });
 
     profileForm.addEventListener("submit", validateForm);
 
-    function handleSelectChange(selectElement, containerId) {
+    function handleSingleSelectChange(selectElement, containerId) {
         const selectedValue = selectElement.value;
         const selectedText = selectElement.options[selectElement.selectedIndex].text;
         const selectedIndex = selectElement.selectedIndex;
 
-        if (selectedValue === "all" || selectedValue === "") return; // "전체" 또는 "기술스택 선택"은 처리하지 않음
+        if (selectedValue === "" || selectedValue === "all") return; // "전체" 또는 빈 값은 처리하지 않음
+
+        // 기존에 선택된 직군이 있는지 확인
+        const iconContainer = document.getElementById(containerId);
+        if (iconContainer.children.length > 0) {
+            alert("하나의 직군만 선택할 수 있습니다.");
+            return;
+        }
+
+        // 선택된 옵션을 컨테이너에 추가
+        const icon = document.createElement('div');
+        icon.className = 'selected-item';
+        icon.id = selectedValue;
+        icon.textContent = selectedText;
+
+        const removeBtn = document.createElement('span');
+        removeBtn.className = 'remove-btn';
+        removeBtn.textContent = 'x';
+        removeBtn.onclick = () => {
+            iconContainer.removeChild(icon);
+
+            // 옵션을 다시 select에 추가
+            const newOption = document.createElement('option');
+            newOption.value = selectedValue;
+            newOption.text = selectedText;
+
+            // 원래 위치에 다시 추가
+            if (selectedIndex >= selectElement.length) {
+                selectElement.add(newOption);
+            } else {
+                selectElement.add(newOption, selectedIndex);
+            }
+
+            // 셀렉트 박스 초기화
+            selectElement.selectedIndex = 0; // 첫 번째 옵션(기본값)으로 초기화
+        };
+
+        icon.appendChild(removeBtn);
+        iconContainer.appendChild(icon);
+
+        // 기존 선택된 옵션 제거
+        selectElement.remove(selectElement.selectedIndex);
+
+        // 셀렉트 박스 초기화
+        selectElement.selectedIndex = 0; // 첫 번째 옵션(기본값)으로 초기화
+    }
+
+    function handleMultiSelectChange(selectElement, containerId) {
+        const selectedValue = selectElement.value;
+        const selectedText = selectElement.options[selectElement.selectedIndex].text;
+        const selectedIndex = selectElement.selectedIndex;
+
+        if (selectedValue === "" || selectedValue === "all") return; // "전체" 또는 빈 값은 처리하지 않음
 
         // 기존 옵션 제거
         selectElement.remove(selectElement.selectedIndex);
@@ -88,13 +140,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // 셀렉트 박스 초기화
         selectElement.selectedIndex = 0; // 첫 번째 옵션(기본값)으로 초기화
     }
-
-    function validateForm(event) {
-        // 폼 검증 로직을 여기에 추가합니다.
-        event.preventDefault();
-        alert("폼이 제출되었습니다.");
-    }
-
 
     function validateForm(event) {
         const skillContainer = document.getElementById('skill-container');
