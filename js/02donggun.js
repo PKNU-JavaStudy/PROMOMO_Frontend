@@ -1,3 +1,33 @@
+// 자기소개 글자 수 세기
+const introduceInput = document.getElementById('introduceInput');
+const introCount = document.getElementById('introCount');
+
+introduceInput.addEventListener('input', () => {
+    const currentLength = introduceInput.value.length;
+    introCount.textContent = `${currentLength}/150`;
+    // 글자수가 넘어가면 border 색 교체
+    if (currentLength >= 150) {
+        introduceInput.style.border = "1px solid red";
+    } else {
+        introduceInput.style.border = "1px solid #D9D9D9";
+    }
+});
+
+// 깃허브 글자 수 세기
+const urlInput = document.getElementById('urlInput');
+const linkCount = document.getElementById('charCount');
+
+urlInput.addEventListener('input', () => {
+    const currentLength = urlInput.value.length;
+    linkCount.textContent = `${currentLength}/50`;
+    if (currentLength >= 50) {
+        urlInput.style.border = "1px solid red";
+    } else {
+        urlInput.style.border = "1px solid #D9D9D9";
+    }
+});
+
+// 기술스택 동적으로 바꾸기
 document.addEventListener("DOMContentLoaded", () => {
     const skillSelect = document.getElementById("skill");
     const stackSelect = document.getElementById("stack");
@@ -16,10 +46,11 @@ document.addEventListener("DOMContentLoaded", () => {
     function handleSingleSelectChange(selectElement, containerId) {
         const selectedValue = selectElement.value;
         const selectedText = selectElement.options[selectElement.selectedIndex].text;
+        const selectedIndex = selectElement.selectedIndex;
 
         if (selectedValue === "" || selectedValue === "all") return; // "전체" 또는 빈 값은 처리하지 않음
 
-        // 직군 선택 하나만
+        // 기존에 선택된 직군이 있는지 확인
         const iconContainer = document.getElementById(containerId);
         if (iconContainer.children.length > 0) {
             alert("하나의 직군만 선택할 수 있습니다.");
@@ -42,7 +73,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const newOption = document.createElement('option');
             newOption.value = selectedValue;
             newOption.text = selectedText;
-            selectElement.add(newOption);
+
+            // 원래 위치에 다시 추가
+            if (selectedIndex >= selectElement.length) {
+                selectElement.add(newOption);
+            } else {
+                selectElement.add(newOption, selectedIndex);
+            }
 
             // 셀렉트 박스 초기화
             selectElement.selectedIndex = 0; // 첫 번째 옵션(기본값)으로 초기화
