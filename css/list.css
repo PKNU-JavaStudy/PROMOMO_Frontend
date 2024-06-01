@@ -39,7 +39,7 @@
 
 .btn-write {
   color: #fff;
-  padding: 18px 20px;
+  padding: 15px 25px;
   border-radius: 5px;
   background-color: var(--main-color);
   border: none;
@@ -53,13 +53,19 @@
   transition: 0.3s;
 }
 
+.button-wrap button:hover a {
+  text-decoration: underline;
+}
+
 .project-list {
   width: 100%;
 }
+
 .search {
   position: relative;
   margin-right: 10px;
 }
+
 .search button {
   position: absolute;
   top: 50%;
@@ -68,6 +74,7 @@
   background: none;
   border: none;
 }
+
 .search button i {
   font-size: 0.815rem;
   color: var(--gray-font);
@@ -76,16 +83,25 @@
 .tapmenu ul {
   display: flex;
 }
+
 .tapmenu ul li {
   padding-right: 15px;
 }
+
 .tapmenu ul li a {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.25rem;
+  color: var(--gray-font2);
 }
+
+.tapmenu ul li:hover a {
+  color: var(--main-color);
+}
+
 .tapmenu ul li.on a {
   color: var(--main-color);
 }
+
 .list-top {
   display: flex;
   justify-content: space-between;
@@ -105,9 +121,12 @@
   border: 1px solid var(--border-color);
   font-size: 1.2rem;
 }
+
 .type-slt {
   display: flex;
 }
+
+
 .show-flex button {
   background: var(--main-color);
   border: none;
@@ -116,18 +135,22 @@
   color: #fff;
   font-weight: 500;
 }
+
 .type-slt li {
   text-align: center;
   padding-right: 20px;
 }
+
 .type-slt li a {
   font-size: 1.25rem;
   font-weight: 500;
 }
+
 .type-slt li.on a {
   color: var(--main-color);
-  font-weight: 600;
+  font-weight: 700;
 }
+
 .type-slt li:hover a {
   text-decoration: underline;
 }
@@ -158,16 +181,20 @@
   padding: 4px 9px;
   margin-right: 5px;
 }
+
 .pj-type.pj {
   background-color: #ffadad;
 }
+
 .pj-type.study {
   background-color: #aaec90;
 }
+
 .pj-work {
   display: flex;
   margin-top: 15px;
 }
+
 .pj-work li {
   background-color: #f1f7ff;
   color: #74a0e2;
@@ -186,7 +213,7 @@
 .project-box strong {
   position: relative;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
   padding-right: 20px;
 }
 
@@ -266,6 +293,7 @@
   color: var(--lightgray-font);
   padding: 0 5px;
 }
+
 .project-box ul.count li:nth-child(1) {
   width: 83%;
 }
@@ -282,27 +310,32 @@
   padding-bottom: 30px;
   font-weight: 500;
 }
+
 .ipt-wrap {
   width: 100%;
   display: flex;
 }
+
 .show-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 50px 0px;
 }
+
 .select-wrap {
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
 }
+
 .left-select select {
   border: 1px solid var(--border-color);
   border-radius: 20px;
   padding: 10px 15px;
   margin-right: 10px;
 }
+
 .show-ipt {
   width: 700px;
   border-radius: 40px;
@@ -319,12 +352,15 @@
   row-gap: 30px;
   grid-template-columns: repeat(4, 1fr);
 }
+
 .top-lists {
   margin-bottom: 110px;
 }
+
 .show-lists.top {
   grid-template-columns: repeat(3, 1fr);
 }
+
 .show-lists.top h2 {
   width: 300px;
   font-size: 1.2rem;
@@ -340,6 +376,7 @@
   height: 180px;
   transition: 0.3s;
 }
+
 .pj-type {
   display: inline-block;
   border-radius: 3px;
@@ -348,12 +385,15 @@
   padding: 4px 9px;
   margin-right: 3px;
 }
+
 .pj-type.pj {
   background-color: #ffadad;
 }
+
 .pj-type.study {
   background-color: #aaec90;
 }
+
 .pj-tag {
   color: #fff;
   font-size: 0.65rem;
@@ -361,18 +401,22 @@
   border-radius: 3px;
   padding: 4px 7px;
 }
+
 .pj-tag.fire {
   background-color: #ffe8e8;
   color: #ea726f;
 }
+
 .pj-tag.new {
   background-color: #fff9d5;
   color: #fdb900;
 }
+
 .pj-tag.hot {
   background-color: #f1f7ff;
   color: #74a0e2;
 }
+
 .box-text {
   background-color: #fff;
   padding: 14px;
@@ -382,6 +426,7 @@
   overflow: hidden;
   height: 150px;
 }
+
 .show-box:hover img {
   scale: 1.1;
   transition: 0.3s;
@@ -394,6 +439,7 @@
   text-overflow: ellipsis;
   padding: 10px 0px;
 }
+
 .box-text.teamnote h2 {
   width: 300px;
 }
@@ -411,13 +457,16 @@
   display: flex;
   padding-bottom: 10px;
 }
+
 .skill li {
   padding: 10px 5px 0 0;
 }
+
 .skill li img {
   width: 25px;
   height: 25px;
 }
+
 .lists-bot {
   display: flex;
   justify-content: space-between;
@@ -425,6 +474,7 @@
   border-top: 1px solid var(--border-color);
   padding-top: 10px;
 }
+
 ul.count {
   display: flex;
 }
@@ -433,6 +483,7 @@ ul.count li {
   font-size: 0.7rem;
   padding-right: 7px;
 }
+
 ul.count li i {
   font-size: 0.7rem;
 }
@@ -477,6 +528,7 @@ ul.count li i {
   align-items: center;
   justify-content: center;
 }
+
 .show-ipt {
   width: 280px;
   border-radius: 30px;
@@ -490,6 +542,7 @@ ul.count li i {
   font-size: 1.5rem;
   padding-bottom: 10px;
 }
+
 .sub-title {
   font-size: 1.2rem;
 }

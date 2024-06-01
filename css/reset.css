@@ -20,10 +20,18 @@ button {
   cursor: pointer;
 }
 
-input,
-select,
-textarea {
-  outline: none;
+
+input:focus-visible,
+select:focus,
+textarea:focus-visible {
+  outline: auto;
+  outline-color: var(--main-hover-color);
+}
+
+option:hover {
+  background: var(--main-hover-color);
+  color: #fff;
+  padding: 3px 0;
 }
 
 html,
