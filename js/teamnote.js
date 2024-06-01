@@ -126,3 +126,25 @@ function deleteTask() {
     }
   }
 }
+
+// 상단 백그라운드 컬러피커
+document.addEventListener('DOMContentLoaded', function () {
+  const colorDiv = document.getElementById('colorDiv');
+  const colorPicker = document.getElementById('colorPicker');
+
+  // 로컬 저장소에서 저장된 색상 불러오기
+  const savedColor = localStorage.getItem('bgColor');
+  if (savedColor) {
+    colorDiv.style.backgroundColor = savedColor;
+    colorPicker.value = savedColor;
+  }
+
+  // color picker의 색상이 변경될 때마다 호출되는 이벤트 핸들러
+  colorPicker.addEventListener('input', function (event) {
+    const selectedColor = event.target.value;
+    colorDiv.style.backgroundColor = selectedColor;
+
+    // 로컬 저장소에 색상 저장
+    localStorage.setItem('bgColor', selectedColor);
+  });
+});

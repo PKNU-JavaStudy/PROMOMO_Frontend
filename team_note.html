@@ -28,6 +28,7 @@
   <script defer src="./js/kanban.js"></script>
   <script defer src="./js/gantt.js"></script>
   <script defer src="./js/link_input.js"></script>
+  <script defer src="./js/teamnote.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
@@ -37,14 +38,19 @@
 </head>
 
 <body>
-  <div class="top-bg"></div>
+  <div class="top-bg" id="colorDiv">
+    <div class="color-picker">
+      <label for="colorPicker" class="color-picker-label">🎨</label>
+      <input type="color" id="colorPicker">
+    </div>
+  </div>
   <div class="wrap team_note">
     <div class="profile-img"></div>
     <div class="note-cont">
       <h1>개발자 커뮤니티 사이트 | 개발바닥</h1>
       <div class="note-info">
         <div class="note-mem sub-title">
-          <h2>👤 프로젝트 멤버</h2>
+          <h2 class="mem-title">👤 프로젝트 멤버</h2>
           <div class="mem-grid">
             <a href="">
               <img src="./img/profile_sample.png" alt="" />
@@ -206,29 +212,31 @@
           <div class="chat other">
             <p class="name">이윤지</p>
             <div class="flex">
-              <span class="talk">프로젝트 진행 사항 공유해주세요~</span>
-              <b class="time">2023.05.25 오후 9시 11분</b>
+              <span class="talk">프로젝트 진행 사항 공유해주세요~프로젝트 진행 사항 공유해주세요~프로젝트 진행 사항 공유해주세요~프로젝트 진행 사항 공유해주세요~프로젝트 진행 사항
+                공유해주세요~프로젝트 진행 사항 공유해주세요~프로젝트 진행 사항 공유해주세요~프로젝트 진행 사항 공유해주세요~프로젝트 진행 사항 공유해주세요~프로젝트 진행 사항 공유해주세요~프로젝트 진행
+                사항 공유해주세요~프로젝트 진행 사항 공유해주세요~프로젝트 진행 사항 공유해주세요~</span>
+              <b class="time">2023.05.25 오후 9:11</b>
             </div>
           </div>
           <div class="chat other">
             <p class="name">한지수</p>
             <div class="flex">
               <span class="talk">프론트엔드 진행 중 입니다.</span>
-              <b class="time">2023.05.25 오후 9시 15분</b>
+              <b class="time">2023.05.25 오후 9:15</b>
             </div>
           </div>
           <div class="chat my">
             <p class="name">최재영(나)</p>
             <div class="flex">
               <span class="talk">ERD 작성 중입니다.</span>
-              <b class="time">2023.05.25 오후 9시 20분</b>
+              <b class="time">2023.05.25 오후 9:20</b>
             </div>
           </div>
         </div>
         <div class="inputzone">
           <img src="" alt="" />
           <input type="text" />
-          <button>입력하기</button>
+          <button><i class="fa-solid fa-paper-plane"></i>입력하기</button>
         </div>
       </div>
     </div>
