@@ -60,10 +60,36 @@
   padding: 30px 0;
   border-top: 1px solid var(--border-color);
 }
+.fc-direction-ltr {
+  margin-bottom: 60px;
+}
+.fc .fc-toolbar-title {
+  border-top: 0;
+  font-size: 1.3rem;
+}
+.fc .fc-button-primary:disabled {
+  background-color: var(--main-color);
+  border: none;
+}
+.fc .fc-button-primary:not(:disabled):active,
+.fc .fc-button-primary:hover,
+.fc .fc-button-primary {
+  background-color: var(--main-hover-color);
+  border: none;
+}
 
 .sub-title h2.mem-title {
   padding-top: 0;
   border-top: none;
+}
+.fc-daygrid-block-event .fc-event-time,
+.fc-daygrid-block-event .fc-event-title {
+  color: #fff;
+  padding: 4px;
+  font-size: 0.815rem;
+}
+.fc .fc-button .fc-icon {
+  color: #fff;
 }
 
 .mem-grid {
@@ -328,7 +354,6 @@
   overflow-y: scroll;
   padding: 30px 40px;
   background-color: #f2f2f2;
-  ;
 }
 
 .inputzone {
